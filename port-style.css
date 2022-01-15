@@ -1,0 +1,107 @@
+:root {
+	--teal: #518A8A;
+	--darkTeal: #0B4949;
+	--pink: #E6007A;
+	--lightPink: #FFB3DB;
+	--lightGray: #f1f1f1;
+	--darkGray: #555;
+}
+
+body {
+	font-family: verdana;
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: 200;
+	color: #5f5f5f;
+	border-bottom: 2px solid deeppink;
+	border-right: 2px solid deeppink;
+	width: 400px;
+	text-align: center;
+}
+
+h3, p {
+	text-align: center;
+}
+
+@media(min-width:768px){
+	.container-1 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.container-1 div {
+	min-height: 300px;
+	background-color: lightgray;
+	padding: 10px;
+	margin: 15px;
+	transition: all 1s;
+}
+
+.container-1 div:hover {
+	transform: scale(1.07);
+}
+
+.box-1 {
+	flex: 1;
+}
+
+.box-2 {
+	flex: 2;
+}
+
+.box-3 {
+	flex: 1;
+}
+
+.box-4 {
+	flex: 2;
+}
+
+.box-5 {
+	flex: 1;
+}
+
+.box-6 {
+	flex: 1;
+}
+
+footer {
+	background-color: var(--lightPink);
+	color: black;
+	padding: 0.5em;
+	text-align: center;
+	clear: both;
+	/*this clears the 'float: right' setting on images and lets the footer be centered properly*/
+}
+
+.topnav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #f1f1f1;
+	position: sticky;
+}
+
+.topnav li a {
+	float: left;
+	display: block;
+	color: #000;
+	padding: 14px 16px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.topnav li a:hover {
+	background-color: #555;
+	color: white;
+}
+
+.topnav .active a {
+	background-color: rgb(81, 138, 138);
+	color: white;
+}

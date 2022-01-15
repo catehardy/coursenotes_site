@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HTML Notes</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="mainContainer">
+			<nav class="topnav">
+				<ul>
+					<li><a href="index.html">Main</a></li>
+					<li class="active"><a href="html.html">HTML</a></li>
+					<li><a href="css.html">CSS</a></li>
+					<li><a href="javascript.html">Javascript</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+				</ul>
+			</nav>
+			<main>
+				<header><h1 class="header">HTML Notes</h1></header>
+				<h2>Resources</h2>
+				<ul>
+					<li><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools.com HTML tutorial</a></h3></li>
+					<li><a href="https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/" target="_blank">FreeCodeCamp: Intro to Basic HTML5</a></li>
+				</ul>
+				<hr>
+				<h2>Types of self-closing tags (aka empty elements)</h2>
+				<ul>
+					<li>&lt;hr&gt; - horizontal line</li>
+					<li>&lt;br&gt; - break</li>
+					<li>&lt;img&gt; - <a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">image</a> (has attributes src, alt, height, width)</li>
+					<li>&ltinput&gt; - allows website user to enter data</li>
+					<li>Complete list <a href="https://www.bitdegree.org/learn/html5-tags#what-is-an-empty-element-in-html" target="_blank">here</a></li>
+				</ul>
+				<hr>
+				<h2>HTML Forms</h2>
+				<p>Types of input field:</p>
+				<ul class="top-menu">
+					<li>text</li>
+					<li>email</li>
+					<li>date (e.g. birthday, booking choice, etc)</li>
+					<li>password</li>
+					<li>radio</li>
+					<li>checkbox</li>
+					<li>select (dropdown menu)</li>
+					<li>submit / reset buttons</li>
+				</ul>
+				<p><strong>Example Form:</strong></p>
+				<form method="POST">
+					<!-- Use POST not GET, for data privacy -->
+					<fieldset>
+						<legend>Your Details</legend>
+						<label for="firstname">First Name: </label>
+						<input type="text" name="firstname" id="firstname" required><br>
+						<label for="lastname">Last Name: </label>
+						<input type="text" name="lastname" id="lastname" required><br>
+						<label for="email">Email: </label>
+						<input type="email" name="email" id="email" required><br>
+						<label for="date-of-birth">Date of Birth: </label>
+						<input type="date" name="date-of-birth" id="date-of-birth"><br>
+						<label for="password">Password (min 8 characters): </label>
+						<input type="password" name="password" id="password" minlength="8">
+					</fieldset>
+					<fieldset>
+						<legend>Favourite colour</legend>
+						<input type="radio" id="red" name="colour" value="red">
+						<label for="red">Red</label><br>
+						<input type="radio" id="blue" name="colour" value="blue">
+						<label for="blue">Blue</label><br>
+						<input type="radio" id="green" name="colour" value="green">
+						<label for="green">Green</label>
+					</fieldset>
+					<fieldset>
+						<legend>Pets</legend>
+						<input type="checkbox" id="dogs" name="pets" value="dogs">
+						<label for="dogs">Dog(s)</label><br>
+						<input type="checkbox" id="cats" name="pets" value="cats">
+						<label for="cats">Cat(s)</label></p>
+					</fieldset>
+					<fieldset>
+					<legend>Region</legend>
+						<select name="region">
+							<option name="region" value="uk">Europe</option>
+							<option name="region" value="us">Canada</option>
+							<option name="region" value="rest-of-world">Australia</option>
+						</select>
+					</fieldset>
+					<br>
+					<input type="submit" value="Sign me up!">
+					<input type="reset">
+				</form><br>
+				<h3>What this form looks like in HTML:</h3>
+				<figure> <!-- figure is a semantic tag, used for SEO and accessibility -->
+					<img src="images/html-form-example.png" alt="html form example" height="500">
+					<figcaption style="text-align: center">Simple HTML Form Example</figcaption>
+				</figure>
+				<hr>
+				<h2>Div and Span</h2>
+				<p>The &ltdiv&gt and &ltspan&gt tags are used to divide up areas of HTML to be styled in CSS.</p>
+				<p>Div allows blocks of content to be selected. Span is an inline version for selecting smaller areas within an element.</p><hr>
+			</main>
+			<footer>Website made with love by Cate, &copy;2022</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,157 @@
+:root {
+	--teal: #518A8A;
+	--darkTeal: #0B4949;
+	--pink: #E6007A;
+	--lightPink: #FFB3DB;
+	--lightGray: #f1f1f1;
+	--darkGray: #555;
+}
+
+body {
+	background-image: url("images/code-backdrop.jpg");
+	font-family: 'Noto Sans', sans-serif;
+}
+
+.header {
+	background-color: var(--teal);
+	color: #FFF;
+	font-size: 3em;
+	text-shadow: 2px 2px 2px var(--darkTeal);
+	text-align: center;
+	margin-top: 45px;
+}
+
+input:focus {
+	background-color: var(--lightGray);
+}
+
+mark {
+	color: var(--darkteal);
+	background-color: var(--lightPink);
+}
+
+.top-menu ul {
+	list-style-type: none;
+}
+
+h1, h2, h3, h4, footer {
+	color: var(--teal);
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+p, pre, li {
+	color: var(--darkTeal);
+}
+
+pre {
+	font-size: 1.3em;
+}
+
+a {
+	color: var(--pink);
+}
+
+a:hover {
+	color: var(--darkTeal);
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px 5px 5px 5px;
+	width: 80%;
+	height: auto;
+}
+
+hr {
+ 	border: 3px;
+ 	border-style: none none dotted;
+	color: var(--teal);
+}
+
+.mainContainer {
+	border: 3px solid var(--darkTeal);
+	padding: 5px 20px 5px 20px;
+	background-color: #FFF;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.lineargrad-box {
+	width: 80%;
+	min-height: 300px;
+	margin: 50px auto;
+	background: linear-gradient(45deg, red, yellow, aliceblue);
+}
+
+footer {
+	background-color: var(--teal);
+	color: white;
+	padding: 0.5em;
+	text-align: center;
+	clear: both;
+	/*this clears the 'float: right / left' settings on images and lets the footer be centered properly*/
+}
+
+.topnav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: var(--lightGray);
+	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+}
+
+.topnav li a {
+	float: left;
+	display: block;
+	color: #000;
+	padding: 14px 16px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.topnav li a:hover {
+	background-color: var(--darkGray);
+	color: white;
+}
+
+.topnav .active a {
+	background-color: var(--teal);
+	color: white;
+}
+
+.darkHeading {
+	color: var(--darkTeal);
+	font-weight: 800;
+}
+
+fieldset {
+	width: 60%;
+	padding-left: 3%;
+	color: #000;
+	margin-bottom: 5px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--lightPink);
+}
+
+legend {
+	color: #000;
+	background-color: var(--lightPink);
+	padding: 5px 30px 5px 30px;
+	border-radius: 50% 50% 50% 50%;
+}
+
+li {
+	line-height: 1.9;
+}

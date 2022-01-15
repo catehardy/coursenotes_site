@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CSS Notes</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+	</head>
+	<body>
+		<nav class="topnav">
+			<ul>
+				<li><a href="index.html">Main</a></li>
+				<li><a href="html.html">HTML</a></li>
+				<li class="active"><a href="css.html">CSS</a></li>
+				<li><a href="javascript.html">Javascript</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+			</ul>
+		</nav>
+		<div class="mainContainer">
+			<main>
+				<header><h1 class="header">CSS Notes</h1></header>
+				<hr>
+				<div>
+					<h2 class="darkHeading">Table of Contents</h2>
+					<ol>
+						<a href="#1"><li>Basic Format of CSS</li></a>
+						<a href="#2"><li>Resources</li></a>
+						<a href="#3"><li>Types of selector</li></a>
+						<a href="#4"><li>Class vs ID</li></a>
+						<a href="#5"><li>Sizing text</li></a>
+						<a href="#6"><li>Pseudo-classes and pseudo-elements</li></a>
+						<a href="#7"><li>Colour</li></a>
+						<a href="#8"><li>Animations</li></a>
+						<a href="#9"><li>Coding Games</li></a>
+					</ol>
+				</div>
+				<hr>
+				<h2 id="1">Basic format of CSS:</h2>
+				<pre>selector {</pre>
+				<pre>   property: value;</pre>
+				<pre>}</pre>
+				<hr>
+				<h2 id="2">Resources</h2>
+				<img src="images/css-resources.jpg" alt="bookshelf containing coding study guides">
+				<h3>Reference & Guides:</h3>
+				<ul>
+					<li><a href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank">FreeCodeCamp Responsive Web Design</li>
+					<li><a href="https://css-tricks.com/almanac/" target="_blank">List of CSS selectors and properties</a></li>
+					<li><a href="https://www.w3schools.com/cssref/css_selectors.asp" target="blank">W3Schools CSS Selector Reference</a></li>
+					<li><a href="https://www.codecademy.com/learn/learn-css/modules/learn-css-display-positioning/cheatsheet" target="blank">Display and Positioning cheatsheet</a></li>
+					<li><a href="https://www.w3schools.com/css/css_navbar.asp" target="_blank">Navigation Bars</li>
+					<li><a href="https://css-tricks.com/centering-css-complete-guide/" target="_blank">Centering a &lt;div&gt; in CSS</a></li>
+					<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Complete Guide to Flexbox</a></li>
+					<li><a href="https://darekkay.com/flexbox-cheatsheet/" target="_blank">Flexbox Cheatsheet</a></li>
+					<li><a href="https://thoughtbot.com/blog/transitions-and-transforms" target="_blank">Transitions and Transforms for Beginners</a></li>
+				</ul>
+				<h3>Design Tools:</h3>
+				<ul>
+					<li><a href="https://paletton.com/" target="_blank">Paletton colour picker</a>
+					<li><a href="http://colormind.io/bootstrap/" target="_blank">Colormind colour palette generator</a></li>
+					<li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">Contrast Checker (web accessibility)</a></li>
+					<li><a href="https://fonts.google.com/">Google Fonts</a></li></ul>
+				<h3>Technical Tools:</h3>
+				<ul>
+					<li><a href="https://www.cleancss.com/css-minify/" target="_blank">Minify Your CSS</a></li>
+					<li><a href="https://www.w3schools.com/cssref/css3_browsersupport.asp" target="_blank">CSS Browser Support - check whether a feature will work on different browsers</a>
+						<ul>
+							<li>Also see: <a href="https://caniuse.com/" target="_blank">Can I use?</a> and <a href="https://github.com/postcss/autoprefixer" target="_blank">Auto-Prefixer</a></li>
+						</ul>
+					</li>
+				</ul>
+				<hr>
+				<h2 id="3">Types of selector</h2>
+				<p>.class (see section below)</p>
+				<p>#id (see section below)</p>
+				<p>* (selects all elements, but easily overridden due to lack of specificity)</p>
+				<p>element (e.g. h2)</p>
+				<p>element, element (e.g. h1, h2 - applies to 2 or more elements)</p>
+				<p>element element (e.g. h1 h2 - applies to the second element whenever it's nested <em>within</em> the first element)</p>
+				<p>element > element (applies to the second element whenever it's a child of the first element)</p>
+				<p>element + element (applies to the second element in cases where it immediately follows the first element - e.g. h1 + p will apply to the p)</p>
+				<p>element ~ element (similar to previous, except it selects ALL elements of the second type when following the first - e.g. h1 + p will apply to ALL p elements immediately after an h1)</p>
+				<p>:hover (e.g. h1:hover)</p>
+				<p>:last-child</p>
+				<p>:first-child</p>
+				<p>!important (overrides other CSS - not recommended)</p>
+				<br>
+				<h3>Which selectors win out in the cascade depends on:</h3>
+				<ul>
+					<li>Specificity</li>
+					<li>Importance (see above note - not recommended)</li>
+					<li>Source Order</li>
+					<li>See also: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance" target="_blank">Inheritance</a> and <a href="http://web.simmons.edu/~grabiner/comm244/weekfour/css-concepts.html" target="_blank">CSS Inheritance, Cascade, and Specificity</a></li>
+				</ul>
+				<hr>
+				<h2 id="4">Class vs ID</h2>
+				<h3>ID</h3>
+				<p>The <strong>id</strong> selector is used for selecting a single HTML element with a unique id attribute value.</p>
+				<p>How to use within stylesheet:</p>
+				<p><strong>#header { width: 100%; height: 80px; background: blue }</strong></p>
+				<p>Applied to HTML:</p>
+				<p><strong>&lt;h1 id="header"&gt;Lorem ipsum.&lt;/h1&gt;</strong></p>
+				<h3>Class</h3>
+				<p>The <strong>class</strong> selector is used for selecting a single or a group of HTML elements with the same class attribute value.</p>
+				<p>How to use within stylesheet:</p>
+				<p><strong>.content { margin: 20px 0; line-height: 24px; font-size: 15px }</strong></p>
+				<p>Applied to HTML:</p>
+				<p><strong>&lt;div class="content"&gt;Lorem ipsum.&lt;/div&gt;</strong></p>
+				<p title="More info here"><a href="https://www.developintelligence.com/blog/2016/04/css-class-vs-id-which-one-to-use/"  target="_blank">When to use class versus id</a></p>
+				<hr>
+				<h2 id="5">Sizing text: px, em and rem</h2>
+				<p>These are 3 different ways to size text.</p>
+				<ul>
+					<li>px means pixels - it's an absolute size (i.e. "anchored to some  physical measurement").</li>
+					<li>em and rem are relative methods of sizing.</li>
+					<li>em is relative to the element that the selected text is contained within. Example:</li>
+					<p>&lt;p&gt;Hello World! <strong>&lt;span&gt;this is a section of text selected inline;&lt;/span&gt;</strong> the text outside is not affected.&lt;/p&gt;</p>
+					<p>Any text inside the &lt;span&gt; will be styled in the CSS settings for "span" and you can use the <em>em</em> value there, under the <em>font-size</em> property. The font size will be relative to the current CSS settings for &lt;p&gt;.</p>
+					<p>CSS stylesheet example (where font size is set to 1.5 times the original size):</p>
+					<pre>span {</pre>
+					<pre>   font-size: 1.5em;</pre>
+					<pre>}</pre>
+					<li>rem is similar, but relative to the <strong>root</strong> element of the document - i.e. whatever the html is set to.</li>
+				</ul>
+				<p>Note: you can also <a href="https://elementor.com/help/whats-the-difference-between-px-em-rem-vw-and-vh/" target="_blank">make the font size relative to the viewport size</a> using VW and VH.</p>
+				<hr>
+				<h2 id="6">Pseudo-classes and pseudo-elements</h2>
+				<p> Pseudo-class is used to define a special state of an element.<br><br>For example, it can be used to:</p>
+				<ul>
+				    <li>Style an element when a user mouses (hovers) over it</li>
+				    <li>Style visited and unvisited links differently</li>
+				    <li>Style an element when it gets focus (e.g. clicking on an input field in a form)</li>
+				    <li>Style the first-child, last-child, etc, of an element.</li>
+				</ul>
+				<h3 class="diary">Format:</h3>
+				<pre>selector:pseudo-class {</pre>
+				<pre>   property: value;</pre>
+				<pre>}</pre>
+				<h3 class="diary">Example:</h3>
+				<pre>a:hover {</pre>
+				<pre>   color: #FF00FF;</pre>
+				<pre>}</pre>
+				<p>Pseudo-elements work in a similar way - however, they act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements.<br>Note: pseudo-elements use a double colon :: instead of a single one at their start.</p>
+				<h3 class="diary">Example:</h3>
+				<pre>article p::first-line {</pre>
+				<pre>   font-size: 120%;</pre>
+				<pre>   font-weight: bold;</pre>
+				<pre>}</pre>  
+				<p>The example above turns the first line of a &lt;p&gt; element (which is nested in an &lt;article&gt; element) into a selectable element of its own, and allows you to style it. The amount of text styled will vary depending on the size of the viewport - only the first line will be styled.</p>
+				<h3 class="diary">Handy example of how the ::before and ::after pseudo-elements work:</h3>
+				<img src="images/pseudo-elements.png" width="80%" height="80%" alt="screenshot of code demonstrating how to use the ::before and ::after psuedo-elements">
+				<p>More info and a full list of <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements" target="_blank">pseudo-classes and pseudo-elements</a>.</p>
+				<hr>
+				<h2 id="7"><span style="color: red;">C</span><span style="color: orange;">O</span><span style="color: yellowgreen;">L</span><span style="color: limegreen;">O</span><span style="color: green;">U</span><span style="color: blue;">R</span><span style="color: purple;">!</span></h2>
+				<p>You can use Hex, RGB, or HSL (hue, saturation, lightness).</p>
+				<p>Here's an argument for <a href="https://tsh.io/blog/why-should-you-use-hsl-color-representation-in-css/" target="_blank">why HSL is the best option</a>.</p>
+				<p>Also check out <a href="https://www.w3schools.com/css/css3_gradients.asp" target="_blank">CSS gradients</a> to do cool stuff like this:</p>
+				<div class="lineargrad-box" style="text-align: center; font-size: 180%; padding-top: 100px;"><p style="position: relative; color: red;">Gradient Backgrounds<p></div>
+				<hr>
+				<h2 id="8">Animations in CSS</h2>
+				<p>Make things move :)</p>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" target="_blank">Mozilla guide to using CSS animations</a></li>
+					<li><a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">W3Schools guide to CSS animations</a></li>
+					<li><a href="https://animate.style/#best-practices" target="_blank">Best practices (aka how to avoid being a dick with your animations!)</a></li>
+					<li><a href="https://blog.hubspot.com/website/css-animation" target="_blank">Hubspot "Ultimate guide" (with lots of examples)</a>
+						<ul>
+							<li>More examples <a href="https://blog.hubspot.com/website/css-animation-examples" target="_blank">here</a> - from easy to complex</li>
+						</ul>
+					</li>
+				</ul>
+				<hr>
+				<h2 id="9">Coding Games</h2>
+				<a href="https://css-diner.netlify.app/" target="_blank"><img src="images/css-diner.png" width="80%" height="80%" title="CSS Diner" alt="screenshot of CSS Diner coding game"></a>
+				<p>Lots of CSS games at <a href="https://codepip.com/" target="_blank">Codepip.com</a> (inc. <a href="http://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a>! &hearts;)</p>
+				<p>...Plus a <a href="https://www.w3schools.com/css/exercise.asp" target="_blank">CSS quiz at W3Schools.com</a></p>
+				<hr>
+			</main>
+			<footer>Website made with love by Cate, &copy;2022</footer>
+		</div>
+	</body>
+</html>

@@ -9,23 +9,44 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 	</head>
+
 	<body>
-		<nav class="topnav">
-			<ul>
-				<li><a href="index.html">Main</a></li>
-				<li><a href="html.html">HTML</a></li>
-				<li><a href="css.html">CSS</a></li>
-				<li class="active"><a href="javascript.html">JavaScript</a></li>
-				<li><a href="portfolio.html">Portfolio</a></li>
-			</ul>
-		</nav>
-		<div class="mainContainer">
-			<main>
-				<header><h1 class="header">JavaScript Notes</h1></header>
-				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel fringilla leo. Vestibulum sagittis efficitur nulla id hendrerit. Mauris pharetra hendrerit lectus id finibus. Morbi vestibulum ligula magna, sit amet ornare lacus malesuada non. Etiam nulla nibh, tempus in dolor ut, tincidunt ultrices nunc. Etiam eleifend ex enim, sit amet euismod erat congue eu. Vivamus ante erat, faucibus et ante nec, porta elementum lorem. In eu consequat quam. Mauris quis nibh semper, commodo ipsum vitae, dapibus urna. Vivamus ultrices metus purus. Nulla vitae diam vitae mi eleifend volutpat.</p>
-				<p>Etiam efficitur feugiat urna non pulvinar. Aliquam magna enim, pharetra eu felis vitae, volutpat vulputate nisl. Fusce dignissim mauris a vehicula tincidunt. Nam vehicula sapien eu sem vehicula, eget tempor arcu cursus. Suspendisse turpis erat, semper in molestie a, vehicula eget sapien. Nulla facilisi. Duis quis justo aliquet magna finibus pulvinar. Pellentesque et rhoncus leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur semper purus justo, quis aliquet risus posuere in. Nullam eget sapien ex. Vestibulum quis mattis odio.</p>
-			</main>
+		<main>
+			<div class="container">
+				
+				<!-- sidebar content in here -->
+					<div class="sidebar">
+						<nav>
+						 	<h3 id="navHeader">Sitemap</h3>
+						    <ul>
+								<li class="active"><a href="index.html">Progress Diary</a></li>
+								<li><a href="html.html">HTML</a></li>
+								<li><a href="css.html">CSS</a></li>
+								<li><a href="javascript.html">JavaScript</a></li>
+								<li><a href="portfolio.html">Portfolio</a></li>
+							</ul>
+							<hr><br>
+					    	<h3 class="navSectionHeader">Useful Links</h3>
+						    <ul>
+								<li class="active"><a href="https://zerotomastery.io/resources/" target="_blank">ZTM Resources</a></li>
+							</ul>
+							<hr><br>
+						<h3 class="navSectionHeader">To Do List</h3>
+							<ul>
+								<li>Add navigation for mobile devices</li>
+								<li>Find out why I had to use 80vw instead of 100vw on div in media query</li>
+								<li>Add page 1, 2, etc for long sections</li>
+							</ul>
+						</nav>
+				    </div>
+
+			    	<div class="mainContent">
+						<header><h1 class="header">JavaScript Notes</h1></header>
+						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel fringilla leo. Vestibulum sagittis efficitur nulla id hendrerit. Mauris pharetra hendrerit lectus id finibus. Morbi vestibulum ligula magna, sit amet ornare lacus malesuada non. Etiam nulla nibh, tempus in dolor ut, tincidunt ultrices nunc. Etiam eleifend ex enim, sit amet euismod erat congue eu. Vivamus ante erat, faucibus et ante nec, porta elementum lorem. In eu consequat quam. Mauris quis nibh semper, commodo ipsum vitae, dapibus urna. Vivamus ultrices metus purus. Nulla vitae diam vitae mi eleifend volutpat.</p>
+						<p>Etiam efficitur feugiat urna non pulvinar. Aliquam magna enim, pharetra eu felis vitae, volutpat vulputate nisl. Fusce dignissim mauris a vehicula tincidunt. Nam vehicula sapien eu sem vehicula, eget tempor arcu cursus. Suspendisse turpis erat, semper in molestie a, vehicula eget sapien. Nulla facilisi. Duis quis justo aliquet magna finibus pulvinar. Pellentesque et rhoncus leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur semper purus justo, quis aliquet risus posuere in. Nullam eget sapien ex. Vestibulum quis mattis odio.</p>
+					</div>
+			</div>
 			<footer>Website made with love by Cate, &copy;2022</footer>
-		</div>
+		</main>
 	</body>
 </html>

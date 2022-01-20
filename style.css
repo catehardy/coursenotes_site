@@ -104,10 +104,6 @@ mark {
 	background-color: var(--lightPink);
 }
 
-.top-menu ul {
-	list-style-type: none;
-}
-
 h1, h2, h3, h4, footer {
 	color: var(--teal);
 }
@@ -117,7 +113,7 @@ p {
 	line-height: 1.5;  
 }
 
-p, pre, li {
+p, pre {
 	color: var(--darkTeal);
 }
 
@@ -161,8 +157,6 @@ footer {
 	margin-top: 15px;
 	padding: 0.5em;
 	text-align: center;
-	clear: both;
-	/*this clears the 'float: right / left' settings on images and lets the footer be centered properly*/
 }
 
 .darkHeading {

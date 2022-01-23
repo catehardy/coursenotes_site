@@ -103,6 +103,7 @@ input:focus {
 mark {
 	color: var(--darkteal);
 	background-color: var(--lightPink);
+	padding: 0px 4px;
 }
 
 h1, h2, h3, h4, footer {

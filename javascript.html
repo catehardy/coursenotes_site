@@ -42,7 +42,8 @@
 
 			    	<div class="mainContent">
 						<header><h1 class="header">JavaScript Notes</h1></header>
-						<h2>JS Learning Resources</h2>
+						<hr>
+						<h2 class="pink-heading">Learning Resources</h2>
 						<ul>
 							<li><a href="https://www.freecodecamp.org/news/learn-javascript-full-course/" target="_blank">freeCodeCamp JavaScript Course (3 hours)</a></li>
 							<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">MDN JavaScript Basics</a></li>
@@ -50,7 +51,29 @@
 							<li><a href="https://www.w3schools.com/js/default.asp" target="_blank">W3Schools JS Tutorial</a></li>
 							<li><a href="https://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank">W3Schools JS Array Reference</a></li>
 						</ul>
-						<h2>Section 2</h2>
+						<hr>
+						<h2 class="pink-heading">Functions</h2>
+						<h3>Types of function:</h3>
+						<p><strong>Function declaration:</strong></p>
+						<pre>function checkDriverAge()</pre>
+						<p><strong>Function expression:</strong></p>
+						<pre>var checkDriverAge2 = function()</pre>
+						<br>
+						<h3>Simple function example:</h3>
+						<pre>function checkDriverAge() {
+	var age = prompt("What is your age?");
+	if (Number(age) < 18) {
+		return "Sorry, you are too young to drive this car. Powering off";
+	} else if (Number(age) > 18) {
+		return "Powering On. Enjoy the ride!";
+	} else if (Number(age) === 18) {
+		return "Congratulations on your first year of driving. Enjoy the ride!";
+	}
+}</pre>
+						<br>
+						<h3>Notes:</h3>
+						<p>FreeCodeCamp on <a href="https://www.freecodecamp.org/news/when-to-use-a-function-declarations-vs-a-function-expression-70f15152a0a0/">when to use a function expression instead of a function declaration</a> (not a beginner topic - revisit later!)</p>
+						<hr>
 					</div>
 			</div>
 			<footer>Website made with love by Cate, &copy;2022</footer>

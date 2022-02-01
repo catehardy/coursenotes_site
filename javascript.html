@@ -52,6 +52,35 @@
 							<li><a href="https://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank">W3Schools JS Array Reference</a></li>
 						</ul>
 						<hr>
+						<h2 class="pink-heading">Variables</h2>
+						<p>Variables allow us to store, change and access data such as numbers, strings, and objects.</p>
+						<h3>The three keywords to declare a variable in JavaScript:</h3>
+						<p><em>Note: Let and Const are now preferred and Var is mainly used in legacy code.<br>A commonly accepted practice is to use const as much as possible, and let in the case of loops and reassignment.</em></p>
+						<h3>Var</h3>
+						<ul>
+							<li>Global or function/local scope</li>
+							<li>Can be redeclared and/or updated</li>
+							<li>Hoisted to the top and initialised with undefined</li>
+						</ul>
+						<h3>Let</h3>
+						<ul>
+							<li>Block scope</li>
+							<li>Can be updated but not redeclared</li>
+							<li>Hoisted to the top but not initialised</li>
+						</ul>
+						<h3>Const</h3>
+						<ul>
+							<li>Block scope</li>
+							<li>Read-only: cannot be updated or redeclared (with exception of object properties)</li>
+							<li>Hoisted to the top but not initialised. Must be initialised during declaration</li>
+						</ul>
+						<h3>Learning resources:</h3>
+						<ul>
+							<li><a href="https://www.digitalocean.com/community/tutorials/understanding-variables-scope-hoisting-in-javascript" target="_blank">Understanding Variables, Scope, and Hoisting in JS</a></li>
+							<li><a href="https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/" target="_blank">Var, Let, and Const - what's the difference?</a></li>
+							<li><a href="https://www.youtube.com/watch?v=ppMlvGMT2qE" target="_blank">Video: What is Hoisting in JavaScript?</a></li>
+						</ul>
+						<hr>
 						<h2 class="pink-heading">Functions</h2>
 						<h3>Types of function:</h3>
 						<p><strong>Function declaration:</strong></p>
@@ -86,6 +115,9 @@
 							<pre>array.push("Kiwi");</pre>
 							<li>Remove "Apples" from the array.</li>
 							<pre>array.shift();</pre>
+							<p>or</p>
+							<pre>array.splice(0, 1);</pre>
+							<p>Note: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank">How to use splice()</a></p>
 							<li>Sort the array in reverse order. (Not alphabetical, but reverse the current Array, i.e. ['a', 'c', 'b'] becomes ['b', 'c', 'a'])</li>
 							<pre>array.reverse();</pre>
 						</ol>
@@ -95,7 +127,7 @@
 						<p><strong>Example 2:</strong> Using this array,</p>
 <pre>var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];</pre>
 						<p>access "Oranges".</p>
-<pre>array2[1][1]</pre>
+<pre>array2[1][1][0]</pre>
 						<hr>
 						<h2 class="pink-heading">Next section</h2>
 					</div>

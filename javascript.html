@@ -91,6 +91,17 @@
 						<pre>var checkDriverAge2 = function()</pre>
 						<br>
 						<h3>Simple function example:</h3>
+						<pre>
+function multiply(a, b) {
+	return a * b;
+}
+
+multiply(10, 4);
+						</pre>
+						<p>Note: The final line above is <strong>calling the function</strong>.</p>
+						<p>Note 2: As soon as you use <strong>return</strong> in a function, the program exits.</p>
+						<br>
+						<h3>Function with conditionals:</h3>
 						<pre>function checkDriverAge() {
 	var age = prompt("What is your age?");
 	if (Number(age) < 18) {
@@ -131,7 +142,48 @@
 						<p>access "Oranges".</p>
 <pre>array2[1][1][0]</pre>
 						<hr>
-						<h2 class="pink-heading">Next section</h2>
+						<h2 class="pink-heading">Objects</h2>
+						<h3>Example of an object containing an array:</h3>
+						<pre>
+var witch = {
+	name: "Mildred",
+	age: 13,
+	powerLevel: 19,
+	spells: ["broomstick", "summon", "cat"]
+};
+						</pre>
+						<p>How to access the witch's "summon" spell:</p>
+						<p>witch.spells[1]</p>
+						<br>
+						<h3>Example of an array containing objects:</h3>
+						<pre>
+var userList = [
+	{
+		username: "Sara",
+		password: "123"
+	},
+	{
+		username: "Maddy",
+		password: "jello33"
+	}
+];
+						</pre>
+						<p>How to access Sara's password:</p>
+						<p>userList[0].password</p>
+						<br>
+						<h3>Example of an object containing a function:</h3>
+						<pre>
+var witch = {
+	name: "Mildred",
+	fly: function() {
+		// add function here;
+	}
+};
+						</pre>
+						<p>How to call the witch's fly function:</p>
+						<p>witch.fly()</p>
+						<p>Note: a function inside an object is a <strong>method</strong>. So <em>fly</em> is a method of <em>witch</em><br>(and log is a method of the object named console, when we use console.log).</p>
+						<hr>
 					</div>
 			</div>
 			<footer>Website made with love by Cate, &copy;2022</footer>

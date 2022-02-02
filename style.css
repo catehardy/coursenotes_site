@@ -14,7 +14,8 @@ html {
 }
 
 body {
-	background-image: url("Images/code-backdrop.jpg");
+	/*background-image: url("Images/code-backdrop.jpg");*/
+	background-color: #ddd9cf;
 	font-family: 'Noto Sans', sans-serif;
 	width: 100%;
 	height: 100%;
@@ -221,7 +222,7 @@ li {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: var(--lightMint);
+  background-color: #eae8e2;
   color: black;
 }
 

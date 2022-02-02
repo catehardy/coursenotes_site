@@ -11,10 +11,23 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	</head>
 
 	<body>
 		<main>
+			<nav class="topnav" id="myTopnav" aria-label="primary">
+				<a href="#home" class="active">Home</a>
+				<a href="html.html">HTML</a>
+				<a href="css.html">CSS</a>
+				<a href="javascript.html">JavaScript</a>
+				<a href="portfolio.html">Portfolio</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				  </a>
+			</nav>
 			<div class="container">
 
 				<!-- sidebar content in here -->
@@ -76,7 +89,7 @@
 					<p>Actions this week:</p>
 					<ul>
 						<li>Completed FCC Flexbox and CSS Grid sections.</li>
-						<li>Completed JS section.</li>
+						<li>Completed first ZTM JS section.</li>
 					</ul>
 					
 
@@ -149,5 +162,6 @@
 			</div>
 			<footer>Website made with love by Cate, &copy;2022</footer>
 		</main>
+		<script type="text/javascript" src="topnav.js"></script>
 	</body>
 </html>

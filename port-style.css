@@ -34,6 +34,12 @@ h3, p {
 	}
 }
 
+@media(max-width: 768px){
+	h1 {
+		font-size: 2em;
+	}
+}
+
 .container-1 div {
 	min-height: 300px;
 	background-color: lightgray;

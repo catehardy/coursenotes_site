@@ -9,35 +9,45 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 		<!-- stylesheet for Animate.css -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	</head>
 	<body>
 		<main>
+			<nav class="topnav" id="myTopnav" aria-label="primary">
+				<a href="index.html">Home</a>
+				<a href="html.html">HTML</a>
+				<a href="css.html" class="active">CSS</a>
+				<a href="javascript.html">JavaScript</a>
+				<a href="portfolio.html">Portfolio</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				  </a>
+			</nav>
 			<div class="container">
 
 				<!-- sidebar content in here -->
 				<div class="sidebar">
-					<nav>
-					 	<h3 id="navHeader">Sitemap</h3>
-					    <ul>
-							<li><a href="index.html">Progress Diary</a></li>
-							<li><a href="html.html">HTML</a></li>
-							<li><a href="css.html">CSS</a></li>
-							<li><a href="javascript.html">JavaScript</a></li>
-							<li><a href="portfolio.html">Portfolio</a></li>
-						</ul>
+					<nav aria-label="secondary">
+					 	<h3 id="navHeader">About</h3>
+					   <p class="center-pink-text">Simple site to store a web dev's notes on HTML, CSS and JavaScript</p>
+					   <img src="./images/rubber-duck.jpg" alt="Rubber duck" loading="lazy">
 						<hr><br>
 				    	<h3 class="navSectionHeader">Useful Links</h3>
 					    <ul>
-							<li><a href="https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/" target="_blank">Link to Udemy course</a></li>
+					    	<li><a href="https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/" target="_blank">ZTM Udemy course</a></li>
 							<li><a href="https://zerotomastery.io/resources/" target="_blank">ZTM Resources</a></li>
+							<li><a href="https://github.com/catehardy/" target="_blank">My GitHub</a></li>
 						</ul>
 						<hr><br>
 						<h3 class="navSectionHeader">To Do List</h3>
 							<ul>
-								<li>Add navigation for mobile devices</li>
-								<li>Add page 1, 2, etc for long sections</li>
+								<li><s>Add navigation for mobile devices</s> (Done!)</li>
+								<li>Add multiple page navigation for progress diary as it gets longer</li>
+								<li>Find a better way to display code examples than &lt;pre&gt; (currently having to reduce font-size too much, to prevent horizontal overflow on mobile displays)</li>
 							</ul>
 					</nav>
 			    </div>
@@ -219,5 +229,6 @@
 			</div>
 			<footer>Website made with love by Cate, &copy;2022</footer>
 		</main>
+		<script type="text/javascript" src="topnav.js"></script>
 	</body>
 </html>

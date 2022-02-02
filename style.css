@@ -31,7 +31,7 @@ body {
 
 .sidebar {
    background-color: #FFF;
-   height: 1000px;
+   height: 1200px;
    margin-top: 20px;
    margin-bottom: 20px;
    padding: 10px 10px;
@@ -60,6 +60,10 @@ body {
     	font-size: 2em !important;
     	padding: 0px;
     	margin: 0px -10px !important;   
+    }
+
+    pre {
+    	font-size: 0.8em !important;
     }
 }
 
@@ -121,6 +125,7 @@ p, pre {
 
 pre {
 	font-size: 1.3em;
+	white-space: pre-wrap;
 }
 
 a {
@@ -187,6 +192,12 @@ legend {
 
 li {
 	line-height: 1.9;
+	margin-bottom: 1em;
+}
+
+.center-pink-text {
+	text-align: center;
+	color: var(--pink);
 }
 
 /*TOP NAV SETTINGS*/

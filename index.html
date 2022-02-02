@@ -19,7 +19,7 @@
 	<body>
 		<main>
 			<nav class="topnav" id="myTopnav" aria-label="primary">
-				<a href="#home" class="active">Home</a>
+				<a href="index.html" class="active">Home</a>
 				<a href="html.html">HTML</a>
 				<a href="css.html">CSS</a>
 				<a href="javascript.html">JavaScript</a>
@@ -32,26 +32,23 @@
 
 				<!-- sidebar content in here -->
 				<div class="sidebar">
-					<nav>
-					 	<h3 id="navHeader">Sitemap</h3>
-					    <ul>
-							<li><a href="index.html">Progress Diary</a></li>
-							<li><a href="html.html">HTML</a></li>
-							<li><a href="css.html">CSS</a></li>
-							<li><a href="javascript.html">JavaScript</a></li>
-							<li><a href="portfolio.html">Portfolio</a></li>
-						</ul>
+					<nav aria-label="secondary">
+					 	<h3 id="navHeader">About</h3>
+					   <p class="center-pink-text">Simple site to store a web dev's notes on HTML, CSS and JavaScript</p>
+					   <img src="./images/rubber-duck.jpg" alt="Rubber duck" loading="lazy">
 						<hr><br>
 				    	<h3 class="navSectionHeader">Useful Links</h3>
 					    <ul>
-					    	<li><a href="https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/" target="_blank">Link to Udemy course</a></li>
+					    	<li><a href="https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/" target="_blank">ZTM Udemy course</a></li>
 							<li><a href="https://zerotomastery.io/resources/" target="_blank">ZTM Resources</a></li>
+							<li><a href="https://github.com/catehardy/" target="_blank">My GitHub</a></li>
 						</ul>
 						<hr><br>
 						<h3 class="navSectionHeader">To Do List</h3>
 							<ul>
-								<li>Add navigation for mobile devices</li>
-								<li>Add page 1, 2, etc for long sections</li>
+								<li><s>Add navigation for mobile devices</s> (Done!)</li>
+								<li>Add multiple page navigation for progress diary as it gets longer</li>
+								<li>Find a better way to display code examples than &lt;pre&gt; (currently having to reduce font-size too much, to prevent horizontal overflow on mobile displays)</li>
 							</ul>
 					</nav>
 			    </div>

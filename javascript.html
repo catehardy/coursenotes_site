@@ -45,7 +45,7 @@
 						<hr>
 						<h2 class="pink-heading">Learning Resources</h2>
 						<ul>
-							<li><a href="https://medium.com/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645" target="_blank">The 10 Best Online JS Courses in 2022</a></li>
+							<li><a href="https://www.codecademy.com/article/glossary-javascript" target="_blank">Codecademy JavaScript Glossary</a></li>
 							<li><a href="https://www.freecodecamp.org/news/learn-javascript-full-course/" target="_blank">freeCodeCamp JavaScript Course (3 hours)</a></li>
 							<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">MDN JavaScript Basics</a></li>
 							<li><a href="https://learnjavascript.online/" target="_blank">learnjavascript.online</a></li>
@@ -86,9 +86,15 @@
 						<h2 class="pink-heading">Functions</h2>
 						<h3>Types of function:</h3>
 						<p><strong>Function declaration:</strong></p>
-						<pre>function checkDriverAge()</pre>
+<pre>function newFunction() {
+
+}
+</pre>
 						<p><strong>Function expression:</strong></p>
-						<pre>var checkDriverAge2 = function()</pre>
+<pre>var newFunction = function() {
+
+}; // note that function expression requires a semi-colon on the end
+</pre>
 						<br>
 						<h3>Simple function example:</h3>
 						<pre>
@@ -138,9 +144,16 @@ multiply(10, 4);
 						<pre>["Kiwi", "Oranges", "Blueberries"]</pre>
 						<br>
 						<p><strong>Example 2:</strong> Using this array,</p>
-<pre>var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];</pre>
-						<p>access "Oranges".</p>
-<pre>array2[1][1][0]</pre>
+<pre>var array = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];</pre>
+						<p>How would you access each of these?</p>
+						<p>	Banana: array[0]<br>
+							(the first item)<br><br>
+							Apples: array[1][0]<br>
+							(the first item inside the second array)<br><br>
+							Oranges: array[1][1][0]<br>
+							(the first item inside the second array, inside the second array)<br><br>
+							Blueberries: array[1][2]<br>
+							(the third item inside the second array)</p>
 						<hr>
 						<h2 class="pink-heading">Objects</h2>
 						<h3>Example of an object containing an array:</h3>
@@ -183,6 +196,78 @@ var witch = {
 						<p>How to call the witch's fly function:</p>
 						<p>witch.fly()</p>
 						<p>Note: a function inside an object is a <strong>method</strong>. So <em>fly</em> is a method of <em>witch</em><br>(and log is a method of the object named console, when we use console.log).</p>
+						<hr>
+						<h2 class="pink-heading">"Dragbook" (using variables, functions, conditionals, loop, arrays and objects</h2>
+<pre>
+	// User database containing names and passwords (structure is an array containing objects)
+
+var database = [
+	{
+		username: "RuPaul",
+		password: "HeyHunty!",
+	},
+	{
+		username: "Baga",
+		password: "ChipZ",
+	},
+	{
+		username: "Heidi",
+		password: "servingtheT",
+	}
+];
+
+
+// Newsfeed database (array of objects)
+
+var newsFeed = [
+	{
+		username: "RuPaul",
+		timeline: "Well, if you can't love yourself...",
+	},
+	{
+		username: "Baga",
+		timeline: "Oi, slapper! Who asked you anyway?",
+	},
+	{
+		username: "Heidi",
+		timeline: "Ooh, feeling foft and fupple!",
+	},
+];
+
+
+// User validation function
+
+function isUserValid(username, password) {
+	for (var i=0; i < database.length; i++) {
+		if(database[i].username === username && database[i].password === password) {
+			return true;
+		} 
+	}
+	return false;
+}
+
+
+// Sign-in function
+
+function signIn(username, password) {
+	if (isUserValid(username, password)) {
+		console.log(newsFeed);
+	} else {
+		alert("Sorry, wrong username and/or password");
+	}
+}
+
+
+// Obtain arguments for sign-in function
+
+var userNamePrompt = prompt("What\'s your username?");
+var passwordPrompt = prompt("What\'s your password?");
+
+
+// Call the sign-in function
+
+signIn(userNamePrompt, passwordPrompt);
+</pre>
 						<hr>
 					</div>
 			</div>

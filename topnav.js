@@ -4,6 +4,6 @@ function myFunction() {
   if (x.className === "topnav") {
     x.classList.add("responsive");
   } else {
-    x.className = "topnav";
+    x.classList.remove("responsive");
   }
 } 

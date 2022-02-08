@@ -347,6 +347,8 @@ signIn(userNamePrompt, passwordPrompt);
 							<li>classList.toggle</li>
 						</ul>
 						<br>
+						<p>The .innerHTML method is extremely useful for setting or getting the HTML inside of an element - however, it can be dangerous. Here's <a href="https://openjavascript.info/2021/09/08/should-we-be-using-innerhtml/" target="_blank">how to use .innerHTML safely</a>.</p>
+						<br>
 						<h3>Example 1: Using querySelector to change CSS of h1</h3>
 						<pre>var h1 = document.querySelector("h1");</pre>
 						<pre>h1.className = "large-red-title";</pre>
@@ -357,13 +359,15 @@ signIn(userNamePrompt, passwordPrompt);
 
 function myFunction() {
   var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.classList.add("responsive");
-  } else {
-    x.className = "topnav";
-  }
+  x.classList.toggle("responsive");
 } </pre>
-					<p><em>Note: However, if you just reset the className to "topnav" then you're potentially blowing away any classes that any other code may have added to the list.<br><br>add() and remove() makes sure this function is just responsible for toggling the single "responsive" class. Or use classList.toggle() - this adds or removes classes automatically based on whether they're already in there or not.</em></p>
+					<br>
+					<h3>Caching Selectors (for performance)</h3>
+					<p>Accessing the HTML DOM is very slow, compared to other JavaScript statements. If you expect to access a DOM element several times, access it once and use it as a local variable:</p>
+<pre>const obj = document.getElementById("demo");
+obj.innerHTML = "Hello";</pre>
+					<p>The two examples above also cache selectors in variables.</p>
+					<p>However, avoid <em>unnecessary</em> variables. Don't create new variables if you don't plan to save values (more info on JS performance <a href="https://www.w3schools.com/js/js_performance.asp" target="_blank">here</a>).</p>
 						<hr>
 					</div>
 			</div>

@@ -75,8 +75,9 @@
 							<a href="#5"><li>Objects</li></a>
 							<a href="#6"><li>"Dragbook" database example</li></a>
 							<a href="#7"><li>DOM</li></a>
+							<a href="#8"><li>Event Listeners and Callback Functions</li></a>
 						</ol>
-						<hr>
+						<br>
 
 						<h2 class="pink-heading" id="1">Learning Resources</h2>
 						<ul>
@@ -87,7 +88,7 @@
 							<li><a href="https://www.w3schools.com/js/default.asp" target="_blank">W3Schools JS Tutorial</a></li>
 							<li><a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Reserved words (keywords) in JavaScript</a></li>
 						</ul>
-						<hr>
+						<br>
 						<h2 class="pink-heading" id="2">Variables</h2>
 						<p>Variables allow us to store, change and access data such as numbers, strings, and objects.</p>
 						<h3>The three keywords to declare a variable in JavaScript:</h3>
@@ -117,7 +118,7 @@
 							<li><a href="https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/" target="_blank">Var, Let, and Const - what's the difference?</a></li>
 							<li><a href="https://www.youtube.com/watch?v=ppMlvGMT2qE" target="_blank">Video: What is Hoisting in JavaScript?</a></li>
 						</ul>
-						<hr>
+						<br>
 						<h2 class="pink-heading" id="3">Functions</h2>
 						<p>A function in JavaScript is similar to a procedure — a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.</p>
 						<h3>Types of function:</h3>
@@ -141,7 +142,7 @@ function multiply(a, b) {
 
 multiply(10, 4);
 						</pre>
-						<p>Note: The final line above is <strong>calling the function</strong>.</p>
+						<p>Note 1: The final line above is <strong>calling the function</strong>.</p>
 						<p>Note 2: As soon as you use <strong>return</strong> in a function, the program exits.</p>
 						<br>
 						<h3>Function with conditionals:</h3>
@@ -156,9 +157,9 @@ multiply(10, 4);
 	}
 }</pre>
 						<br>
-						<h3>Notes:</h3>
+						<h3>Learning resources:</h3>
 						<p>FreeCodeCamp on <a href="https://www.freecodecamp.org/news/when-to-use-a-function-declarations-vs-a-function-expression-70f15152a0a0/">when to use a function expression instead of a function declaration</a> (not a beginner topic - revisit later!)</p>
-						<hr>
+						<br>
 						<h2 class="pink-heading" id="4">Arrays</h2>
 						<p>In JavaScript, array is a single variable that is used to store different elements. It is often used when we want to store list of elements and access them by a single variable.</p>
 						<p>Resource: <a href="https://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank">W3Schools JS Array Reference</a></p>
@@ -193,15 +194,15 @@ multiply(10, 4);
 							(the first item inside the second array, inside the second array)<br><br>
 							Blueberries: array[1][2]<br>
 							(the third item inside the second array)</p>
-						<hr>
+						<br>
 						<h2 class="pink-heading" id="5">Objects</h2>
-						<p>In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics.</p>
+						<p>In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup: a cup is an object, with properties such as a color, a design, weight, a material it is made of, etc. In the same way, JavaScript objects can have properties which define their characteristics.</p>
 						<h3>Example of an object containing an array:</h3>
 						<pre>
 var witch = {
 	name: "Mildred",
 	age: 13,
-	powerLevel: 19,
+	powerLevel: 6,
 	spells: ["broomstick", "summon", "cat"]
 };
 						</pre>
@@ -236,7 +237,7 @@ var witch = {
 						<p>How to call the witch's fly function:</p>
 						<p>witch.fly()</p>
 						<p>Note: a function inside an object is a <strong>method</strong>. So <em>fly</em> is a method of <em>witch</em><br>(and log is a method of the object named console, when we use console.log).</p>
-						<hr>
+						<br>
 						<h2 class="pink-heading" id="6">"Dragbook" (using variables, functions, conditionals, loop, arrays and objects</h2>
 <pre>
 /* User database containing names and passwords
@@ -310,7 +311,7 @@ var passwordPrompt = prompt("What\'s your password?");
 
 signIn(userNamePrompt, passwordPrompt);
 </pre>
-						<hr>
+						<br>
 						<h2 class="pink-heading" id="7">The DOM</h2>
 						<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">Document Object Model (DOM)</a> is a Web API used to build websites.</p>
 						<p>In more detail, it's a programming interface for web documents, which represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages (usually JavaScript) can interact with the page.</p>
@@ -361,14 +362,85 @@ function myFunction() {
   var x = document.getElementById("myTopnav");
   x.classList.toggle("responsive");
 } </pre>
-					<br>
-					<h3>Caching Selectors (for performance)</h3>
-					<p>Accessing the HTML DOM is very slow, compared to other JavaScript statements. If you expect to access a DOM element several times, access it once and use it as a local variable:</p>
+						<br>
+						<h3>Caching Selectors (for performance)</h3>
+						<p>Accessing the HTML DOM is very slow, compared to other JavaScript statements. If you expect to access a DOM element several times, access it once and use it as a local variable:</p>
 <pre>const obj = document.getElementById("demo");
 obj.innerHTML = "Hello";</pre>
-					<p>The two examples above also cache selectors in variables.</p>
-					<p>However, avoid <em>unnecessary</em> variables. Don't create new variables if you don't plan to save values (more info on JS performance <a href="https://www.w3schools.com/js/js_performance.asp" target="_blank">here</a>).</p>
-						<hr>
+						<p>The two examples above also cache selectors in variables.</p>
+						<p>However, avoid <em>unnecessary</em> variables. Don't create new variables if you don't plan to save values (<a href="https://www.w3schools.com/js/js_performance.asp" target="_blank">more info on JS performance here</a>).</p>
+						<br>
+						<h2 class="pink-heading" id="8">Event Listeners and Callback Functions</h2>
+						<p>An event listener is a procedure in JavaScript that waits for an event to occur. A simple example of an event is a user clicking the mouse or pressing a key.</p>
+						<p>Any number of event handlers can be added to a single element without overwriting existing event handlers.</p>
+						<br>
+						<h3>Example 1: Simple Event Listener</h3>
+<pre>var button = document.getElementsByTagName("button")[0];
+
+button.addEventListener("click", function() {
+  // add function here
+})</pre>
+						<p>The example above does the following:</p>
+						<ol>
+							<li>Selects the button element (note the index) and caches it in a variable named "button".</li>
+							<li>Creates an <strong>event listener</strong> which listens for a click on the button and then carries out the connected function.</li>
+						</ol>
+						<br>
+						<h3>Example 2: To Do List</h3>
+<pre>var button = document.getElementById("enter");
+var input = document.getElementById("userinput");
+var ul = document.querySelector("ul");
+
+function inputLength() {
+  return input.value.length;
+}
+
+function createListElement() {
+  var li = document.createElement("li");
+  li.appendChild(document.createTextNode(input.value));
+  ul.appendChild(li);
+  input.value = "";
+}
+
+function addListAfterClick() {
+  if (inputLength() > 0) {
+    createListElement();
+  }
+}
+
+function addListAfterKeypress(event) {
+  if (inputLength() > 0 && event.keyCode === 13) {
+    createListElement();
+  }
+}
+
+button.addEventListener("click", addListAfterClick);
+
+input.addEventListener("keypress", addListAfterKeypress);</pre>
+						<br>
+						<p><strong>Note the three methods we haven't seen before:</strong></p>
+						<ul>
+							<li>.createElement</li>
+							<li>.appendChild</li>
+							<li>.createTextNode</li>
+						</ul>
+						<br>
+						<h3>Callback functions</h3>
+						<p><strong>The program above uses two callback functions:</strong></p>
+						<p>button.addEventListener("click", addListAfterClick);</p>
+						<p>input.addEventListener("keypress", addListAfterKeypress);</p>
+						<br>
+						<p><strong>We may have expected the syntax to look like this:</strong></p>
+						<p>button.addEventListener("click", addListAfterClick());</p>
+						<p>input.addEventListener("keypress", addListAfterKeypress(event));</p>
+						<br>
+						<p>However, when that line of javascript runs, we don't want the addListAfterClick function to run because we are just adding the event listener now to wait for click or keypress.</p>
+						<p>We want to let it know, though, that we want this action to happen when a click happens. So the function now automatically gets run (gets the () added) every time the click happens. So we are passing a reference to the function without running it.</p>
+						<br>
+						<h3>Learning resources:</h3>
+						<ul>
+							<li><a href="https://blog.codeanalogies.com/2016/04/11/javascript-callbacks-explained-using-minions/" target="_blank">Callbacks explained using Minions</a></li>
+						<br><hr><br>
 					</div>
 			</div>
 			<footer>Website made with love by Cate, &copy;2022</footer>

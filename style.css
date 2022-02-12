@@ -27,7 +27,7 @@ body {
     display: grid;
     gap: 30px;
     grid-template-columns: 270px 3fr;
-    padding: 0% 6%;
+    padding: 60px 6% 0%;
 }
 
 .sidebar {
@@ -80,6 +80,7 @@ body {
 	margin-right: -30px;
 }
 
+/*sidebar*/
 #navHeader {
 	background-color: var(--teal);
 	color: #FFF;
@@ -90,6 +91,7 @@ body {
 	margin: -10px -10px 0px -10px;
 }
 
+/*sidebar*/
 .navSectionHeader {
 	background-color: var(--teal);
 	color: #FFF;
@@ -179,16 +181,14 @@ fieldset {
 	padding-left: 3%;
 	color: #000;
 	margin-bottom: 5px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: var(--lightPink);
+	border-width: 0;
 }
 
 legend {
 	color: #000;
-	background-color: var(--lightPink);
-	padding: 5px 30px 5px 30px;
-	border-radius: 50% 50% 50% 50%;
+	background-color: var(--lightMint);
+	padding: 5px 20px 5px 20px;
+	border-radius: 10% 10% 10% 10%;
 }
 
 li {
@@ -207,6 +207,8 @@ li {
 .topnav {
   background-color: var(--darkTeal);
   overflow: hidden;
+  width: 100%;
+  position: fixed;
 }
 
 /* Style the links inside the navigation bar */
@@ -261,4 +263,11 @@ This class makes the topnav look good on small screens (display the links vertic
     display: block;
     text-align: left;
   }
-} 
+.container {
+    padding: 10% 6% 0%;
+}
+}
+
+.sub-list {
+	list-style-type: none;
+}

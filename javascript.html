@@ -68,18 +68,19 @@
 
 						<h2 class="pink-heading">Table of Contents</h2>
 						<ol>
-							<a href="#1"><li>Learning Resources</li></a>
-							<a href="#2"><li>Variables</li></a>
-							<a href="#3"><li>Functions</li></a>
-							<a href="#4"><li>Arrays</li></a>
-							<a href="#5"><li>Objects</li></a>
-							<a href="#6"><li>"Dragbook" database example</li></a>
-							<a href="#7"><li>DOM</li></a>
-							<a href="#8"><li>Event Listeners and Callback Functions</li></a>
+							<a href="#learning-resources"><li>Learning Resources</li></a>
+							<a href="#variables"><li>Variables</li></a>
+							<a href="#functions"><li>Functions</li></a>
+							<a href="#arrays"><li>Arrays</li></a>
+							<a href="#objects"><li>Objects</li></a>
+							<a href="#database-example"><li>"Dragbook" database example</li></a>
+							<a href="#dom"><li>DOM</li></a>
+							<a href="#event-listeners-callback-functions"><li>Event Listeners and Callback Functions</li></a>
+							<a href="#operators"><li>Operators</li></a>
 						</ol>
 						<br>
 
-						<h2 class="pink-heading" id="1">Learning Resources</h2>
+						<h2 class="pink-heading" id="learning-resources">Learning Resources</h2>
 						<ul>
 							<li><a href="https://www.codecademy.com/article/glossary-javascript" target="_blank">Codecademy JavaScript Glossary</a></li>
 							<li><a href="https://www.freecodecamp.org/news/learn-javascript-full-course/" target="_blank">freeCodeCamp JavaScript Course (3 hours)</a></li>
@@ -89,7 +90,7 @@
 							<li><a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Reserved words (keywords) in JavaScript</a></li>
 						</ul>
 						<br>
-						<h2 class="pink-heading" id="2">Variables</h2>
+						<h2 class="pink-heading" id="variables">Variables</h2>
 						<p>Variables allow us to store, change and access data such as numbers, strings, and objects.</p>
 						<h3>The three keywords to declare a variable in JavaScript:</h3>
 						<p><em>Note: Let and Const are now preferred and Var is mainly used in legacy code.<br>A commonly accepted practice is to use const as much as possible, and let in the case of loops and reassignment.</em></p>
@@ -119,7 +120,7 @@
 							<li><a href="https://www.youtube.com/watch?v=ppMlvGMT2qE" target="_blank">Video: What is Hoisting in JavaScript?</a></li>
 						</ul>
 						<br>
-						<h2 class="pink-heading" id="3">Functions</h2>
+						<h2 class="pink-heading" id="functions">Functions</h2>
 						<p>A function in JavaScript is similar to a procedure — a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.</p>
 						<h3>Types of function:</h3>
 						<p><strong>Function declaration:</strong></p>
@@ -160,7 +161,7 @@ multiply(10, 4);
 						<h3>Learning resources:</h3>
 						<p>FreeCodeCamp on <a href="https://www.freecodecamp.org/news/when-to-use-a-function-declarations-vs-a-function-expression-70f15152a0a0/">when to use a function expression instead of a function declaration</a> (not a beginner topic - revisit later!)</p>
 						<br>
-						<h2 class="pink-heading" id="4">Arrays</h2>
+						<h2 class="pink-heading" id="arrays">Arrays</h2>
 						<p>In JavaScript, array is a single variable that is used to store different elements. It is often used when we want to store list of elements and access them by a single variable.</p>
 						<p>Resource: <a href="https://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank">W3Schools JS Array Reference</a></p>
 						<p><strong>Example 1:</strong> Using this array,
@@ -195,7 +196,7 @@ multiply(10, 4);
 							Blueberries: array[1][2]<br>
 							(the third item inside the second array)</p>
 						<br>
-						<h2 class="pink-heading" id="5">Objects</h2>
+						<h2 class="pink-heading" id="objects">Objects</h2>
 						<p>In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup: a cup is an object, with properties such as a color, a design, weight, a material it is made of, etc. In the same way, JavaScript objects can have properties which define their characteristics.</p>
 						<h3>Example of an object containing an array:</h3>
 						<pre>
@@ -238,7 +239,7 @@ var witch = {
 						<p>witch.fly()</p>
 						<p>Note: a function inside an object is a <strong>method</strong>. So <em>fly</em> is a method of <em>witch</em><br>(and log is a method of the object named console, when we use console.log).</p>
 						<br>
-						<h2 class="pink-heading" id="6">"Dragbook" (using variables, functions, conditionals, loop, arrays and objects</h2>
+						<h2 class="pink-heading" id="database-example">"Dragbook" (using variables, functions, conditionals, loop, arrays and objects</h2>
 <pre>
 /* User database containing names and passwords
 (structure is an array containing objects) */
@@ -312,7 +313,7 @@ var passwordPrompt = prompt("What\'s your password?");
 signIn(userNamePrompt, passwordPrompt);
 </pre>
 						<br>
-						<h2 class="pink-heading" id="7">The DOM</h2>
+						<h2 class="pink-heading" id="dom">The DOM</h2>
 						<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">Document Object Model (DOM)</a> is a Web API used to build websites.</p>
 						<p>In more detail, it's a programming interface for web documents, which represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages (usually JavaScript) can interact with the page.</p>
 						<h3>Things you can do with the DOM:</h3>
@@ -370,7 +371,7 @@ obj.innerHTML = "Hello";</pre>
 						<p>The two examples above also cache selectors in variables.</p>
 						<p>However, avoid <em>unnecessary</em> variables. Don't create new variables if you don't plan to save values (<a href="https://www.w3schools.com/js/js_performance.asp" target="_blank">more info on JS performance here</a>).</p>
 						<br>
-						<h2 class="pink-heading" id="8">Event Listeners and Callback Functions</h2>
+						<h2 class="pink-heading" id="event-listeners-callback-functions">Event Listeners and Callback Functions</h2>
 						<p>An event listener is a procedure in JavaScript that waits for an event to occur. A simple example of an event is a user clicking the mouse or pressing a key.</p>
 						<p>Any number of event handlers can be added to a single element without overwriting existing event handlers.</p>
 						<br>
@@ -440,7 +441,82 @@ input.addEventListener("keypress", addListAfterKeypress);</pre>
 						<h3>Learning resources:</h3>
 						<ul>
 							<li><a href="https://blog.codeanalogies.com/2016/04/11/javascript-callbacks-explained-using-minions/" target="_blank">Callbacks explained using Minions</a></li>
-						<br><hr><br>
+							<li><a href="https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/" target="_blank">freeCodeCamp: What are callbacks and how do I use them?</a></li>
+						</ul>
+						<br>
+						<h2 class="pink-heading" id="operators">Operators</h2>
+						<p>An operator is a symbol that acts like a function. JavaScript operators are used to assign values, compare values, perform arithmetic operations, and more.</p>
+						<h3>Types of Operator in JS</h3>
+						<ul>
+							<li><strong>Arithmetic Operators</strong>
+								<ul>
+									<li class="sub-list">Addition, subtraction, multiplication, division, modulus, increment and decrement.</li>
+								</ul>
+							</li>
+							<li><strong>Assignment Operators</strong>
+								<ul>
+									<li class="sub-list">Used to assign values to JavaScript variables.</li>
+								</ul>
+							</li>
+							<li><strong>String Operators</strong>
+								<ul>
+									<li class="sub-list">The + operator, and the += operator can also be used to concatenate (add) strings.</li>
+								</ul>
+							</li>
+							<li><strong>Comparison Operators</strong>
+								<ul>
+									<li class="sub-list">Used in logical statements to determine equality or difference between variables or values (e.g. ==, ===, !=, <=, etc). </li>
+								</ul>
+							</li>
+							<li><strong>Conditional (Ternary) Operator</strong>
+								<ul>
+									<li class="sub-list">Syntax: variablename = (condition) ? value1:value2</li>
+									<li class="sub-list">Example: voteable = (age < 18) ? "Too young":"Old enough";</li>
+									<li class="sub-list">Learning resource: <a href="https://www.javascripttutorial.net/javascript-ternary-operator/" target="_blank">Ternary operator tutorial</a></li>
+									<li class="sub-list">Note that there are also <a href="https://study.com/academy/lesson/conditional-statements-in-javascript.html" target="_blank">conditional statements in JavaScript</a>: if, else, else if, and switch statements.</li>
+								</ul>
+							</li>
+							<li><strong>Logical Operators</strong>
+								<ul>
+									<li class="sub-list">These are: && (and), || (or), ! (not).</li>
+								</ul>
+							</li>
+							<li><strong>Bitwise Operators</strong>
+								<ul>
+									<li class="sub-list">Bitwise operators in Javascript are <a href="https://dev.to/puritanic/nsfw-use-cases-for-bitwise-operators-in-js-2om5" target="_blank">mostly used for numerical conversions/computations</a>, because sometimes they're much faster than their Math or parseInt equivalents.</li>
+								</ul>
+							</li>
+							<li><strong>typeof Operator</strong>
+								<ul>
+									<li class="sub-list">Tells you the type of a variable, object, function or expression (e.g. returns boolean, string or number).</li>
+								</ul>
+							</li>
+							<li><strong>delete Operator</strong>
+								<ul>
+									<li class="sub-list">Deletes a property from an object.</li>
+								</ul>
+							</li>
+							<li><strong>in Operator</strong>
+								<ul>
+									<li class="sub-list">Returns true if the specified property is in the specified object, otherwise false.</li>
+								</ul>
+							</li>
+							<li><strong>instanceof Operator</strong>
+								<ul>
+									<li class="sub-list">Returns true if the specified object is an instance of the specified object.</li>
+								</ul>
+							</li>
+							<li><strong>void Operator</strong>
+								<ul>
+									<li class="sub-list">Used to evaluate a JavaScript expression without returning a value.</li>
+								</ul>
+							</li></ul>
+							<br>
+							<h3>Learning Resources:</h3>
+							<ul>
+								<li><a href="https://www.w3schools.com/jsref/jsref_operators.asp" target="_blank">Complete list of JavaScript operators (with examples)</a></li>
+							</ul>
+							<br><hr><br>
 					</div>
 			</div>
 			<footer>Website made with love by Cate, &copy;2022</footer>

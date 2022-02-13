@@ -79,6 +79,7 @@
 							<li><a href="#database-example">Database example</a></li>
 							<li><a href="#dom">DOM</a></li>
 							<li><a href="#event-listeners-callback-functions">Event Listeners and Callback Functions</a></li>
+							<li><a href="#destructuring">Destructuring</a></li>
 						</ol>
 						<br>
 
@@ -304,10 +305,33 @@ for (let step = 0; step < 5; step++) {
 							<li>switch statements</li>
 						</ul>
 						<br>
+						<h3>Switch Statement Example</h3>
+<pre>function lunchChoices(choice) {
+    var response;
+    switch(choice) {
+        case "salad":
+            response = "Nice! Hope you remembered the dressing :)";
+            break;
+         case "chocolate":
+            response = "Chocolate for lunch again?!";
+            break;
+         case "nothing":
+            response = "Oh dear! Please make sure you have a good dinner at least";
+            break;
+         case "soup":
+            response = "Yum, good winter choice!";
+            break;
+        default:
+            response = "That's not a meal!";
+    }
+    return response;
+}</pre>
+						<br>
 						<h3>Learning resources:</h3>
 						<ul>
 							<li><a href="https://www.freecodecamp.org/news/what-in-the-world-is-a-javascript-loop-for/" target="_blank">freeCodeCamp guide to loops in JS</a></li>
 							<li><a href="https://study.com/academy/lesson/conditional-statements-in-javascript.html" target="_blank">Conditional statements in JS</a></li>
+							<li><a href="	https://www.geeksforgeeks.org/switch-vs-else/" target="_blank">Switch statements vs if-else</a></li>
 						</ul>
 						<br>
 
@@ -643,6 +667,36 @@ input.addEventListener("keypress", addListAfterKeypress);</pre>
 							<li><a href="https://blog.codeanalogies.com/2016/04/11/javascript-callbacks-explained-using-minions/" target="_blank">Callbacks explained using Minions</a></li>
 							<li><a href="https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/" target="_blank">freeCodeCamp: What are callbacks and how do I use them?</a></li>
 						</ul>
+						<br>
+
+						<h2 class="pink-heading" id="destructuring">Destructuring</h2>
+						<p>Destructuring is a useful JavaScript feature to extract properties from objects and arrays, and bind them to variables.</p>
+						<p>Example: extracting properties from an object with and without destructuring:</p>
+<pre>// example object:
+
+const obj = {
+	player: "Cate",
+	experience: 80,
+	wizardLevel: true
+}
+
+// extracting properties without destructuring:
+
+const player = obj.player;
+const experience = obj.experience;
+let wizardLevel = obj.wizardLevel;
+
+// extracting properties WITH destructuring:
+
+const { player, experience } = obj;
+let { wizardLevel } = obj;</pre>
+						<br>
+						<h3>Learning resources:</h3>
+						<ul>
+							<li><a href="https://www.javascripttutorial.net/es6/destructuring/" target="_blank">Tutorial on destructuring</a></li>
+							<li><a href="https://javascript.info/destructuring-assignment" target="_blank">Destructuring assignment</a></li>
+						</ul>
+
 							<br><hr><br>
 					</div>
 			</div>

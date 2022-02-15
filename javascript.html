@@ -159,6 +159,11 @@
 							<li><strong>String Operators</strong>
 								<ul>
 									<li class="sub-list">The + operator, and the += operator can also be used to concatenate (add) strings.</li>
+									<p><strong>Note that ES6 syntax allows us to use <a href="https://developers.google.com/web/updates/2015/01/ES6-Template-Strings" target="_blank">template strings</a>.</strong></p>
+									<p>Instead of:</p>
+<pre>var message = "Hello " + firstName + ", have I met you before? I think we met in " + city + " last summer?";</pre>
+									<p>we can use:</p>
+<pre>const message = `Hello ${firstName}, have I met you before? I think we met in ${city} last summer`;</pre>
 								</ul>
 							</li>
 							<li><strong>Comparison Operators</strong>
@@ -168,9 +173,12 @@
 							</li>
 							<li><strong>Conditional (Ternary) Operator</strong>
 								<ul>
-									<li class="sub-list">Syntax: variablename = (condition) ? value1:value2</li>
-									<li class="sub-list">Example: voteable = (age < 18) ? "Too young":"Old enough";</li>
-									<li class="sub-list">Learning resource: <a href="https://www.javascripttutorial.net/javascript-ternary-operator/" target="_blank">Ternary operator tutorial</a></li>
+									<li class="sub-list"><strong>Syntax:</strong> variablename = (condition) ? value1:value2;</li>
+									<p>value1 applies if the condition is true, and value2 applies if false.</p>
+									<li class="sub-list"><strong>Examples:</strong></li>
+<pre>voteable = (age < 18) ? "Too young":"Old enough";</pre>
+<pre>let answer = isUserValid(true) ? "You may enter" : "Access Denied";</pre>
+									<li class="sub-list"><strong>Learning resource:</strong> <a href="https://www.javascripttutorial.net/javascript-ternary-operator/" target="_blank">Ternary operator tutorial</a></li>
 									<li class="sub-list">Note that there are also <a href="https://study.com/academy/lesson/conditional-statements-in-javascript.html" target="_blank">conditional statements in JavaScript</a>: if, else, else if, and switch statements.</li>
 								</ul>
 							</li>
@@ -277,7 +285,7 @@ for (let step = 0; step < 5; step++) {
 
 						<h2 class="pink-heading" id="functions">Functions</h2>
 						<p>A function in JavaScript is similar to a procedure — a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.</p>
-						<h3>Types of function:</h3>
+						<h3>Types of function</h3>
 						<p><strong>Function declaration:</strong></p>
 <pre>function newFunction() {
 
@@ -313,10 +321,45 @@ multiply(10, 4);
 	}
 }</pre>
 						<br>
+						<h3>ES6 function features</h3>
+						<p><strong>Arrow Functions</strong></p>
+						<p>Two "regular functions" compared to an arrow function example:</p>
+<pre>
+// Function declaration
+function sayHiStranger() {
+  return 'Hi, stranger!'
+}
+
+// Function expression
+const sayHiStranger = function () {
+  return 'Hi, stranger!'
+}
+
+// Arrow function
+const sayHiStranger = () => 'Hi, stranger'
+</pre>
+						<p><strong>Default Arguments</strong></p>
+						<p>This means that if a function doesn't return an argument, a default argument will be used:</p>
+<pre>
+// Without default argument
+function isValidAge(age) {
+    return age
+}
+
+// With default argument of age 10
+function isValidAge(age=10) {
+    return age;
+}
+
+// Same as above, but as an arrow function
+const isValidAge = (age = 10) => age;
+</pre>
+						<br>
 						<h3>Learning resources:</h3>
 						<ul>
 								<li>FreeCodeCamp on <a href="https://www.freecodecamp.org/news/when-to-use-a-function-declarations-vs-a-function-expression-70f15152a0a0/">when to use a function expression instead of a function declaration</a></li>
 						<li><a href="https://www.w3schools.com/js/js_arrow_function.asp" target="_blank">Arrow Functions (w3Schools guide)</a></li>
+						<li><a href="https://www.sitepoint.com/javascript-arrow-functions/" target="_blank">Arrow Functions (sitepoint guide)</a></li>
 						</ul>
 						<br>
 

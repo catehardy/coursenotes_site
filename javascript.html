@@ -285,7 +285,7 @@ for (let step = 0; step < 5; step++) {
 						<br>
 
 						<h2 class="pink-heading" id="functions">Functions</h2>
-						<p>A function in JavaScript is similar to a procedure — a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.</p>
+						<p>A function in JavaScript is similar to a procedure (a set of statements that performs a task or calculates a value), but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.</p>
 						<h3>Types of function</h3>
 						<p><strong>Function declaration:</strong></p>
 <pre>function newFunction() {
@@ -298,6 +298,7 @@ for (let step = 0; step < 5; step++) {
 };
 </pre>
 						<p>Note that function expression requires a semi-colon on the end.</p>
+						<p>Function expressions (aka <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_function_example" target="_blank">anonymous functions</a>) are invoked to avoid polluting the global scope. Instead of your program being aware of many different functions, when you keep them anonymous they are used and forgotten immediately.</p>
 						<br>
 						<h3>Simple function example:</h3>
 						<pre>
@@ -309,6 +310,18 @@ multiply(10, 4);
 						</pre>
 						<p>Note 1: The final line above is <strong>calling the function</strong>.</p>
 						<p>Note 2: As soon as you use <strong>return</strong> in a function, the program exits.</p>
+						<br>
+						<h3>Assigning a function's output to a variable:</h3>
+<pre>
+let processed;  // declare variable outside of function
+
+function processArg(num) {  // declare function
+  return (num + 3) / 5;
+}
+
+processed = processArg(7); // call function with argument of 7 and assign output to variable
+console.log(processed);  // check output (in this example, 2)
+</pre>
 						<br>
 						<h3>Function with conditionals:</h3>
 						<pre>function checkDriverAge() {
@@ -358,9 +371,10 @@ const isValidAge = (age = 10) => age;
 						<br>
 						<h3>Learning resources:</h3>
 						<ul>
-								<li>FreeCodeCamp on <a href="https://www.freecodecamp.org/news/when-to-use-a-function-declarations-vs-a-function-expression-70f15152a0a0/">when to use a function expression instead of a function declaration</a></li>
-						<li><a href="https://www.w3schools.com/js/js_arrow_function.asp" target="_blank">Arrow Functions (w3Schools guide)</a></li>
-						<li><a href="https://www.sitepoint.com/javascript-arrow-functions/" target="_blank">Arrow Functions (sitepoint guide)</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions" target="_blank">MDN guide to JavaScript Functions</a></li>							
+							<li>FreeCodeCamp on <a href="https://www.freecodecamp.org/news/when-to-use-a-function-declarations-vs-a-function-expression-70f15152a0a0/">when to use a function expression instead of a function declaration</a></li>
+							<li><a href="https://www.w3schools.com/js/js_arrow_function.asp" target="_blank">Arrow Functions (w3Schools guide)</a></li>
+							<li><a href="https://www.sitepoint.com/javascript-arrow-functions/" target="_blank">Arrow Functions (sitepoint guide)</a></li>
 						</ul>
 						<br>
 

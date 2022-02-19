@@ -418,7 +418,7 @@ const isValidAge = (age = 10) => age;
 						<p>In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup: a cup is an object, with properties such as a color, a design, weight, a material it is made of, etc. In the same way, JavaScript objects can have properties which define their characteristics.</p>
 						<h3>Example of an object containing an array:</h3>
 						<pre>
-var witch = {
+const witch = {
 	name: "Mildred",
 	age: 13,
 	powerLevel: 6,
@@ -427,10 +427,12 @@ var witch = {
 						</pre>
 						<p>How to access the witch's "summon" spell:</p>
 						<p>witch.spells[1]</p>
+						<p>Note: if the object property contains a space, you'll need to use bracket notation instead of dot notation to access it. E.g. if powerLevel were written "Power Level":<p>	
+						<p> witch["Power Level"];</p>
 						<br>
 						<h3>Example of an array containing objects:</h3>
 						<pre>
-var userList = [
+const userList = [
 	{
 		username: "Sara",
 		password: "123"
@@ -446,7 +448,7 @@ var userList = [
 						<br>
 						<h3>Example of an object containing a function:</h3>
 						<pre>
-var witch = {
+const witch = {
 	name: "Mildred",
 	fly: function() {
 		// add function here;
@@ -457,7 +459,20 @@ var witch = {
 						<p>witch.fly()</p>
 						<p>Note: a function inside an object is a <strong>method</strong>. So <em>fly</em> is a method of <em>witch</em><br>(and log is a method of the object named console, when we use console.log).</p>
 						<br>
-						<h3>ECMA6 Syntax</h3>
+						<h3>Accessing object properties with variables</h3>
+<pre>
+const dogs = {
+  Fido: "Mutt",
+  Hunter: "Doberman",
+  Snoopie: "Beagle"
+};
+
+const myDog = "Hunter";
+const myBreed = dogs[myDog];
+console.log(myBreed);	// displays <strong>Doberman</strong>
+</pre>
+						<br>
+						<h3>ECMA6 syntax</h3>
 						<p>Say you want to create an object that stores these variables:</p>
 <pre>const a = 'test';
 const b = true;

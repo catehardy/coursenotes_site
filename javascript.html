@@ -564,8 +564,22 @@ signIn(userNamePrompt, passwordPrompt);
 </pre>
 						<br>
 						<h3>"Record Collection" Database</h3>
-						<p>Uses ____:</p>
+						<p>This example shows ways of updating properties and values in an object and in the arrays it contains:</p>
 						<img src="Images/database-update.png" alt="JavaScript database example" height="500">
+						<p>Note 1: the final condition could be written more simply, as the first two conditions have excluded all other options:</p>
+<pre>
+} else {
+	records[id][prop] = value;
+}
+</pre>
+						<p>Note 2: the second condition can also be simplified:</p>
+<pre>
+} else if (prop === "tracks") {
+	records[id][prop] = records[id][prop] || [];
+	records[id][prop].push(value;)
+}
+</pre>
+						<p>The second line will create an empty array named "tracks" if one doesn't already exist for that records[id].</p>
 						<br>
 
 						<h2 class="pink-heading" id="dom">The DOM</h2>

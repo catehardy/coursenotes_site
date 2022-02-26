@@ -391,7 +391,7 @@ const isValidAge = (age = 10) => age;
 						<p>Becomes:</p>
 						<pre>const curriedMultiply = (a) => (b) => a * b;</pre>
 						<p>Which is called this way: curriedMultiply(3)(4);</p>
-						<p>WHY? Because it’s now more extensible: we can create a “multiply by 5” function like this:</p>
+						<p>Why would we want to do this? Because the function is now more extensible; e.g. we can create a “multiply by 5” function like this:</p>
 						<pre>const multiplyBy5 = curriedMultiply(5);</pre>						
 						<br>
 						<h3>Composition</h3>

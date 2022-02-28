@@ -77,6 +77,7 @@
 							<li><a href="#functions">Functions</a></li>
 							<li><a href="#advanced-functions">Advanced Functions</a></li>
 							<li><a href="#arrays">Arrays</a></li>
+							<li><a href="#advanced-arrays">Advanced Arrays</a></li>
 							<li><a href="#objects">Objects</a></li>
 							<li><a href="#database-examples">Database examples</a></li>
 							<li><a href="#dom">DOM</a></li>
@@ -417,9 +418,13 @@ console.log(halve);
 						<p>A <strong>pure function</strong> is deterministic and avoids side-effects; it depends only on its input elements, not on any state or data change during execution (side-effects).</p>
 						<p>This is a key part of avoiding bugs. If the function always does the same thing, it helps you avoid random errors.</p>
 						<br>
+						<h3>Function vs Method: terminology</h3>
+						<p>Is there a difference between a function and a method?</p>
+						<p>A method, like a function, is a set of instructions that perform a task. The difference is that a method is associated with an object, while a function is not. A function is directly called by its name, whereas a method includes a code that is called by the object's name.</p>
+						<br>
 
 						<h2 class="pink-heading" id="arrays">Arrays</h2>
-						<p>In JavaScript, array is a single variable that is used to store different elements. It is often used when we want to store list of elements and access them by a single variable.</p>
+						<p>In JavaScript, an array is a single variable that is used to store different elements. It is often used when we want to store a list of elements and access them by a single variable.</p>
 						<p>Resource: <a href="https://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank">W3Schools JS Array Reference</a></p>
 						<p><strong>Example 1:</strong> Using this array,
 <pre> var array = ["Banana", "Apples", "Oranges", "Blueberries"];</pre>
@@ -453,6 +458,52 @@ console.log(halve);
 							Blueberries: array[1][2]<br>
 							(the third item inside the second array)</p>
 						<br>
+
+						<h2 class="pink-heading" id="advanced-arrays">Advanced Arrays</h2>
+						<p>Any time you think of looping over an array, you’ll probably want to use one of these three:</p>
+						<h3>Map</h3>
+						<p>This method allows us to create a new array from a pre-existing one, by iterating over and performing an action on each value within it.</p>
+						<p>Map has some similarity to the forEach method; however, map always requires a <strong>return</strong> element.</p>						
+						<p><strong>Example, part 1: Doubling an array using forEach:</strong></p>
+<pre>const array = [1, 2, 10, 17];
+
+const double = []
+const newArray = array.forEach((num) => {
+	double.push(num * 2);
+	})
+
+console.log(double);
+</pre>
+						<p><strong>Example, part 2: The same as above, using map:</strong></p>
+<pre>const array = [1, 2, 10, 17];
+
+const mapArray = array.map(num => num * 2);
+
+console.log(mapArray);
+</pre>
+						<p>(Here's a more detailed <a href="https://code.tutsplus.com/tutorials/javascript-map-vs-foreach-when-to-use-each-one--cms-38365" target="_blank">comparison of the two methods</a>.)</p>
+						<br>
+						<h3>Filter</h3>
+						<p>This method allows us to create a new array by iterating over and then filtering out only the required elements from a pre-existing array.</p>
+						<p><strong>Here's an example, using the array from the example above:</strong></p>
+<pre>const filteredArray = array.filter(num => num > 5);
+</pre>
+						<p>In the example above, the new array <em>filteredArray</em> would only contain numbers above 5.</p>
+						<br>
+						<h3>Reduce</h3>
+						<p>This method allows us to reduce an array to the sum of the numerical elements it consists of (plus an accumulator value, which can be set to 0).</p>
+						<p><strong>Here's an example, again using the array from the map example above:</strong></p>
+<pre>const reduceArray = array.reduce((accumulator, num) => {
+	return accumulator + num
+}, 0);
+</pre>
+						<p>In the example above, <em>console.log(reduceArray)</em> would produce the result <em>30</em>.</p>
+						<p>Note that the <em>accumulator</em> argument is defined within the function (and the <em>num</em> argument represents each element of the array as it's iterated over by the <em>reduce()</em> method).</p>
+						<br>
+						<h3>Learning resources:</h3>
+						<ul>
+							<li><a href="https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d" target="_blank">Simplify your JavaScript – Use .map(), .reduce(), and .filter()</a></li>
+						</ul>
 
 						<h2 class="pink-heading" id="objects">Objects</h2>
 						<p>In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup: a cup is an object, with properties such as a color, a design, weight, a material it is made of, etc. In the same way, JavaScript objects can have properties which define their characteristics.</p>

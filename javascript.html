@@ -170,6 +170,9 @@
 							<li><strong>Arithmetic Operators</strong>
 								<ul>
 									<li class="sub-list">Addition, subtraction, multiplication, division, modulus, increment and decrement.</li>
+									<li class="sub-list"><strong>To square, cube, (etc), a number, use this syntax:</strong></li>
+									<li class="sub-list">const square = (num) => num**2;</li>
+									<li class="sub-list">const cube = (num) => num**3;</li>
 								</ul>
 							</li>
 							<li><strong>Assignment Operators</strong>
@@ -377,15 +380,33 @@ const sayHiStranger = () => 'Hi, stranger'
 <pre>const array = [1, 2, 10, 17];
 
 const halve = []
-const newArray = array.forEach((num) => {
-	halve.push(num / 2);
-	})
+array.forEach((num) => halve.push(num / 2))
 
 console.log(halve);
 </pre>
 						<p>The above example calls the forEach function as a method on the 'array' variable; it iterates through and halves each number in the array, then returns a new array (named 'halve') containing the halved numbers.</p>
 						<p>num is a variable representing each number of the array, as the function iterates through and halves them.</p>
-						<p>Note that the function works without the 'const newArray =' variable assignment (tbh I don't currently know why it's in there!)</p>
+						<br>
+						<p><strong>Formats for arrow functions:</strong></p>
+						<p>One-line function:</p>
+<pre>let oneliner = x => x*2;</pre>
+						<p>Multi-line function:</p>
+<pre>let multiliner = x => {
+	x = x*2; 
+	return x;
+}
+</pre>
+						<p>NOTE: if you use {braces} you need a return statement or the function won't, well, function! Example:</p>
+<pre>const dragons = ['Tim', 'Johnathan', 'Sandy', 'Sarah']; // example array
+
+// YES, THIS WORKS - RETURN IS IMPLICIT
+const filteredArray = dragons.filter(name => name.includes('John'))
+
+// YES, THIS WORKS TOO
+dragons.filter(name => { return name.includes('John')}) 
+
+// NO, THIS WILL RUN BUT NOT WORK PROPERLY!
+const filteredArray = dragons.filter(name => {name.includes('John')})</pre>
 						<br>
 						<p><strong>Default Arguments</strong></p>
 						<p>This means that if a function doesn't return an argument, a default argument will be used:</p>
@@ -604,6 +625,27 @@ const c = 789;</pre>
 						<p>In JavaScript, <strong>“context”</strong> refers to an object. Within an object, the keyword “this” refers to that object (i.e. “self”), and provides an interface to the properties and methods that are members of that object. When a function is executed, the keyword “this” refers to the object that the function is executed in.</p>
 						<p>Resource: <a href="https://blog.kevinchisholm.com/javascript/context-object-literals/" target="_blank">Why is the word “this” so important in JavaScript?</a></p>
 						<p><strong>Instantiation</strong> refers to the creation of an object. There are multiple patterns that have evolved over time that are used to achieve this. When instantiation patterns are used correctly, they can effectively manage inheritance and provide greater code re-usability when creating multiple instances of objects.</p>
+						<p><strong>Instantiation example:</strong></p>
+<pre>class Animal {
+	constructor(name, type, colour) {
+		this.name = name;
+		this.type = type;
+		this.colour = colour;
+	}
+}
+
+class Mammal extends Animal {
+	constructor(name, type, colour) {
+		super(name, type, colour)
+	}
+	speak() {
+		console.log(`Hello! I'm a ${this.colour} ${this.type} and my name is ${this.name}!`);
+	}
+}
+
+const cat1 = new Mammal("Myst", "Persian cat", "grey");</pre>
+						<p>Running the above code and then calling cat1.speak() would create:</p>
+						<p><em>Hello! I'm a grey Persian cat and my name is Myst!</em></p>
 						<p>Resources:</p>
 						<ul>
 							<li><a href="https://dev.to/gavmac/javascript-instantiation-in-5-mins-kij" target="_blank">JavaScript Instantiation in 5 Minutes</a></p></li>
@@ -624,7 +666,11 @@ let b = [].concat(a);
 <pre>b.push(5,6);</pre>
 						<br>
 						<h3>Type Coercion</h3>
-						<p></p>
+						<p>Type coercion is the process of converting value from one type to another (such as string to number, object to boolean, and so on). Any type, be it primitive or an object, is a valid subject for type coercion.</p>
+						<p>Type coercion can be explicit or implicit. When a developer expresses the intention to convert between types by writing the appropriate code, like Number(value), it’s called <strong>explicit type coercion</strong> (or type casting). Since JavaScript is a weakly-typed language, values can also be converted between different types automatically, which is known as <strong>implicit type coercion</strong>.</p>
+						<p>In 90% of use cases, it’s better to avoid implicit type coercion. However, you might face questions about type coercion during interviews for JavaScript developer positions.</p>
+						<p>In general, remember to use the strict equality operator === rather than the loose equality operator == (unless you have a very specific reason to use the loose version!)</p>
+						<p>Resource: <a href="https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/" target="_blank">fCC: JavaScript Type Coercion Explained</a></p>
 						<br>
 
 						<h2 class="pink-heading" id="database-examples">Database Examples</h2>

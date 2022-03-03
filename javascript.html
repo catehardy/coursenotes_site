@@ -79,6 +79,7 @@
 							<li><a href="#arrays">Arrays</a></li>
 							<li><a href="#advanced-arrays">Advanced Arrays</a></li>
 							<li><a href="#objects">Objects</a></li>
+							<li><a href="#advanced-objects">Advanced Objects</a></li>
 							<li><a href="#database-examples">Database examples</a></li>
 							<li><a href="#dom">DOM</a></li>
 							<li><a href="#event-listeners-callback-functions">Event Listeners and Callback Functions</a></li>
@@ -107,7 +108,7 @@
 									<p>Object, Array, and Function (which are all types of objects) are known as <strong>reference</strong> or <strong>composite</strong> data types.</p>
 									<p>Reference / composite data types, unlike primitive data types, are dynamic in nature. That is, they do not have a fixed size. Most of them are considered as objects, and therefore have methods. Examples of such data types include arrays, functions, collections, and all other types of objects.</p>
 									<br>
-									<h3>The equality operator and data types:</h3>
+									<h3 id="equality-data-types">The equality operator and data types:</h3>
 									<p>Using the equality operator gives an example of how primitive and reference data types differ.</p>
 									<p>If you created two variables of a primitive data type (say, number) and gave them an identical value (e.g. let a = 10 and let b = 10) then the following would return true:</p>
 									<p>a === b</p>
@@ -120,6 +121,7 @@
 									<h3>Learning resources:</h3>
 									<ul>
 										<li><a href="https://www.edureka.co/blog/data-types-in-javascript/" target="_blank">Data Types in JavaScript</a></li>
+										<li><a href="https://flexiple.com/javascript-pass-by-reference-or-value/" target="_blank">Pass by Value and Pass by Reference</a></li>
 									</ul>
 						<br>
 
@@ -595,16 +597,34 @@ const c = 789;</pre>
 						<p>But using ECMA6 syntax we can do this, if both the property and value are the same:</p>
 <pre>const exampleObj = {a, b, c};</pre>
 						<br>
+
+						<h2 class="pink-heading" id="advanced-objects">Advanced Objects</h2>
+						<p></p>
 						<h3>Context and Instantiation Patterns</h3>
-						<p>These are advanced ways of working with objects.</p>
 						<p>In JavaScript, <strong>“context”</strong> refers to an object. Within an object, the keyword “this” refers to that object (i.e. “self”), and provides an interface to the properties and methods that are members of that object. When a function is executed, the keyword “this” refers to the object that the function is executed in.</p>
 						<p>Resource: <a href="https://blog.kevinchisholm.com/javascript/context-object-literals/" target="_blank">Why is the word “this” so important in JavaScript?</a></p>
 						<p><strong>Instantiation</strong> refers to the creation of an object. There are multiple patterns that have evolved over time that are used to achieve this. When instantiation patterns are used correctly, they can effectively manage inheritance and provide greater code re-usability when creating multiple instances of objects.</p>
 						<p>Resources:</p>
 						<ul>
 							<li><a href="https://dev.to/gavmac/javascript-instantiation-in-5-mins-kij" target="_blank">JavaScript Instantiation in 5 Minutes</a></p></li>
-							<li><a href="https://dev.to/mconner89/a-quick-guide-to-instantiation-in-javascript-6n" target="_blank">Quick Guide to Instantiation Patterns in JS</a> (explains the <strong>constructor()</strong> function and <strong>class</strong> keyword).</li>
+							<li><a href="https://dev.to/mconner89/a-quick-guide-to-instantiation-in-javascript-6n" target="_blank">Quick Guide to Instantiation Patterns in JS</a> - explains the <strong>constructor()</strong> function and the <strong>new</strong> and <strong>class</strong> keywords</li>
 						</ul>
+						<br>
+						<h3>Pass by Value and Pass by Reference</h3>
+						<p>See section above on <a href="#equality-data-types">the equality operator and data types</a> to understand why objects are passed by reference.</p>
+						<p>Passing by reference can be a useful way to save resources, by assigning the data from one object to another and storing it in a single location. However, sometimes you'll want to clone an object so that it can be stored and modified separately. Here's how to do that for both objects and arrays (which are also a type of object):</p>
+						<p><strong>Cloning an object</strong></p>
+						<p><a href="https://www.javascripttutorial.net/es6/javascript-object-assign/" target="_blank">Using Object.assign() to clone or merge objects</a></p>
+						<p><strong>Cloning an array</strong></p>
+						<p>For this, you can use <a href="https://www.w3schools.com/jsref/jsref_concat_array.asp" target="_blank">concatentation</a>. Example:</p>
+<pre>let a = [1,2,3,4];
+let b = [].concat(a);
+</pre>
+						<p>The concat() method joins two arrays together, so here we've simply joined array <em>a</em> to the empty array <em>b</em>, to create a copy. We can then modify <em>b</em> without affecting <em>a</em>, like this:</p>
+<pre>b.push(5,6);</pre>
+						<br>
+						<h3>Type Coercion</h3>
+						<p></p>
 						<br>
 
 						<h2 class="pink-heading" id="database-examples">Database Examples</h2>

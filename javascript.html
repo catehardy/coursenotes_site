@@ -98,8 +98,24 @@
 						<br>
 
 									<h2 class="pink-heading" id="data-types">Data Types</h2>
-									<p>In JavaScript, a primitive (primitive value, primitive data type) is data that is not an object and has no methods. There are 7 <strong>primitive</strong> data types: string, number, bigint, boolean, undefined, symbol, and null.</p>
-									<p>Object, Array, and Function (which are all types of objects) are <strong>composite</strong> data types.</p>
+									
+									<p>In JavaScript, data types are split into two categories, and the computer treats each one differently. We have <strong>primitive</strong> data types and <strong>reference</strong> data types.</p>
+									<h3>Primitive Types</h3>
+									<p>A primitive value/data type is data that is not an object and has no methods. There are 7 <strong>primitive</strong> data types: string, number, bigint, boolean, undefined, symbol, and null.</p>
+									<p>But you might be wondering about strings, because they <em>do</em> have methods. The fact is, JavaScript converts primitive strings to string objects, so that it’s possible to use string object methods.</p>
+									<h3>Reference Types</h3>
+									<p>Object, Array, and Function (which are all types of objects) are known as <strong>reference</strong> or <strong>composite</strong> data types.</p>
+									<p>Reference / composite data types, unlike primitive data types, are dynamic in nature. That is, they do not have a fixed size. Most of them are considered as objects, and therefore have methods. Examples of such data types include arrays, functions, collections, and all other types of objects.</p>
+									<br>
+									<h3>The equality operator and data types:</h3>
+									<p>Using the equality operator gives an example of how primitive and reference data types differ.</p>
+									<p>If you created two variables of a primitive data type (say, number) and gave them an identical value (e.g. let a = 10 and let b = 10) then the following would return true:</p>
+									<p>a === b</p>
+									<p>However, if you created two objects with identical contents (e.g. let array1 = [10] and let array2 = [10]) then the following would return false:</p>
+									<p>array1 === array2</p>
+									<p>This is because the comparison of objects isn't a comparison of values, but a comparison of references; they are equal if, and only if, they refer to the same base object.</p>
+									<p>If you assigned array2 to array1 (array2 = array1), then array1 === array2 would return true, as array2 now references array1 (it points to the same location in program memory).</p>
+									<p><strong>Note:</strong> If you reassigned array1 or array2 (e.g. array1 = [10,11];) then other arrays would no longer reference it and array1 === array2 would return false. However, if you updated its contents using a method such as array.push(), both the original array and any others referencing it would be updated and retain the connection.</p>
 									<br>
 									<h3>Learning resources:</h3>
 									<ul>
@@ -578,6 +594,17 @@ const c = 789;</pre>
 };</pre>
 						<p>But using ECMA6 syntax we can do this, if both the property and value are the same:</p>
 <pre>const exampleObj = {a, b, c};</pre>
+						<br>
+						<h3>Context and Instantiation Patterns</h3>
+						<p>These are advanced ways of working with objects.</p>
+						<p>In JavaScript, <strong>“context”</strong> refers to an object. Within an object, the keyword “this” refers to that object (i.e. “self”), and provides an interface to the properties and methods that are members of that object. When a function is executed, the keyword “this” refers to the object that the function is executed in.</p>
+						<p>Resource: <a href="https://blog.kevinchisholm.com/javascript/context-object-literals/" target="_blank">Why is the word “this” so important in JavaScript?</a></p>
+						<p><strong>Instantiation</strong> refers to the creation of an object. There are multiple patterns that have evolved over time that are used to achieve this. When instantiation patterns are used correctly, they can effectively manage inheritance and provide greater code re-usability when creating multiple instances of objects.</p>
+						<p>Resources:</p>
+						<ul>
+							<li><a href="https://dev.to/gavmac/javascript-instantiation-in-5-mins-kij" target="_blank">JavaScript Instantiation in 5 Minutes</a></p></li>
+							<li><a href="https://dev.to/mconner89/a-quick-guide-to-instantiation-in-javascript-6n" target="_blank">Quick Guide to Instantiation Patterns in JS</a> (explains the <strong>constructor()</strong> function and <strong>class</strong> keyword).</li>
+						</ul>
 						<br>
 
 						<h2 class="pink-heading" id="database-examples">Database Examples</h2>

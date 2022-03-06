@@ -84,16 +84,17 @@
 							<li><a href="#dom">DOM</a></li>
 							<li><a href="#event-listeners-callback-functions">Event Listeners and Callback Functions</a></li>
 							<li><a href="#destructuring">Destructuring</a></li>
+							<li><a href="#debugging">Debugging</a></li>
 						</ol>
 						<br>
 
 						<h2 class="pink-heading" id="learning-resources">Learning Resources</h2>
 						<ul>
+							<li><a href="https://devdocs.io/javascript/" target="_blank">DevDocs.io JavaScript documentation</a></li>
 							<li><a href="https://www.codecademy.com/article/glossary-javascript" target="_blank">Codecademy JavaScript Glossary</a></li>
 							<li><a href="https://www.freecodecamp.org/news/learn-javascript-full-course/" target="_blank">freeCodeCamp JavaScript Course (3 hours)</a></li>
 							<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">MDN JavaScript Basics</a></li>
 							<li><a href="https://learnjavascript.online/" target="_blank">learnjavascript.online</a></li>
-							<li><a href="https://www.w3schools.com/js/default.asp" target="_blank">W3Schools JS Tutorial</a></li>
 							<li><a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Reserved words (keywords) in JavaScript</a></li>
 						</ul>
 						<br>
@@ -287,14 +288,14 @@ for (let step = 0; step < 5; step++) {
          case "chocolate":
             response = "Chocolate for lunch again?!";
             break;
-         case "nothing":
-            response = "Oh dear! Please make sure you have a good dinner at least";
+         case "pizza":
+            response = "Want extra mushrooms on that?";
             break;
          case "soup":
             response = "Yum, good winter choice!";
             break;
         default:
-            response = "That's not a meal!";
+            response = "Great, hope you enjoy it!";
     }
     return response;
 }</pre>
@@ -397,16 +398,16 @@ console.log(halve);
 }
 </pre>
 						<p>NOTE: if you use {braces} you need a return statement or the function won't, well, function! Example:</p>
-<pre>const dragons = ['Tim', 'Johnathan', 'Sandy', 'Sarah']; // example array
+<pre>const dragons = ['Tim', 'Jonathan', 'Sandy', 'Sarah']; // example array
 
 // YES, THIS WORKS - RETURN IS IMPLICIT
-const filteredArray = dragons.filter(name => name.includes('John'))
+const filteredArray = dragons.filter(name => name.includes('Jon'))
 
 // YES, THIS WORKS TOO
-dragons.filter(name => { return name.includes('John')}) 
+dragons.filter(name => { return name.includes('Jon')}) 
 
 // NO, THIS WILL RUN BUT NOT WORK PROPERLY!
-const filteredArray = dragons.filter(name => {name.includes('John')})</pre>
+const filteredArray = dragons.filter(name => {name.includes('Jon')})</pre>
 						<br>
 						<p><strong>Default Arguments</strong></p>
 						<p>This means that if a function doesn't return an argument, a default argument will be used:</p>
@@ -460,6 +461,15 @@ const filteredArray = dragons.filter(name => {name.includes('John')})</pre>
 						<h3>Function vs Method: terminology</h3>
 						<p>Is there a difference between a function and a method?</p>
 						<p>A method, like a function, is a set of instructions that perform a task. The difference is that a method is associated with an object, while a function is not. A function is directly called by its name, whereas a method includes a code that is called by the object's name.</p>
+						<br>
+						<h3>JavaScript Methods: learning resources</h3>
+						<ul>
+							<li><a href="https://www.programiz.com/javascript/methods" target="_blank">Introduction to JS methods and the 'this' keyword</a></li>
+							<li><a href="https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm" target="_blank">List of JavaScript methods</a></li>
+							<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-object-methods-in-javascript" target="_blank">How to use object methods in JavaScript</a></li>
+							<li><a href="https://www.samanthaming.com/tidbits/97-string-padstart-padend/" target="_blank">String padding methods</a></li>
+							<li><a href="https://appdividend.com/2019/03/11/javascript-string-trimstart-trimend-tutorial-with-example/" target="_blank">Trim string start/end methods</a></li>
+						</ul>
 						<br>
 
 						<h2 class="pink-heading" id="arrays">Arrays</h2>
@@ -543,11 +553,18 @@ console.log(mapArray);
 						<h3>Learning resources:</h3>
 						<ul>
 							<li><a href="https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d" target="_blank">Simplify your JavaScript – Use .map(), .reduce(), and .filter()</a></li>
+							<li><a href ="https://medium.com/@mandeepkaur1/a-list-of-javascript-array-methods-145d09dd19a0" target="_blank">List of JavaScript Array Methods</a>: Quick examples of .map(), .filter(), .sort(), .forEach(), .concat(), .every(), .some(), .includes(), .join(), .reduce(), .find(), .findIndex(), .indexOf(), .fill(), .slice(), .reverse(), .push(), .pop(), .shift(), .unshift()</li>
+							<li><a href ="https://flexiple.com/flatten-array-javascript/" target="_blank">How to flatten an array</a> - e.g. [1, 2, [3, [4, 5, 6]] to [1, 2, 3, 4, 5, 6]</li>
 							<li><a href ="https://sdras.github.io/array-explorer/" target="_blank">JavaScript Array Explorer</a> - find the array method you need without digging through the docs!</li>
 						</ul>
 
 						<h2 class="pink-heading" id="objects">Objects</h2>
 						<p>In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup: a cup is an object, with properties such as a color, a design, weight, a material it is made of, etc. In the same way, JavaScript objects can have properties which define their characteristics.</p>
+						<h3>Comparing Object and Array</h3>
+						<p> Objects and arrays are complex data types that hold multiple values, as opposed to primitive data types that hold a single value.</p>
+						<p><strong>Objects </strong>are an unordered set of key-value pairs. The key is a text identifier that must be unique within the object and the value can be either a primitive or complex data value.</p>
+						<p><strong>Arrays </strong>are an ordered list of values that do not need to be unique and can be various data types. The position in the list is called an index, which is zero-based, meaning the first item in the array has an index of 0.</p>
+						<br>
 						<h3>Example of an object containing an array:</h3>
 						<pre>
 const witch = {
@@ -604,6 +621,12 @@ const myBreed = dogs[myDog];
 console.log(myBreed);	// displays <strong>Doberman</strong>
 </pre>
 						<br>
+						<h3>Note on syntax</h3>
+						<p>The property pairs within objects are known variously as:</p>
+						<p>property name / property value</p>
+						<p>property / value</p>
+						<p>key / value</p>
+						<br>
 						<h3>ECMA6 syntax</h3>
 						<p>Say you want to create an object that stores these variables:</p>
 <pre>const a = 'test';
@@ -650,6 +673,7 @@ const cat1 = new Mammal("Myst", "Persian cat", "grey");</pre>
 						<ul>
 							<li><a href="https://dev.to/gavmac/javascript-instantiation-in-5-mins-kij" target="_blank">JavaScript Instantiation in 5 Minutes</a></p></li>
 							<li><a href="https://dev.to/mconner89/a-quick-guide-to-instantiation-in-javascript-6n" target="_blank">Quick Guide to Instantiation Patterns in JS</a> - explains the <strong>constructor()</strong> function and the <strong>new</strong> and <strong>class</strong> keywords</li>
+							<li><a href="https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript" target="_blank">Understanding Classes in JavaScript</a></li>
 						</ul>
 						<br>
 						<h3>Pass by Value and Pass by Reference</h3>
@@ -671,6 +695,29 @@ let b = [].concat(a);
 						<p>In 90% of use cases, it’s better to avoid implicit type coercion. However, you might face questions about type coercion during interviews for JavaScript developer positions.</p>
 						<p>In general, remember to use the strict equality operator === rather than the loose equality operator == (unless you have a very specific reason to use the loose version!)</p>
 						<p>Resource: <a href="https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/" target="_blank">fCC: JavaScript Type Coercion Explained</a></p>
+						<br>
+						<h3>Object.values and Object.entries</h3>
+						<p>With an array, we can use methods like .map(), .filter() and .reduce(), but we can’t do that directly with an object. However, we can convert an object into an array using Object.values and Object.entries, so that we can iterate through and use array methods on it.</p>
+						<p><strong>Example:</strong></p>
+<pre>let festiveCharacters = {
+ username0: "Santa",
+ username1: "Rudolf",
+ username2: "MrGrinch"
+}
+
+Object.entries(festiveCharacters).forEach(entry => console.log(entry);)</pre>
+						<p>Which returns the following data as arrays:</p>
+<pre>[ "username0", "Santa" ]
+[ "username1", "Rudolf" ]
+[ "username2", "MrGrinch" ]</pre>
+						<p><strong>Example 2, using same object:</strong></p>
+<pre>Object.entries(festiveCharacters).map(entry => {
+return entry[1] + entry[0].replace("username", "");
+})</pre>
+						<p>Which returns:</p>
+<pre>[ "Santa0", "Rudolf1", "MrGrinch2" ]</pre>
+						<p>Resource: <a href="https://betterprogramming.pub/how-to-convert-objects-to-arrays-and-vice-versa-in-javascript-7776b5843948" target="_blank">How to convert objects to arrays and vice-versa</a></p>
+						<p>Note: The older method Object.keys worked similarly.</p>
 						<br>
 
 						<h2 class="pink-heading" id="database-examples">Database Examples</h2>
@@ -929,6 +976,13 @@ let { wizardLevel } = obj;</pre>
 							<li><a href="https://javascript.info/destructuring-assignment" target="_blank">Destructuring assignment</a></li>
 							<li><a href="https://medium.com/swlh/why-are-there-so-many-curly-brackets-in-javascript-49752253b6b8" target="_blank">Why are there so many curly braces in JS?</a> (Discusses destructuring)</li>
 							</ul>
+							<br>
+
+							<h2 class="pink-heading" id="debugging">Debugging</h2>
+							<h3>Try/Catch</h3>
+							<p>A try / catch block is basically used to handle errors in JavaScript. You use this when you don't want an error in your script to break your code.</p>
+							<p><a href="https://www.freecodecamp.org/news/try-catch-in-javascript/" target="_blank">How to use a try/catch block in JavaScript</a></p>
+
 
 							<br><hr><br>
 					</div>

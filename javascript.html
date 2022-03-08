@@ -271,6 +271,45 @@ for (let step = 0; step < 5; step++) {
 							<li>forEach - see <a href="https://www.freecodecamp.org/news/javascript-foreach-how-to-loop-through-an-array-in-js/" target="_blank">this article</a> on how it works</li>
 						</ul>
 						<br>
+						<h3>Loop comparison: for, forEach, for/of</h3>
+						<p>Each of these loops will iterate through the example array and console.log each item.</p>
+						<p><em>example array:</em></p>
+<pre>const basket = ['apples', 'oranges', 'grapes'];</pre>
+
+						<p><em>for loop:</em></p>
+<pre>for (let i = 0; i < basket.length; i++) {
+	console.log(basket[i]);
+}</pre>
+
+						<p><em>forEach loop:</em></p>
+<pre>basket.forEach(item => {
+	console.log(item);
+})</pre>
+						<p><em>for/of loop:</em></p>
+<pre>for (item of basket) {
+	console.log(item);
+}</pre>
+						<p><strong>Resource: </strong><a href="https://blog.bitsrc.io/3-flavors-of-the-for-loop-in-javascript-and-when-to-use-them-f0fb5501bdf3" target="_blank">3 Flavours of JavaScript Loop and when to use them</a></p>
+						<br>
+						<h3>Loop comparison part 2: for/in loop</h3>
+						<p>The above types of loop can be used to iterate over an array or string. Objects are non-iterable in JavaScript, but we can iterate (enumerate) over their properties using <a href="https://www.programiz.com/javascript/for-in" target="_blank">for/in</a>.</p>
+						<p>Note: You should not use for...in to iterate over an array where the index order is important, as it iterates in an arbitrary order.</p>
+						<p><em>example object:</em></p>
+<pre>const detailedBasket = {
+	apples: 5,
+	oranges: 10,
+	grapes: 100
+}</pre>
+						<p><em>for/in loop:</em></p>
+<pre>for (item in detailedBasket) {
+	console.log(item);
+}</pre>
+						<p>The above loop would log:</p>
+<pre>apples
+oranges
+grapes</pre>
+						<p><strong>Resource: </strong>See the <a href="#objects">Objects section</a> below for more info on interating through objects.</p>
+						<br>
 						<h3>Conditionals</h3>
 						<ul>
 							<li>if</li>
@@ -583,6 +622,7 @@ console.log(mapArray);
 						<p> Objects and arrays are complex data types that hold multiple values, as opposed to primitive data types that hold a single value.</p>
 						<p><strong>Objects </strong>are an unordered set of key-value pairs. The key is a text identifier that must be unique within the object and the value can be either a primitive or complex data value.</p>
 						<p><strong>Arrays </strong>are an ordered list of values that do not need to be unique and can be various data types. The position in the list is called an index, which is zero-based, meaning the first item in the array has an index of 0.</p>
+						<p>Arrays, like strings, are JavaScript iterables - meaning that it's possible to iterate through them. Objects are not iterables in JavaScript, so we have to use other <a href="https://flaviocopes.com/how-to-iterate-object-properties-javascript/" target="_blank">techniques to <a href="https://morioh.com/p/0306aa9dcb17" target="_blank">enumerate</a> through object properties</a>. (See also the <a href="#database-examples">Database Example</a> below for an example of how object properties can be accessed using a for loop, when the object/s are contained in an array.)</p>
 						<br>
 						<h3>Example of an object containing an array:</h3>
 						<pre>
@@ -640,13 +680,13 @@ const myBreed = dogs[myDog];
 console.log(myBreed);	// displays <strong>Doberman</strong>
 </pre>
 						<br>
-						<h3>Note on syntax</h3>
-						<p>The property pairs within objects are known variously as:</p>
+						<h3>Terminology: key/value pairs</h3>
+						<p>The property pairs within objects are described variously as:</p>
+						<p>key / value</p>
 						<p>property name / property value</p>
 						<p>property / value</p>
-						<p>key / value</p>
 						<br>
-						<h3>ECMA6 syntax</h3>
+						<h3>ECMA6 object syntax</h3>
 						<p>Say you want to create an object that stores these variables:</p>
 <pre>const a = 'test';
 const b = true;
@@ -716,7 +756,7 @@ let b = [].concat(a);
 						<p>Resource: <a href="https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/" target="_blank">fCC: JavaScript Type Coercion Explained</a></p>
 						<br>
 						<h3>Object.values and Object.entries</h3>
-						<p>With an array, we can use methods like .map(), .filter() and .reduce(), but we can’t do that directly with an object. However, we can convert an object into an array using Object.values and Object.entries, so that we can iterate through and use array methods on it.</p>
+						<p>With an array, we can use methods like .map(), .filter() and .reduce(), but we can’t do that directly with an object (as objects are not iterable in JS). However, we can convert an object into an array using Object.values and Object.entries, so that we can iterate (or rather, enumerate) through and use array methods on it.</p>
 						<p><strong>Example:</strong></p>
 <pre>let festiveCharacters = {
  username0: "Santa",

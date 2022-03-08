@@ -92,10 +92,12 @@
 						<ul>
 							<li><a href="https://devdocs.io/javascript/" target="_blank">DevDocs.io JavaScript documentation</a></li>
 							<li><a href="https://www.codecademy.com/article/glossary-javascript" target="_blank">Codecademy JavaScript Glossary</a></li>
-							<li><a href="https://www.freecodecamp.org/news/learn-javascript-full-course/" target="_blank">freeCodeCamp JavaScript Course (3 hours)</a></li>
+							<li><a href="https://www.freecodecamp.org/news/learn-javascript-full-course/" target="_blank">freeCodeCamp JavaScript Course</a></li>
 							<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">MDN JavaScript Basics</a></li>
 							<li><a href="https://learnjavascript.online/" target="_blank">learnjavascript.online</a></li>
 							<li><a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Reserved words (keywords) in JavaScript</a></li>
+							<li><a href="https://dev.to/codewithahsan/8-techniques-to-write-cleaner-javascript-code-369e" target="_blank">8 techniques to write cleaner JavaScript code</a></li>
+							<li><a href="https://stackoverflow.com/help/how-to-ask" target="_blank">How to ask a good question on Stack Overflow</a></li>
 						</ul>
 						<br>
 
@@ -449,7 +451,15 @@ const filteredArray = dragons.filter(name => {name.includes('Jon')})</pre>
 						<br>
 						<h3>Composition</h3>
 						<p>Composition is putting two functions together to form a third function, where the output of one function is the input of the other.</p>
-						<p>Resource: <a href="https://www.educative.io/edpresso/function-composition-in-javascript" target="_blank">Function composition in JavaScript</a></p>						
+						<p><strong>Resource: </strong><a href="https://www.educative.io/edpresso/function-composition-in-javascript" target="_blank">Function composition in JavaScript</a></p>						
+						<br>
+						<h3>Trailing commas</h3>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas" target="_blank">Trailing commas</a> (sometimes called "final commas") can be useful when adding new elements, parameters, or properties to JavaScript code.</p>
+						<p>For instance: if you want to add a new property, you can add a new line without modifying the previously last line, if that line already uses a trailing comma.</p>
+						<p><strong>Example:</strong></p>
+<pre>const example = (a, b, c, d,) => console.log(a);
+example(1,2,3,4,)</pre>
+						<p><em>Note that JSON disallows trailing commas.</em></p>
 						<br>
 						<h3>Functional purity</h3>
 						<p>We want to minimise side-effects - the function should affect the data being input to it, without creating side-effects in the outer world of the program.</p>
@@ -457,10 +467,19 @@ const filteredArray = dragons.filter(name => {name.includes('Jon')})</pre>
 						<p>When a function is deterministic, it means that the function behaves the same way every time - when you enter the same input, you always get the same results.</p>
 						<p>A <strong>pure function</strong> is deterministic and avoids side-effects; it depends only on its input elements, not on any state or data change during execution (side-effects).</p>
 						<p>This is a key part of avoiding bugs. If the function always does the same thing, it helps you avoid random errors.</p>
+						<p><strong>Resource: </strong><a href="https://dev.to/codewithahsan/8-techniques-to-write-cleaner-javascript-code-369e" target="_blank">Writing cleaner JavaScript code</a></p>
 						<br>
 						<h3>Function vs Method: terminology</h3>
 						<p>Is there a difference between a function and a method?</p>
 						<p>A method, like a function, is a set of instructions that perform a task. The difference is that a method is associated with an object, while a function is not. A function is directly called by its name, whereas a method includes a code that is called by the object's name.</p>
+						<br>
+						<h3>Method chaining</h3>
+						<p>Method chaining is the mechanism of calling a method on another method of the same object. This means a cleaner and more readable code.</p>
+						<p><strong>Example:</strong></p>
+<pre>fixedEmail = email.trimStart().trimEnd()
+</pre>
+						<p>In the above example, “email” is a string which has access to all the String methods; using method trimStart() on it returns another string which also has access to String methods.</p>
+						<p><strong>Resource: </strong><a href="https://www.tutorialspoint.com/method-chaining-in-javascript" target="_blank">Tutorial: Method chaining in JavaScript</a></p>
 						<br>
 						<h3>JavaScript Methods: learning resources</h3>
 						<ul>

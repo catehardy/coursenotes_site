@@ -95,6 +95,8 @@
 							<li><a href="https://dev.to/codewithahsan/8-techniques-to-write-cleaner-javascript-code-369e" target="_blank">8 techniques to write cleaner JavaScript code</a></li>
 							<li><a href="https://www.sitepoint.com/javascript-truthy-falsy/" target="_blank">Truthy and Falsy Values: When All is Not Equal in JavaScript</a></li>
 							<li><a href="https://dev.to/adriennemiller/semicolons-in-javascript-to-use-or-not-to-use-2nli" target="_blank">Semicolons in JavaScript: to use or not to use?</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="_blank">Rest syntax and Spread syntax (...)</a></li>
+							<li><a href="https://medium.com/swlh/why-are-there-so-many-curly-brackets-in-javascript-49752253b6b8" target="_blank">Why are there so many curly braces in JS?</a></li>
 							<li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank">freeCodeCamp JavaScript Course</a></li>
 						</ul>
 						<br>
@@ -1011,7 +1013,7 @@ input.addEventListener("keypress", addListAfterKeypress);</pre>
 						<br>
 
 						<h2 class="pink-heading" id="destructuring">Destructuring</h2>
-						<p>Destructuring is a useful JavaScript feature to extract properties from objects and arrays, and bind them to variables.</p>
+						<p>Destructuring is a JavaScript feature that allows us to extract data from arrays, objects, and maps and set them into new, distinct variables. Destructuring allows us to extract multiple properties, or items, from an array at a time.</p>
 						<p>Example: extracting properties from an object, with and without destructuring:</p>
 <pre>// example object:
 
@@ -1034,16 +1036,43 @@ let { wizardLevel } = obj;</pre>
 						<br>
 						<h3>Learning resources:</h3>
 						<ul>
-							<li><a href="https://www.javascripttutorial.net/es6/destructuring/" target="_blank">Tutorial on destructuring</a></li>
-							<li><a href="https://javascript.info/destructuring-assignment" target="_blank">Destructuring assignment</a></li>
-							<li><a href="https://medium.com/swlh/why-are-there-so-many-curly-brackets-in-javascript-49752253b6b8" target="_blank">Why are there so many curly braces in JS?</a> (Discusses destructuring)</li>
+							<li><a href="https://www.educative.io/edpresso/what-is-object-destructuring-in-javascript" target="_blank">What is object destructuring in JavaScript?</a></li>
+							<li><a href="https://wesbos.com/destructuring-objects" target="_blank">Simple guide to destructuring objects</a></li>
+							<li><a href="https://javascript.info/destructuring-assignment" target="_blank">More detailed destructuring guide</a></li>
 							</ul>
 							<br>
 
 							<h2 class="pink-heading" id="debugging">Debugging</h2>
+							<p>Debugging is a multistep process that involves identifying a problem, isolating the source of the problem, and then either correcting the problem or determining a way to work around it. The final step is to test the correction or workaround and make sure it works.</p>
+							<p><a href="https://www.dummies.com/article/technology/programming-web-design/javascript/10-common-javascript-bugs-and-how-to-avoid-them-142585">10 Common JavaScript Bugs and How to Avoid Them</a></p>
+							<p><a href="https://dev.to/educationecosystem/results-of-a-study-to-understand-javascript-bugs-and-how-to-avoid-them-2e64">Results of a Study on JavaScript Bugs (explains most common ones)</a></p>
+							<br>
 							<h3>Try/Catch</h3>
-							<p>A try / catch block is basically used to handle errors in JavaScript. You use this when you don't want an error in your script to break your code.</p>
+							<p>A try / catch block is used to handle errors in JavaScript. You use this when you don't want an error in your script to break your code.</p>
+							<p>Notes:</p>
+							<ul>
+								<li>try...catch only works for runtime errors. For try...catch to work, the code must be runnable. In other words, it should be valid JavaScript. It won’t work if the code is syntactically wrong, for instance it has unmatched curly braces.</li>
+								<li>try...catch works synchronously. If an exception happens in “scheduled” code, like in setTimeout, then try...catch won’t catch it.</li>
+							</ul>
 							<p><a href="https://www.freecodecamp.org/news/try-catch-in-javascript/" target="_blank">How to use a try/catch block in JavaScript</a></p>
+							<p><a href="https://javascript.info/try-catch">Error handling with try/catch</a></p>
+
+
+
+							<br>
+							<h3>Chrome / FireFox DevTools</h3>
+							<p>As developers, we’ve traditionally rooted out bugs in our programs by using meaningful log statements. JavaScript has the famous console.log() method for that. But while log statements are good, they're less efficient than a tool that enables you to carry out step-by-step debugging.</p>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Tools">What are browser developer tools?</a></p>
+							<p><a href="https://dev.to/atapas/the-definitive-guide-to-javascript-debugging-2021-edition-116n" target="_blank">Chrome DevTools: The definitive guide to JavaScript Debugging</a></p>
+							<p><a href="https://firefox-source-docs.mozilla.org/devtools-user/index.html">FireFox DevTools user docs</a></p>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger">The FireFox JavaScript Debugger (MDN guide)</a></p>
+							<br>
+							<h3>Debugging in VS Code</h3>
+							<p>How would you like to have your entire web development experience, all of the tools you need, completely inside VS Code? In addition to our code and terminal we now have a browser, browser dev tools, and... wait for it, the console!!</p>
+							<p><a href="https://www.youtube.com/watch?v=vHZPeohPHqo">VS Code Has Dev Tools & Console!! No Need For Chrome Anymore (YouTube)</a></p>
+							<p><a href=https://code.visualstudio.com/docs/editor/debugging target="_blank">Guide to VS Code's built-in debugger </a></p>
+							
+													
 
 
 							<br><hr><br>

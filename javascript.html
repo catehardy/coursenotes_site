@@ -91,6 +91,7 @@
 
 						<h2 class="pink-heading" id="learning-resources">Learning Resources</h2>
 						<ul>
+							<li><a href="https://javascript.info/" target="_blank">The Modern JavaScript Tutorial</a> - From the basics to advanced topics with simple, but detailed explanations.</li>
 							<li><a href="https://devdocs.io/javascript/" target="_blank">DevDocs.io JavaScript documentation</a></li>
 							<li><a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Reserved words (keywords) in JavaScript</a></li>
 							<li><a href="https://dev.to/codewithahsan/8-techniques-to-write-cleaner-javascript-code-369e" target="_blank">8 techniques to write cleaner JavaScript code</a></li>
@@ -254,9 +255,32 @@
 
 						<h2 class="pink-heading" id="advanced-operators">Advanced Operators</h2>
 						<h3>Optional Chaining Operator ( ?. )</h3>
-						<p>some text</p>
+						<p>The optional chaining operator lets you read the value of a property located deep within a chain of connected objects, without having to check that each reference in the chain is valid.</p>
+						<p>It's a shorthand for checking whether objects and object properties exist and can replace or shorten long <em>if</em> statements.</p>
+						<p>If the object or object property you've referenced doesn’t exist, the program will return <em>undefined</em> rather than throwing an error.</p>
+						<h3>Optional chaining operator examples:</h3>
+						<img src="Images/optional-chaining-operator.png" alt="optional chaining operator - first example" height="500">
+						<br>
+						<img src="Images/optional-chaining-operator-2.png" alt="optional chaining operator - second example" height="500">
+						<h3>Learning resource:</h3>
+							<ul>
+								<li><a href="https://javascript.info/optional-chaining" target="_blank">The Optional Chaining Operator: When and how to use it</a></li>
+							</ul>
+						<br>
 						<h3>Nullish Coalescing Operator ( ?? )</h3>
-						<p>some text</p>
+						<p>The nullish coalescing operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.</p>
+						<p>The common use case for <strong>??</strong> is to provide a default value for a potentially undefined variable.</p>
+						<p><strong>Example:</strong></p>
+<pre>console.log(false ?? 'Default value')  // Returns false
+console.log(null ?? 'Default value')  // Returns 'Default value'
+</pre>
+						<p>The <strong>??</strong> operator can often be used instead of the OR ( <strong>||</strong> ) operator. Unlike OR, <strong>??</strong> doesn’t check whether a value is generally falsey - it checks whether it’s specifically null or undefined.</p>
+						<p>In other words, <strong>||</strong> doesn’t distinguish between <strong>false</strong>, <strong>0</strong>, an empty string <strong>""</strong>, and <strong>null/undefined</strong>. They are all the same – falsy values. If any of these is the first argument of <strong>||</strong>, then we’ll get the second argument as the result. (The <strong>||</strong> operator, reading left to right, will evaluate to the first truthy value. If no truthy value is found, the last value is returned.)</p>
+						<h3>Learning resources:</h3>
+							<ul>
+								<li><a href="https://javascript.info/nullish-coalescing-operator" target="_blank">Guide to the Nullish Coalescing Operator</a></li>
+								<li><a href="https://riptutorial.com/javascript/example/828/logic-operators-with-non-boolean-values--boolean-coercion-" target="_blank">Logic Operators with Non-boolean values (Logical OR and Logical AND)</a></li>
+							</ul>
 						<br>
 
 						<h2 class="pink-heading" id="loops">Loops and Conditionals</h2>

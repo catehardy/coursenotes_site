@@ -73,6 +73,7 @@
 							<li><a href="#data-types">Data Types</a></li>
 							<li><a href="#variables-scope">Variables and Scope</a></li>
 							<li><a href="#operators">Operators</a></li>
+							<li><a href="#advanced-operators">Advanced Operators</a></li>
 							<li><a href="#loops">Loops and Conditionals</a></li>
 							<li><a href="#functions">Functions</a></li>
 							<li><a href="#advanced-functions">Advanced Functions</a></li>
@@ -105,7 +106,7 @@
 									
 									<p>In JavaScript, data types are split into two categories, and the computer treats each one differently. We have <strong>primitive</strong> data types and <strong>reference</strong> data types.</p>
 									<h3>Primitive Types</h3>
-									<p>A primitive value/data type is data that is not an object and has no methods. There are 7 <strong>primitive</strong> data types: string, number, bigint, boolean, undefined, symbol, and null.</p>
+									<p>A primitive value/data type is data that is not an object and has no methods. There are 7 <strong>primitive</strong> data types: string, number, <a href="https://www.smashingmagazine.com/2019/07/essential-guide-javascript-newest-data-type-bigint/" target="_blank">bigint</a>, boolean, undefined, <a href="https://www.freecodecamp.org/news/how-did-i-miss-javascript-symbols-c1f1c0e1874a/" target="_blank">symbol</a>, and null.</p>
 									<p>But you might be wondering about strings, because they <em>do</em> have methods. The fact is, JavaScript converts primitive strings to string objects, so that it’s possible to use string object methods.</p>
 									<h3>Reference Types</h3>
 									<p>Object, Array, and Function (which are all types of objects) are known as <strong>reference</strong> or <strong>composite</strong> data types.</p>
@@ -172,15 +173,15 @@
 						<ul>
 							<li><strong>Arithmetic Operators</strong>
 								<ul>
-									<li class="sub-list">Addition, subtraction, multiplication, division, modulus, increment and decrement.</li>
-									<li class="sub-list"><strong>To square, cube, (etc), a number, use this syntax:</strong></li>
+									<li class="sub-list">Addition ( + ), subtraction ( - ), multiplication ( * ), division ( / ), modulus ( % ), increment ( ++ ) and decrement ( -- ).</li>
+									<li class="sub-list"><strong>Exponentiation: To square, cube, (etc), a number, use this syntax:</strong></li>
 									<li class="sub-list">const square = (num) => num**2;</li>
 									<li class="sub-list">const cube = (num) => num**3;</li>
 								</ul>
 							</li>
-							<li><strong>Assignment Operators</strong>
+							<li><strong>Assignment Operator</strong>
 								<ul>
-									<li class="sub-list">Used to assign values to JavaScript variables.</li>
+									<li class="sub-list">Used to assign values to JavaScript variables ( = ).</li>
 								</ul>
 							</li>
 							<li><strong>String Operators</strong>
@@ -195,7 +196,7 @@
 							</li>
 							<li><strong>Comparison Operators</strong>
 								<ul>
-									<li class="sub-list">Used in logical statements to determine equality or difference between variables or values (e.g. ==, ===, !=, <=, etc). </li>
+									<li class="sub-list">Used in logical statements to determine equality or difference between variables or values ( ==, ===, !=, !==, <, >, <=, >=, ). </li>
 								</ul>
 							</li>
 							<li><strong>Conditional (Ternary) Operator</strong>
@@ -249,6 +250,13 @@
 							<ul>
 								<li><a href="https://www.w3schools.com/jsref/jsref_operators.asp" target="_blank">Complete list of JavaScript operators (with examples)</a></li>
 							</ul>
+						<br>
+
+						<h2 class="pink-heading" id="advanced-operators">Advanced Operators</h2>
+						<h3>Optional Chaining Operator ( ?. )</h3>
+						<p>some text</p>
+						<h3>Nullish Coalescing Operator ( ?? )</h3>
+						<p>some text</p>
 						<br>
 
 						<h2 class="pink-heading" id="loops">Loops and Conditionals</h2>
@@ -530,8 +538,13 @@ example(1,2,3,4,)</pre>
 							<li><a href="https://www.programiz.com/javascript/methods" target="_blank">Introduction to JS methods and the 'this' keyword</a></li>
 							<li><a href="https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm" target="_blank">List of JavaScript methods</a></li>
 							<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-object-methods-in-javascript" target="_blank">How to use object methods in JavaScript</a></li>
-							<li><a href="https://www.samanthaming.com/tidbits/97-string-padstart-padend/" target="_blank">String padding methods</a></li>
-							<li><a href="https://appdividend.com/2019/03/11/javascript-string-trimstart-trimend-tutorial-with-example/" target="_blank">Trim string start/end methods</a></li>
+							<p>Recently added string methods:</p>
+							<ul>
+								<li><a href="https://www.samanthaming.com/tidbits/97-string-padstart-padend/" target="_blank">String padding methods</a></li>
+								<li><a href="https://appdividend.com/2019/03/11/javascript-string-trimstart-trimend-tutorial-with-example/" target="_blank">Trim string start/end methods</a></li>
+								<li><a href="https://www.javascripttutorial.net/es-next/javascript-string-replaceall/" target="_blank">JavaScript string replaceAll()</a></li>
+								</ul>
+							
 						</ul>
 						<br>
 
@@ -1064,6 +1077,7 @@ let { wizardLevel } = obj;</pre>
 							<p>As developers, we’ve traditionally rooted out bugs in our programs by using meaningful log statements. JavaScript has the famous console.log() method for that. But while log statements are good, they're less efficient than a tool that enables you to carry out step-by-step debugging.</p>
 							<p><a href="https://developer.mozilla.org/en-US/docs/Tools">What are browser developer tools?</a></p>
 							<p><a href="https://dev.to/atapas/the-definitive-guide-to-javascript-debugging-2021-edition-116n" target="_blank">Chrome DevTools: The definitive guide to JavaScript Debugging</a></p>
+							<p><a href="https://medium.datadriveninvestor.com/stopping-using-console-log-and-start-using-your-browsers-debugger-62bc893d93ff" target="_blank">Debugging example in Chrome DevTools</a></p>
 							<p><a href="https://firefox-source-docs.mozilla.org/devtools-user/index.html">FireFox DevTools user docs</a></p>
 							<p><a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger">The FireFox JavaScript Debugger (MDN guide)</a></p>
 							<br>

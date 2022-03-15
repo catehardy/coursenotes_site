@@ -111,7 +111,7 @@
 									
 									<p>In JavaScript, data types are split into two categories, and the computer treats each one differently. We have <strong>primitive</strong> data types and <strong>reference</strong> data types.</p>
 									<h3>Primitive Types</h3>
-									<p>A primitive value/data type is data that is not an object and has no methods. There are 7 <strong>primitive</strong> data types: string, number, <a href="https://www.smashingmagazine.com/2019/07/essential-guide-javascript-newest-data-type-bigint/" target="_blank">bigint</a>, boolean, undefined, <a href="https://www.freecodecamp.org/news/how-did-i-miss-javascript-symbols-c1f1c0e1874a/" target="_blank">symbol</a>, and null.</p>
+									<p>A primitive value/data type is data that is not an object and has no methods. There are 7 <strong>primitive</strong> data types: string, number (including <a href="https://www.w3schools.com/jsref/jsref_isnan_number.asp" target="_blank">NaN</a>), <a href="https://www.smashingmagazine.com/2019/07/essential-guide-javascript-newest-data-type-bigint/" target="_blank">bigint</a>, boolean, undefined, <a href="https://www.freecodecamp.org/news/how-did-i-miss-javascript-symbols-c1f1c0e1874a/" target="_blank">symbol</a>, and null.</p>
 									<p>But you might be wondering about strings, because they <em>do</em> have methods. The fact is, JavaScript converts primitive strings to string objects, so that it’s possible to use string object methods.</p>
 									<h3>Reference Types</h3>
 									<p>Object, Array, and Function (which are all types of objects) are known as <strong>reference</strong> or <strong>composite</strong> data types.</p>
@@ -131,6 +131,7 @@
 									<ul>
 										<li><a href="https://www.edureka.co/blog/data-types-in-javascript/" target="_blank">Data Types in JavaScript</a></li>
 										<li><a href="https://flexiple.com/javascript-pass-by-reference-or-value/" target="_blank">Pass by Value and Pass by Reference</a></li>
+										<li><a href="https://dmitripavlutin.com/nan-in-javascript/" target="_blank">NaN in JavaScript</a></li>
 									</ul>
 						<br>
 
@@ -656,6 +657,9 @@ console.log(mapArray);
 						<p>In the example above, <em>console.log(reduceArray)</em> would produce the result <em>30</em>.</p>
 						<p>Note that the <em>accumulator</em> argument is defined within the function (and the <em>num</em> argument represents each element of the array as it's iterated over by the <em>reduce()</em> method).</p>
 						<br>
+						<h3>JavaScript Array Methods: Cheat Sheet</h3>
+						<img src="Images/js-array-methods.png" alt="JavaScript array methods" height="500">
+						<br>
 						<h3>Learning resources:</h3>
 						<ul>
 							<li><a href ="https://medium.com/@mandeepkaur1/a-list-of-javascript-array-methods-145d09dd19a0" target="_blank">List of JavaScript Array Methods</a>: Quick examples of .map(), .filter(), .sort(), .forEach(), .concat(), .every(), .some(), .includes(), .join(), .reduce(), .find(), .findIndex(), .indexOf(), .fill(), .slice(), .reverse(), .push(), .pop(), .shift(), .unshift()</li>
@@ -980,6 +984,9 @@ function myFunction() {
 obj.innerHTML = "Hello";</pre>
 						<p>The two examples above also cache selectors in variables.</p>
 						<p>However, avoid <em>unnecessary</em> variables. Don't create new variables if you don't plan to save values (<a href="https://www.w3schools.com/js/js_performance.asp" target="_blank">more info on JS performance here</a>).</p>
+						<br>
+						<h3>JavaScript DOM: Cheat Sheet</h3>
+						<img src="Images/js-dom.jpg" alt="JavaScript DOM" height="500">
 						<br>
 
 						<h2 class="pink-heading" id="event-listeners-callback-functions">Event Listeners and Callback Functions</h2>

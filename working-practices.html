@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang ="en-GB">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Working Practices</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<!-- stylesheet for Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</head>
+
+	<body>
+		<main>
+			<nav class="topnav" id="myTopnav" aria-label="primary">
+				<a href="index.html" class="active">Home</a>
+				<a href="html.html">HTML</a>
+				<a href="css.html">CSS</a>
+				<a href="javascript.html">JavaScript</a>
+				<a href="working-practices.html">Working Practices</a>
+				<a href="portfolio.html">Portfolio</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				  </a>
+			</nav>
+
+			<div class="container">
+				<!-- sidebar content in here -->
+				<div class="sidebar">
+					<nav aria-label="secondary">
+					 	<h3 id="navHeader">About</h3>
+					   <p class="center-pink-text">Simple site to store a trainee web dev's notes on HTML, CSS and JavaScript</p>
+					   <img src="./Images/rubber-duck.jpg" alt="Rubber duck" loading="lazy">
+						<hr><br>
+				    	<h3 class="navSectionHeader">Useful Links</h3>
+					    <ul>
+					    	<li><a href="https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/" target="_blank">ZTM Udemy course</a></li>
+							<li><a href="https://zerotomastery.io/resources/" target="_blank">ZTM Resources</a></li>
+							<li><a href="https://github.com/catehardy/" target="_blank">My GitHub</a></li>
+							<li><a href="https://caniuse.com/" target="_blank">Can I Use?</a></li>
+							<li><a href="https://codepen.io/" target="_blank">Codepen.io</a></li>
+						</ul>
+						<hr><br>
+						<h3 class="navSectionHeader">To Do List</h3>
+							<ul>
+								<li><s>Add navigation for mobile devices</s> (Done!)</li>
+								<li>Add multiple page navigation for progress diary as it gets longer</li>								
+								<li><strong>Things to learn/improve and add to LinkedIn:</strong>
+									<p>Front-End Development<br>
+									Git<br>
+									JavaScript<br>
+									React.js<br>
+									Node.js<br>
+									Google Analytics<br>
+									Agile Methodologies (<a href="https://medium.com/javarevisited/10-free-online-courses-to-learn-agile-and-scrum-for-beginners-e028711532ce" target="_blank">free courses here</a>)<br>
+									Bash<br>
+									Linux
+								</p></li>
+							</ul>
+					</nav>
+			    </div>
+
+			    <div class="mainContent">
+					<header><h1 class="header">Working Practices</h1></header>
+					<h2 class="pink-heading">Table of Contents</h2>
+						<ol>
+							<li><a href="#github-workflow">GitHub Workflow</a></li>
+						</ol>
+						<br>
+
+						<h2 class="pink-heading" id="github-workflow">GitHub Workflow</h2>
+						<h3>Collaborating on a project</h3>
+						<p><strong>Initial steps:</strong></p>
+						<ol>
+							<li>Clone the project repo to your computer</li>
+							<li>CD into project directory</li>
+							<li>Go to step 3 below</li>
+						</ol>
+						<br>
+						<p><strong>Daily workflow:</strong></p>
+						<ol>
+							<li>Check out the main branch: <strong>git checkout main</strong></li>
+							<li>Sync the local main branch: <strong>git pull origin main</strong></li>
+							<li>Check out a new branch from main: <strong>git checkout -b YOUR_BRANCH_NAME</strong></li>
+							<li>Write and commit your code</li>
+							<li>Push the commits to the remote repo on GitHub: <strong>git push origin YOUR_BRANCH_NAME</strong></li>
+							<li>Open a Pull Request (PR) on GitHub</li>
+							<li>Wait for the Continuous Integration pipelines to pass</li>
+							<li>Request a review from other developers and discuss the code</li>
+							<li>Once the PR is approved, merge it to the main branch</li>
+							<li>Loop back to step 1 (sync local repo with main)</li>
+						</ol>
+						<br>
+						<h3>Resources</h3>
+						<ul>
+							<li><a href="https://opensource.com/article/20/4/git-merge-conflict" target="_blank">Resolving merge conflicts</a></li>
+							<li><a href="https://gitexplorer.com/" target="_blank">Git Command Explorer</a></li>
+						</ul>
+						<br>
+						<hr>
+						<h3>Contributing to an open source project</h3>
+						<p>Unless you have write access to the repository in question, you cannot simply push anything to it; your push will be denied by the server. That's where a fork comes into play. By forking someone else's repo, you get a copy to which you have write access, i.e. to which you can push your contributions.</p>
+						<p>A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.</p>
+						<p>Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.</p>
+						<br>
+						<p><strong>Typical process:</strong></p>
+						<ol>							
+    						<li>Identify an area in the open source project that can be improved</li>
+    						<li>Fork its repo</li>
+    						<li>Make a clone of your fork on your local machine</li>
+    						<li>In that clone, make changes, run tests, create commits (possibly on a new branch), etc</li>
+    						<li>Once you're happy with your amendments to the code, make your work more presentable: tidy/squash your commits, write good commit messages that respect the style of the original repo. You may also want to <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" target="_blank">rebase your branch</a> to that of the repo owner's branch, if they have pushed changes to their repo since you forked it</li>
+    						<li>Push to your fork</li>
+    						<li> Issue a pull request to the repo's owner and wait for them to review it</li>
+    						<li>Push more commits to (and possibly rebase) your branch until they are satisfied with your work</li>
+    						<li>If all goes well, they will merge your pull request; your work gets integrated into their GitHub repo</li>
+    						<li>To save space on GitHub's servers, and if you don't intend to contribute to the project again any time soon, you can safely delete your fork</li>
+						</ol>
+						<br>
+						<p><strong>Note: Keeping your fork up to date</strong></p>
+						<p>What happens if somebody makes an update to the original project and now your forked project is out of sync? Here's how to make sure your fork has the most up-to-date version of the original project:</p>
+						<ol>
+							<li>In your terminal, change directory to your forked project directory</li>
+							<li>Enter <strong>git remote -v</strong>. You'll see the current configured remote repository for your fork.</li>
+							<img src="Images/sync-fork-1.png" alt="Syncing a fork, part 1"">
+							<li>Type <strong>git remote add upstream</strong> and then paste the URL you would copy from the original repository if you were to do a git clone. Press Enter. It will look like this:</li>
+							<img src="Images/sync-fork-2.png" alt="Syncing a fork, part 2">
+							<li>To verify the new upstream repository you've specified for your fork, type <strong>git remote -v</strong> again. You should see the URL for your fork as <strong>origin</strong>, and the URL for the original repository as <strong>upstream</strong>.</li>
+							<img src="Images/sync-fork-3.png" alt="Syncing a fork, part 3">
+							<li>Now, you can keep your fork synced with the upstream repository with a few Git commands. One simple way is to use this command from the main branch of your forked repository: <strong>git pull upstream main</strong>.</li>
+							<li>Or you can follow another method, here: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork" target="_blank">Syncing a Fork</a>.</li>
+						</ol>
+						<br>
+						<h3>Resources</h3>
+						<ul>
+							<li><a href="https://raw.githubusercontent.com/zero-to-mastery/start-here-guidelines/855a00243db60c71905f6e3afd95ebf2cf7459a0/gitstartedguideoptimized.pdf" target="_blank">Open source “Git Started Guide”</a></li>
+							<li><a href="https://github.com/zero-to-mastery/start-here-guidelines#anatomy-of-an-open-source-project" target="_blank">Anatomy of an open source project (ZTM guide)</a></li>
+							<li><a href="https://www.tutorialandexample.com/git-upstream-and-downstream" target="_blank">Git upstream and downstream</a></li>
+							</ul>
+				</div>
+			</div>
+			<footer>Website made with love by Cate, &copy;2022</footer>
+		</main>
+		<script type="text/javascript" src="topnav.js"></script>
+	</body>
+</html>

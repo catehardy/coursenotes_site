@@ -639,6 +639,19 @@ const mapArray = array.map(num => num * 2);
 console.log(mapArray);
 </pre>
 						<p>(Here's a more detailed <a href="https://code.tutsplus.com/tutorials/javascript-map-vs-foreach-when-to-use-each-one--cms-38365" target="_blank" rel="noopener">comparison of the two methods</a>.)</p>
+						<p><strong>Note on the parameters map() takes:</strong></p>
+						<p>Map takes one parameter, which is the function which is passed into it. That function can take one, two or three parameters. The example above uses one, and the example below uses two. (The third argument would be the whole array being iterated.)</p>
+						<p>In the example below, the two parameters passed into the function are: the item being iterated over, and the index of the item being iterated over.</p>
+<pre>let arr2 = [12,14,16,18];
+
+arr2.map((item, index) => {
+  console.log( item, index );
+});</pre>
+						<p>The above function returns:</p>
+<pre>12 0
+14 1
+16 2
+18 3</pre>
 						<br>
 						<h3>Filter</h3>
 						<p>This method allows us to create a new array by iterating over and then filtering out only the required elements from a pre-existing array.</p>

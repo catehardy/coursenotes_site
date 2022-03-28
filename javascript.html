@@ -640,9 +640,9 @@ console.log(mapArray);
 </pre>
 						<p>(Here's a more detailed <a href="https://code.tutsplus.com/tutorials/javascript-map-vs-foreach-when-to-use-each-one--cms-38365" target="_blank" rel="noopener">comparison of the two methods</a>.)</p>
 						<p><strong>Note on the parameters map() takes:</strong></p>
-						<p>Map takes one parameter, which is the function which is passed into it. That function can take one, two or three parameters. The example above uses one, and the example below uses two. (The third argument would be the whole array being iterated.)</p>
-						<p>In the example below, the two parameters passed into the function are: the item being iterated over, and the index of the item being iterated over.</p>
-<pre>let arr2 = [12,14,16,18];
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank" rel="noopener">Map can take one, two or three parameters</a>. The example above uses one (the item being iterated over), and the example below uses two (the item being iterated over, and the index of the item being iterated over). If used, the third parameter would be the whole array that's being mapped.</p>
+						<p><strong>Example: map function taking 2 parameters</strong></p>
+<pre>const arr2 = [12,14,16,18];
 
 arr2.map((item, index) => {
   console.log( item, index );

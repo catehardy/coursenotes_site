@@ -114,7 +114,7 @@ mark {
 }
 
 h1, h2, h3, h4, footer {
-	color: var(--teal);
+	color: var(--darkTeal);
 }
 
 p {

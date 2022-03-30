@@ -6,6 +6,12 @@
 	--lightGray: #f1f1f1;
 	--darkGray: #555;
 	--lightMint: #e0ebeb;
+	/* NEW COLOURS  */
+	--offWhite: #E7E3E4;
+	--blueGray: #81819E;
+	--pink: #E6007A;
+	--midGray: #847F88;
+	--navyBlue: #30385D;
 }
 
 html {
@@ -15,12 +21,12 @@ html {
 
 body {
 	/*background-image: url("Images/code-backdrop.jpg");*/
-	background-color: #ddd9cf;
+	background-color: var(--offWhite);
 	font-family: 'Noto Sans', sans-serif;
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
-	color: var(--darkTeal);
+	color: var(--navyBlue);
 }
 
 .container {
@@ -69,10 +75,10 @@ body {
 }
 
 .header {
-	background-color: var(--teal);
+	background-color: var(--blueGray);
 	color: #FFF;
 	font-size: 3em;
-	text-shadow: 2px 2px 2px var(--darkTeal);
+	text-shadow: 2px 2px 2px var(--navyBlue);
 	text-align: center;
 	margin-top: 0px;
 	padding: 0px 20px 10px;
@@ -82,10 +88,10 @@ body {
 
 /*sidebar*/
 #navHeader {
-	background-color: var(--teal);
+	background-color: var(--blueGray);
 	color: #FFF;
 	font-size: 3em;
-	text-shadow: 2px 2px 2px var(--darkTeal);
+	text-shadow: 2px 2px 2px var(--navyBlue);
 	text-align: center;
 	padding-bottom: 10px;
 	margin: -10px -10px 0px -10px;
@@ -93,10 +99,10 @@ body {
 
 /*sidebar*/
 .navSectionHeader {
-	background-color: var(--teal);
+	background-color: var(--blueGray);
 	color: #FFF;
 	font-size: 1.5em;
-	text-shadow: 2px 2px 2px var(--darkTeal);
+	text-shadow: 2px 2px 2px var(--navyBlue);
 	text-align: center;
 	margin: -10px -10px 0px -10px;
 	padding-top: 5px;
@@ -104,17 +110,17 @@ body {
 }
 
 input:focus {
-	background-color: var(--lightGray);
+	background-color: var(--offWhite);
 }
 
 mark {
-	color: var(--darkteal);
+	color: var(--navyBlue);
 	background-color: var(--lightPink);
 	padding: 0px 4px;
 }
 
 h1, h2, h3, h4, footer {
-	color: var(--darkTeal);
+	color: var(--navyBlue);
 }
 
 p {
@@ -123,7 +129,7 @@ p {
 }
 
 p, pre {
-	color: var(--darkTeal);
+	color: var(--navyBlue);
 }
 
 pre {
@@ -136,7 +142,7 @@ a {
 }
 
 a:hover {
-	color: var(--darkTeal);
+	color: var(--navyBlue);
 }
 
 img {
@@ -151,7 +157,7 @@ img {
 hr {
  	border: 3px;
  	border-style: none none dotted;
-	color: var(--teal);
+	color: var(--midGray);
 }
 
 .lineargrad-box {
@@ -162,7 +168,7 @@ hr {
 }
 
 footer {
-	background-color: var(--teal);
+	background-color: var(--navyBlue);
 	color: white;
 	margin-top: 15px;
 	padding: 0.5em;
@@ -191,7 +197,7 @@ fieldset {
 
 legend {
 	color: #000;
-	background-color: var(--lightMint);
+	background-color: var(--offWhite);
 	padding: 5px 20px 5px 20px;
 	border-radius: 10% 10% 10% 10%;
 }
@@ -210,7 +216,7 @@ li {
 
  /* Add a black background color to the top navigation */
 .topnav {
-  background-color: var(--darkTeal);
+  background-color: var(--navyBlue);
   overflow: hidden;
   width: 100%;
   position: fixed;
@@ -229,7 +235,7 @@ li {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #eae8e2;
+  background-color: var(--offWhite);
   color: black;
 }
 

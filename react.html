@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>React Notes</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+		<main>
+			<nav class="topnav" id="myTopnav" aria-label="primary">
+				<a href="index.html">Diary</a>
+				<a href="html.html">HTML</a>
+				<a href="css.html">CSS</a>
+				<a href="javascript.html">JavaScript</a>
+				<a href="react.html" class="active">React</a>
+				<a href="working-practices.html">Working Practices</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				  </a>
+			</nav>
+			<div class="container">
+				
+				<!-- sidebar content in here -->
+				<div class="sidebar">
+					<nav aria-label="secondary">
+					 	<h3 id="navHeader">About</h3>
+					   <p class="center-pink-text">Simple site to store a trainee web dev's notes</p>
+					   <img src="./Images/rubber-duck.jpg" alt="Rubber duck" loading="lazy">
+						<hr><br>
+				    	<h3 class="navSectionHeader">Useful Links</h3>
+					    <ul>
+					    	<li><a href="https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/" target="_blank" rel="noopener">ZTM Udemy course</a></li>
+							<li><a href="https://zerotomastery.io/resources/" target="_blank" rel="noopener">ZTM Resources</a></li>
+							<li><a href="https://github.com/catehardy/" target="_blank" rel="noopener">My GitHub</a></li>
+							<li><a href="https://caniuse.com/" target="_blank" rel="noopener">Can I Use?</a></li>
+							<li><a href="https://codepen.io/" target="_blank" rel="noopener">Codepen.io</a></li>
+						</ul>
+						<hr><br>
+						<h3 class="navSectionHeader">To Do List</h3>
+							<ul>
+								<li><s>Add navigation for mobile devices</s> (Done!)</li>
+								<li>Add multiple page navigation for progress diary as it gets longer</li>								
+								<li><strong>Things to learn/improve and add to LinkedIn:</strong>
+									<p>Front-End Development<br>
+									Git<br>
+									JavaScript<br>
+									React.js<br>
+									Node.js<br>
+									Google Analytics<br>
+									Agile Methodologies (<a href="https://medium.com/javarevisited/10-free-online-courses-to-learn-agile-and-scrum-for-beginners-e028711532ce" target="_blank" rel="noopener">free courses here</a>)<br>
+									Bash<br>
+									Linux
+								</p></li>
+							</ul>
+					</nav>
+			    </div>
+
+			    	<div class="mainContent">
+						<header><h1 class="header">React Notes</h1></header>
+						<h2 class="pink-heading">Table of Contents</h2>
+						<ol>
+							<li><a href="#learning-resources">Resources</a></li>
+							<li><a href="#notes">Notes</a></li>
+						</ol>
+						<br>
+
+						<h2 class="pink-heading" id="learning-resources">Resources</h2>
+						<ul>
+							<li><a href="https://reactjs.org/docs/getting-started.html" target="_blank" rel="noopener">Reactjs.org: Getting Started</a></li>
+							<li><a href="https://reactjs.org/tutorial/tutorial.html" target="_blank" rel="noopener">Reactjs.org: Tutorial (and Tic Tac Toe game)</a></li>
+							<li><a href="https://www.taniarascia.com/getting-started-with-react/" target="_blank" rel="noopener">React Tutorial: An Overview and Walkthrough</a></li>
+							<li><a href="http://www.developer-cheatsheets.com/react" target="_blank" rel="noopener">React Cheatsheet</a></li>
+							<li><a href="https://create-react-app.dev/docs/getting-started/" target="_blank" rel="noopener">Using Create React App</a></li>
+						</ul>
+						<br>
+
+						<h2 class="pink-heading" id="notes">Notes</h2>
+						<ul>
+							<li>One-way data flow</li>
+							<li>Uses Virtual DOM (it’s a JS object which replaces DOM manipulation)</li>
+							<li>React can be used for other purposes - mobile, VR, etc (so instead of importing ReactDOM, you would import ReactNative)</li>
+							<li>React ecosystem: lots of tools that work with it, like node.js, Bąbel, npm. webpack</li>
+							<li>JSX (filetype) is a React extension to the JavaScript language syntax which provides a way to structure component rendering using syntax familiar to many developers. It is similar in appearance to HTML</li>
+							<li>Use className instead of class for html-like tags in virtual DOM (e.g. &ltp className=‘boldRed’&gt)</li>
+						</ul>
+							
+													
+
+
+							<br><hr><br>
+					</div>
+			</div>
+			<footer>Website made with love by Cate, &copy;2022</footer>
+		</main>
+		<script type="text/javascript" src="topnav.js"></script>
+	</body>
+</html>

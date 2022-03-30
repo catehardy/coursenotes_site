@@ -18,12 +18,12 @@
 	<body>
 		<main>
 			<nav class="topnav" id="myTopnav" aria-label="primary">
-				<a href="index.html">Home</a>
+				<a href="index.html">Diary</a>
 				<a href="html.html">HTML</a>
 				<a href="css.html" class="active">CSS</a>
 				<a href="javascript.html">JavaScript</a>
+				<a href="react.html">React</a>
 				<a href="working-practices.html">Working Practices</a>
-				<a href="portfolio.html">Portfolio</a>
 				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 					<i class="fa fa-bars"></i>
 				  </a>
@@ -34,7 +34,7 @@
 				<div class="sidebar">
 					<nav aria-label="secondary">
 					 	<h3 id="navHeader">About</h3>
-					   <p class="center-pink-text">Simple site to store a trainee web dev's notes on HTML, CSS and JavaScript</p>
+					   <p class="center-pink-text">Simple site to store a trainee web dev's notes</p>
 					   <img src="./Images/rubber-duck.jpg" alt="Rubber duck" loading="lazy">
 						<hr><br>
 				    	<h3 class="navSectionHeader">Useful Links</h3>
@@ -70,26 +70,25 @@
 					<div>
 						<h2 class="pink-heading">Table of Contents</h2>
 						<ol>
-							<a href="#1"><li>Basic Format of CSS</li></a>
-							<a href="#2"><li>Resources</li></a>
-							<a href="#3"><li>Types of selector</li></a>
-							<a href="#4"><li>Class vs ID</li></a>
-							<a href="#5"><li>Sizing text</li></a>
-							<a href="#6"><li>Pseudo-classes and pseudo-elements</li></a>
-							<a href="#7"><li>Colour</li></a>
-							<a href="#8"><li>Animations</li></a>
-							<a href="#9"><li>Grid and Flexbox</li></a>
-							<a href="#10"><li>Coding Games</li></a>
+							<li><a href="#1">Basic Format of CSS</a></li>
+							<li><a href="#2">Resources</a></li>
+							<li><a href="#3">Types of selector</a></li>
+							<li><a href="#4">Class vs ID</a></li>
+							<li><a href="#5">Sizing text</a></li>
+							<li><a href="#6">Pseudo-classes and pseudo-elements</a></li>
+							<li><a href="#7">Colour</a></li>
+							<li><a href="#8">Animations</a></li>
+							<li><a href="#9">Grid and Flexbox</a></li>
+							<li><a href="#10">Coding Games</a></li>
 						</ol>
 					</div>
-					<hr>
-					<h2 id="1">Basic format of CSS:</h2>
+					<br>
+					<h2 class="pink-heading" id="1">Basic format of CSS:</h2>
 					<pre>selector {</pre>
 					<pre>   property: value;</pre>
 					<pre>}</pre>
-					<hr>
-					<h2 id="2">Resources</h2>
-					<img src="Images/css-resources.jpg" alt="bookshelf containing coding study guides">
+					<br>
+					<h2 class="pink-heading" id="2">Resources</h2>
 					<h3>Reference & Guides:</h3>
 					<ul>
 						<li><a href="https://web.dev/learn/css/" target="_blank" rel="noopener">Learn CSS - Web.dev course</li>
@@ -116,8 +115,8 @@
 							</ul>
 						</li>
 					</ul>
-					<hr>
-					<h2 id="3">Types of selector</h2>
+					<br>
+					<h2 class="pink-heading" id="3">Types of selector</h2>
 					<p>.class (see section below)</p>
 					<p>#id (see section below)</p>
 					<p>* (selects all elements, but easily overridden due to lack of specificity)</p>
@@ -139,8 +138,8 @@
 						<li>Source Order</li>
 						<li>See also: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance" target="_blank" rel="noopener">Inheritance</a> and <a href="http://web.simmons.edu/~grabiner/comm244/weekfour/css-concepts.html" target="_blank" rel="noopener">CSS Inheritance, Cascade, and Specificity</a></li>
 					</ul>
-					<hr>
-					<h2 id="4">Class vs ID</h2>
+					<br>
+					<h2 class="pink-heading" id="4">Class vs ID</h2>
 					<h3>ID</h3>
 					<p>The <strong>id</strong> selector is used for selecting a single HTML element with a unique id attribute value.</p>
 					<p>How to use within stylesheet:</p>
@@ -154,8 +153,8 @@
 					<p>Applied to HTML:</p>
 					<p><strong>&lt;div class="content"&gt;Lorem ipsum.&lt;/div&gt;</strong></p>
 					<p title="More info here"><a href="https://www.developintelligence.com/blog/2016/04/css-class-vs-id-which-one-to-use/"  target="_blank" rel="noopener">When to use class versus id</a></p>
-					<hr>
-					<h2 id="5">Sizing text: px, em and rem</h2>
+					<br>
+					<h2 class="pink-heading" id="5">Sizing text: px, em and rem</h2>
 					<p>These are 3 different ways to size text.</p>
 					<ul>
 						<li>px means pixels - it's an absolute size (i.e. "anchored to some  physical measurement").</li>
@@ -170,8 +169,8 @@
 						<li>rem is similar, but relative to the <strong>root</strong> element of the document - i.e. whatever the html is set to.</li>
 					</ul>
 					<p>Note: you can also <a href="https://elementor.com/help/whats-the-difference-between-px-em-rem-vw-and-vh/" target="_blank" rel="noopener">make the font size relative to the viewport size</a> using VW and VH.</p>
-					<hr>
-					<h2 id="6">Pseudo-classes and pseudo-elements</h2>
+					<br>
+					<h2 class="pink-heading" id="6">Pseudo-classes and pseudo-elements</h2>
 					<p> Pseudo-class is used to define a special state of an element.<br><br>For example, it can be used to:</p>
 					<ul>
 					    <li>Style an element when a user mouses (hovers) over it</li>
@@ -197,14 +196,14 @@
 					<h3 class="diary">Handy example of how the ::before and ::after pseudo-elements work:</h3>
 					<img src="Images/pseudo-elements.png" width="80%" height="80%" alt="screenshot of code demonstrating how to use the ::before and ::after psuedo-elements">
 					<p>More info and a full list of <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements" target="_blank" rel="noopener">pseudo-classes and pseudo-elements</a>.</p>
-					<hr>
+					<br>
 					<h2 id="7"><span style="color: red;">C</span><span style="color: orange;">O</span><span style="color: yellowgreen;">L</span><span style="color: limegreen;">O</span><span style="color: green;">U</span><span style="color: blue;">R</span><span style="color: purple;">!</span></h2>
 					<p>You can use Hex, RGB, or HSL (hue, saturation, lightness).</p>
 					<p>Here's an argument for <a href="https://tsh.io/blog/why-should-you-use-hsl-color-representation-in-css/" target="_blank" rel="noopener">why HSL is the best option</a>.</p>
 					<p>Also check out <a href="https://www.w3schools.com/css/css3_gradients.asp" target="_blank" rel="noopener">CSS gradients</a> to do cool stuff like this:</p>
 					<div class="lineargrad-box" style="text-align: center; font-size: 180%; padding-top: 100px;"><p style="position: relative; color: red;">Gradient Backgrounds<p></div>
-					<hr>
-					<h2 id="8">Animations in CSS</h2>
+					<br>
+					<h2 class="pink-heading" id="8">Animations in CSS</h2>
 					<p class="animate__animated animate__pulse animate__infinite">Make things move :)</p>
 					<ul>
 						<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" target="_blank" rel="noopener">Mozilla guide to using CSS animations</a></li>
@@ -218,8 +217,8 @@
 							</ul>
 						</li>
 					</ul>
-					<hr>
-					<h2 id="9">Grid and Flexbox</h2>
+					<br>
+					<h2 class="pink-heading" id="9">Grid and Flexbox</h2>
 					<p>These are two CSS layout systems that can be used individually or together. Both have different strengths, so they can work well in tandem. You can combine them by using a Flexbox container inside a CSS Grid container. However, you <em>can't</em> use a CSS Grid Container inside a Flexbox container.</p>
 					<ul>
 						<li><a href="https://blog.hubspot.com/website/css-grid-vs-flexbox" target="_blank" rel="noopener">A comparison of the two systems</a></li>
@@ -231,12 +230,12 @@
 						<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener">A Complete Guide to Flexbox</a></li>
 						<li><a href="https://darekkay.com/flexbox-cheatsheet/" target="_blank" rel="noopener">Flexbox Cheatsheet</a></li>
 					</ul>
-					<hr>
-					<h2 id="10">Coding Games</h2>
+					<br>
+					<h2 class="pink-heading" id="10">Coding Games</h2>
 					<a href="https://css-diner.netlify.app/" target="_blank" rel="noopener"><img src="Images/css-diner.png" width="80%" height="80%" title="CSS Diner" alt="screenshot of CSS Diner coding game"></a>
 					<p>Lots of CSS games at <a href="https://codepip.com/" target="_blank" rel="noopener">Codepip.com</a> (inc. <a href="http://flexboxfroggy.com/" target="_blank" rel="noopener">Flexbox Froggy</a>! &hearts;)</p>
 					<p>...Plus a <a href="https://www.w3schools.com/css/exercise.asp" target="_blank" rel="noopener">CSS quiz at W3Schools.com</a></p>
-					<hr>
+					<br><hr><br>
 				</div>
 			</div>
 			<footer>Website made with love by Cate, &copy;2022</footer>

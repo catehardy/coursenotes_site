@@ -77,14 +77,27 @@
 
 						<h2 class="pink-heading" id="github-workflow">GitHub Workflow</h2>
 						<h3>Collaborating on a project</h3>
-						<p><strong>Initial steps:</strong></p>
+						<p><strong>Situation 1: Cloning a remote repo to your local machine</strong></p>
 						<ol>
+							<li>Make sure you've been <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository" target="_blank" rel="noopener">added to the repo as a collaborator</a></li>
 							<li>Clone the project repo to your computer: <strong>git clone https://github.com/...</strong></li>
 							<li>CD into project directory</li>
-							<li>Go to step 3 below</li>
+							<li>Go to step 3 of <a href="#daily-workflow">Daily Workflow</a></li>
 						</ol>
 						<br>
-						<p><strong>Daily workflow:</strong></p>
+						<p><strong>Situation 2: Creating a remote GitHub repo from your local files</strong></p>
+						<ol>
+							<li>In your local directory, <strong>git init</strong>, <strong>touch .gitignore</strong>, then <strong>git add -A</strong> and <strong>git commit -m "Initial commit"</strong></li>
+							<li>Create a remote repo on GitHub</li>
+							<li>Copy the GitHub URL</li>
+							<li>In your project directory, enter <strong>git remote add origin YOUR-URL</strong></li>
+							<li>Enter <strong>git remote -v</strong> to verify</li>
+							<li>Push the local files to GitHub; as this is the first time, set the upstream server with a '-u' tracking reference: <strong>git push -u origin main</strong></li>
+							<li><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository" target="_blank" rel="noopener">Add any other collaborators</a> to your repo</li>
+							<li>Go to step 3 of <a href="#daily-workflow">Daily Workflow</a></li>
+						</ol>
+						<br>
+						<p id="daily-workflow"><strong>Daily workflow:</strong></p>
 						<ol>
 							<li>Check out the main branch: <strong>git checkout main</strong></li>
 							<li>Sync the local main branch: <strong>git pull origin main</strong></li>
@@ -95,7 +108,7 @@
 							<li>Wait for the Continuous Integration pipelines to pass</li>
 							<li>Request a review from other developers and discuss the code</li>
 							<li>Once the PR is approved, merge it to the main branch</li>
-							<li>Loop back to step 1 (sync local repo with main)</li>
+							<li>Loop back to step 1 (sync local repo with origin main)</li>
 						</ol>
 						<br>
 						<h3>Resources</h3>

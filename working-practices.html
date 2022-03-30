@@ -104,10 +104,16 @@
 							<li>Check out a new branch from main: <strong>git checkout -b YOUR_BRANCH_NAME</strong></li>
 							<li>Write and commit your code</li>
 							<li>Push the commits to the remote repo on GitHub: <strong>git push origin YOUR_BRANCH_NAME</strong></li>
-							<li>Open a Pull Request (PR) on GitHub</li>
+							<li>Open a pull request (PR) on GitHub</li>
 							<li>Wait for the Continuous Integration pipelines to pass</li>
-							<li>Request a review from other developers and discuss the code</li>
-							<li>Once the PR is approved, merge it to the main branch</li>
+							<li>Add a note and request a review from other developers
+								<ul>
+									<li>Discuss the code, if necessary</li>
+									<li>Make any requested changes and push to the branch again</li>
+									<li>Re-request a review (within already existing PR)</li>
+								</ul>
+							</li>
+							<li>Once the PR is approved, the reviewer will merge it to the main branch and delete the completed feature branch</li>
 							<li>Loop back to step 1 (sync local repo with origin main)</li>
 						</ol>
 						<br>

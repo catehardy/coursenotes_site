@@ -173,11 +173,6 @@ footer {
 	font-weight: 800;
 }
 
-.days-off {
-	color: var(--pink);
-	font-style: italic;
-}
-
 fieldset {
 	width: 60%;
 	padding-left: 3%;
@@ -196,6 +191,7 @@ legend {
 li {
 	line-height: 1.9;
 	margin-bottom: 1em;
+	margin-top: 1em;
 }
 
 .center-pink-text {

@@ -86,11 +86,15 @@
 					<br>
 
 					<h2 class="pink-heading" id="http-https">HTTP / HTTPS</h2>
+					<p>HTTPS - <strong>H</strong>yper <strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol <strong>S</strong>ecure.</p>
+					<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview" target="_blank" rel="noopener">HTTP is a protocol (system of rules) for fetching resources such as HTML documents</a>. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched - for instance, text, layout description, images, videos, scripts, and more.</p>
+					<p>HTTPS is a secure version of the HTTP protocol that uses the SSL/TLS protocol for encryption and authentication.</p>
 					<p><strong>HTTP methods:</strong> GET, POST PUT, DELETE</p>
 					<p>In general, GET requests are for getting data, POST requests are for sending data, PUT requests are for updating data and DELETE requests are for deleting data.</p>
 					<br>
 
 					<h2 class="pink-heading" id="json">JSON</h2>
+					<p>JSON - <strong>JS</strong> (JavaScript) <strong>O</strong>bject <strong>N</strong>otation.</p>
 					<p>The most common and easy way to transport data is in JSON format in the body of the request. JSON is a format that represents JavaScript objects as strings and is built into the JavaScript language with some handy methods:</p>
 					<ul>
 						<li>JSON.stringify(obj) — turns a JS object into a JSON string</li>
@@ -99,10 +103,15 @@
 					<p>Most of the time, when your frontend sends some data to the backend it will be formatted into JSON, and when your backend receives that data it will be parsed from JSON back into a JavaScript object. It's the same in the other direction: when your backend sends some data to the frontend it will be formatted into JSON, and when your frontend receives that data it will be parsed from JSON back into a JavaScript object.</p>
 					<p>Summary: JSON is neither frontend nor backend. It is a data format or structure used to pass data between the frontend and backend. It can also be used to transfer data between multiple backends or frontends. It is a collection of string-based key-value pairs.</p>
 					<br>
+					<p>An alternative to JSON is XML (e<strong>x</strong>tensible <strong>m</strong>arkup <strong>l</strong>anguage). However, JSON is now more popular.</p>
+					<img src="./Images/json-xml.png" alt="JSON vs XML data">
+					<br>
 
 					<h2 class="pink-heading" id="ajax">AJAX</h2>
 					<p>AJAX - <strong>A</strong>synchronous <strong>Ja</strong>vaScript <strong>X</strong>ML.</p>
-					<p>AJAX is a frontend tool used to communicate with the backend. All the AJAX related code is written in JavaScript, and the corresponding handler code goes in your server side implementation, which could be in any language. It is the only way to talk with the server from the browser.</p>
+					<p>AJAX is a technique for accessing web servers from a web page - a frontend tool used to communicate with the backend.</p>
+					<p>AJAX is a misleading name. AJAX applications might use XML to transport data, but it is equally common to transport data as plain text or JSON text.</p>
+					<img src="./Images/how-ajax-works.png" alt="How AJAX works: diagram">
 
 					<br><hr><br>
 				</div>

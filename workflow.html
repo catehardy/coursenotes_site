@@ -69,13 +69,19 @@
 					<header><h1 class="header">Development Workflow</h1></header>
 					<h2 class="pink-heading">Table of Contents</h2>
 						<ol>
-							<li><a href="#github-workflow">GitHub Workflow</a></li>
+							<li><a href="#github-workflow">GitHub Workflow</a>
+								<ul>
+									<li><a href="#collaborating-on-a-project">Collaborating on a project</a></li>
+									<li><a href="#contributing-to-an-opensource-project">Contributing to an open source project</a></li>
+									<li><a href="#essential-git-commands">Essential Git commands</a></li>
+								</ul>
+							</li>
 							<li><a href="#devops">DevOps</a></li>
 						</ol>
 						<br>
 
 						<h2 class="pink-heading" id="github-workflow">GitHub Workflow</h2>
-						<h3>Collaborating on a project</h3>
+						<h3 id="collaborating-on-a-project">Collaborating on a project</h3>
 						<p><strong>Situation 1: Cloning a remote repo to your local machine</strong></p>
 						<ol>
 							<li>Make sure you've been <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository" target="_blank" rel="noopener">added to the repo as a collaborator</a></li>
@@ -124,7 +130,7 @@
 						</ul>
 						<br>
 						<hr>
-						<h3>Contributing to an open source project</h3>
+						<h3 id="contributing-to-an-opensource-project">Contributing to an open source project</h3>
 						<p>Unless you have write access to the repository in question, you cannot simply push something to it; your push will be denied by the server. That's where a fork comes into play. By forking someone else's repo, you get a copy to which you have write access, i.e. to which you can push your contributions.</p>
 						<p>A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.</p>
 						<p>Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.</p>
@@ -165,7 +171,7 @@
 							</ul>
 							<br>
 							<hr>
-							<h3>Essential Git commands:</h3>
+							<h3 id="essential-git-commands">Essential Git commands:</h3>
 							<p><strong>git diff</strong>: This is the comparison command in Git. Here's a <a href="https://www.cloudbees.com/blog/git-diff-a-complete-comparison-tutorial-for-git" target="_blank" rel="noopener">tutorial on how to use git diff</a>. (To scroll through the <a href="https://en.wikipedia.org/wiki/Less_(Unix)" target="_blank" rel="noopener">less program</a>, use up and down arrows and when you've finished, press 'q' or 'ctrl + z' to exit.)</p>
 							<p><strong>git log</strong>: The <a href="https://careerkarma.com/blog/git-log/" target="_blank" rel="noopener">git log command</a> shows you what changes were made to a repository, by whom, and when. You can filter the output of git log to show only the information you need to know. (See notes above on git diff command for how to use the less program.)</p>
 							<p><strong>git revert</strong> vs <strong>git reset</strong>: Two different ways to undo commits. Here's a <a href="https://www.theserverside.com/tutorial/How-to-git-revert-a-commit-A-simple-undo-changes-example" target="_blank" rel="noopener">tutorial on how git revert works</a>, and here's one on <a href="https://www.theserverside.com/video/Dont-git-revert-that-last-commit-git-reset-instead" target="_blank" rel="noopener">when to use git reset</a> instead of git revert.</p>

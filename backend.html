@@ -128,19 +128,27 @@ fetch(url)
   .catch(err => console.log(err))
 </pre>
 					<h3>Promises</h3>
-					<p>The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.</p>
+					<p>A Promise is a special JavaScript object. It produces a value after an asynchronous (aka, async) operation completes successfully, or an error if it does not complete successfully due to time out, network error, and so on.</p>
 					<p>A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.</p>
-					<p>A Promise is in one of these states:
+					<p>A Promise is always in one of these states:
 						<ul>
 							<li><strong>pending:</strong> initial state, neither fulfilled nor rejected</li>
 							<li><strong>fulfilled:</strong> meaning that the operation was completed successfully</li>
 							<li><strong>rejected:</strong> meaning that the operation failed</li>
 						</ul>
+					<p>Successful call completions are indicated by the resolve function call, and errors are indicated by the reject function call.</p>
+					<p>You can create a promise using the promise constructor like this:</p>
+<pre>
+const promise = new Promise((resolve, reject) => {    
+    // Make an asynchronous call and either resolve or reject
+});
+</pre>
 					</p>
-					<h3>Resources for Fetch() method:</h3>
+					<h3>Resources for Fetch() method and Promises:</h3>
 					<ul>
 						<li><a href="https://www.freecodecamp.org/news/how-to-use-fetch-api/" target="_blank" rel="noopener">How to Use Fetch to Make AJAX Calls in JavaScript</a></li>
 						<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank" rel="noopener">MDN Docs: Fetch API</a></li>
+						<li><a href="https://www.freecodecamp.org/news/javascript-promise-tutorial-how-to-resolve-or-reject-promises-in-js/" target="_blank" rel="noopener">How to Resolve or Reject Promises in JS</a></li>
 					</ul>
 
 					<br><hr><br>

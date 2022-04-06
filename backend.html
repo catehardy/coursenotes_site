@@ -112,23 +112,21 @@
 					<p>Ajax is a set of web development techniques that uses various web technologies on the client-side to create asynchronous web applications. With Ajax, web applications can send and retrieve data from a server asynchronously (in the background) without interfering with the display and behaviour of the existing page. By decoupling the data interchange layer from the presentation layer, Ajax allows web pages and, by extension, web applications, to change content dynamically without the need to reload the entire page.</p>
 					<p><strong>Note:</strong> In practice, modern implementations commonly utilize JSON instead of XML.</p>
 					<p>The term Ajax has come to represent a broad group of Web technologies that can be used to implement a Web application that communicates with a server in the background, without interfering with the current state of the page.</p>
-					<p>In the article that coined the term Ajax, Jesse James Garrett explained that the following technologies are incorporated:</p>
-					<ul>
-						<li>HTML and CSS for presentation</li>
-						<li>The DOM for dynamic display of and interaction with data</li>
-						<li>JSON (or XML) for the interchange of data</li>
-						<li>The XMLHttpRequest object for asynchronous communication</li>
-						<li>JavaScript to bring these technologies together</li>
-					</ul>
 					<h3>Shortest description:</h3>
 					<p>AJAX is a technique for accessing web servers from a web page - a frontend tool used to communicate with the backend.</p>
-					<img src="./Images/how-ajax-works.png" alt="How AJAX works: diagram">
+					<img src="./Images/api.png" alt="How an API works: diagram">
 					<br>
 					<h2>Fetch API</h2>
 					<p>Fetch is an interface for making an AJAX request in JavaScript. It is implemented widely by modern browsers and is used to call an API.</p>
-					<p>As a newer native JavaScript API, Fetch allows you to make network requests similar to XMLHttpRequest. According to Google Developers Documentation, Fetch makes it easier to make asynchronous requests and handles responses better than the older XMLHttpRequest API.</p>
+					<p>As a newer native JavaScript API, Fetch allows you to make network requests similar to the older XMLHttpRequest API. According to Google Developers Documentation, Fetch makes it easier to make asynchronous requests and handles responses better than XMLHttpRequest.</p>
 					<p>The main difference between Fetch and XMLHttpRequest is that the Fetch API uses Promises, and so avoids <a href="https://medium.com/@wendell_adriel/from-highway-to-callback-hell-to-stairway-to-async-await-heaven-e90f73309ed4" target="_blank" rel="noopener">callback hell</a>.</p>
 					<p>The fetch() method takes one mandatory argument: the path to the resource you want to fetch. It returns a <strong>Promise</strong> that resolves to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response" target="_blank" rel="noopener">Response</a> to that request — as soon as the server responds with headers — even if the server response is an HTTP error status. You can also optionally pass in an <strong>init</strong> options object as the second argument (see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request" target="_blank" rel="noopener">Request</a>).</p>
+					<h3>An example fetch request:</h3>
+<pre>
+fetch(url)
+  .then(response => response.json())
+  .catch(err => console.log(err))
+</pre>
 					<h3>Promises</h3>
 					<p>The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.</p>
 					<p>A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.</p>

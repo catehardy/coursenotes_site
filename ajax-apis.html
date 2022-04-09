@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang ="en-GB">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>AJAX and APIs</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<!-- stylesheet for Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</head>
+
+	<body>
+		<main>
+			<nav class="topnav" id="myTopnav" aria-label="primary">
+				<a href="index.html">Home</a>
+				<a href="html.html">HTML</a>
+				<a href="css.html">CSS</a>
+				<a href="javascript.html">JavaScript</a>
+				<a href="react.html">React</a>
+				<a href="ajax-apis.html" class="active">AJAX & APIs</a>
+				<a href="backend.html">Backend</a>
+				<a href="workflow.html">Workflow</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				  </a>
+			</nav>
+
+			<div class="container">
+				<!-- sidebar content in here -->
+				<div class="sidebar">
+					<nav aria-label="secondary">
+					 	<h3 id="navHeader">About</h3>
+					   <p class="center-pink-text">Simple site to store a trainee web dev's notes</p>
+					   <img src="./Images/rubber-duck.jpg" alt="Rubber duck" loading="lazy">
+						<hr><br>
+				    	<h3 class="navSectionHeader">Useful Links</h3>
+					    <ul>
+					    	<li><a href="https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/" target="_blank" rel="noopener">ZTM Udemy course</a></li>
+							<li><a href="https://zerotomastery.io/resources/" target="_blank" rel="noopener">ZTM Resources</a></li>
+							<li><a href="https://github.com/catehardy/" target="_blank" rel="noopener">My GitHub</a></li>
+							<li><a href="https://caniuse.com/" target="_blank" rel="noopener">Can I Use?</a></li>
+							<li><a href="https://codepen.io/" target="_blank" rel="noopener">Codepen.io</a></li>
+						</ul>
+						<hr><br>
+						<h3 class="navSectionHeader">Calendar</h3>
+							<ul>
+								<li>Women in Tech Monthly Mentoring: <strong>April 20th, 8pm</strong> at <a href="https://women-in-tech.thisdotmedia.com/" target="_blank" rel="noopener">thisdotmedia.com</a></li>
+								<li>Coffee chat w. Shawn Axsom: <strong>April 21st, 2-2:15pm</strong>, Google Meet</li>
+								<li>Coffee chat w. Fred Harper: <strong>May 17th</strong>, 3:30-4pm, Zoom</li>
+								<li><a href="https://the-collab-lab.codes/apply/" target="_blank" rel="noopener">Apply to Collab Lab</a> <strong>June 12th</strong></li>
+								<li><a href="https://codelandconf.com/" target="_blank" rel="noopener">Codeland Conference</a> ("The most welcoming conference for early-career coders and their champions") <strong>June 16th-17th</strong>, remote</li>
+							</ul>
+					</nav>
+			    </div>
+
+			    <div class="mainContent">
+					<header><h1 class="header">AJAX and APIs</h1></header>
+					<h2 class="pink-heading">Table of Contents</h2>
+					<ol>
+						<li><a href="#http-https">HTTP / HTTPS</a></li>
+						<li><a href="#json">JSON</a></li>
+						<li><a href="#ajax">AJAX</a></li>
+						<li><a href="#apis">APIs</a></li>	
+					</ol>
+					<br>
+
+					<h2 class="pink-heading" id="http-https">HTTP / HTTPS</h2>
+					<p>HTTPS - <strong>H</strong>yper <strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol <strong>S</strong>ecure.</p>
+					<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview" target="_blank" rel="noopener">HTTP is a protocol (system of rules) for fetching resources such as HTML documents</a>. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched - for instance, text, layout description, images, videos, scripts, and more.</p>
+					<p>HTTPS is a secure version of the HTTP protocol that uses the SSL/TLS protocol for encryption and authentication.</p>
+					<p><strong>HTTP methods:</strong> GET, POST PUT, DELETE</p>
+					<p>In general, GET requests are for getting data, POST requests are for sending data, PUT requests are for updating data and DELETE requests are for deleting data.</p>
+					<br>
+
+					<h2 class="pink-heading" id="json">JSON</h2>
+					<p>JSON - <strong>JS</strong> (JavaScript) <strong>O</strong>bject <strong>N</strong>otation.</p>
+					<p>The most common and easy way to transport data is in JSON format in the body of the request. JSON is a format that represents JavaScript objects as strings and is built into the JavaScript language with some handy methods:</p>
+					<ul>
+						<li>JSON.stringify(obj) — turns a JS object into a JSON string</li>
+						<li>JSON.parse(string) — turns a JSON string into a JavaScript object</li>
+					</ul>
+					<p>Most of the time, when your frontend sends some data to the backend it will be formatted into JSON, and when your backend receives that data it will be parsed from JSON back into a JavaScript object. It's the same in the other direction: when your backend sends some data to the frontend it will be formatted into JSON, and when your frontend receives that data it will be parsed from JSON back into a JavaScript object.</p>
+					<p>Summary: JSON is neither frontend nor backend. It is a data format or structure used to pass data between the frontend and backend. It can also be used to transfer data between multiple backends or frontends. It is a collection of string-based key-value pairs.</p>
+					<br>
+					<p>An alternative to JSON is XML (e<strong>x</strong>tensible <strong>m</strong>arkup <strong>l</strong>anguage). However, JSON is now more popular.</p>
+					<img src="./Images/json-xml.png" alt="JSON vs XML data">
+					<br>
+
+					<h2 class="pink-heading" id="ajax">AJAX</h2>
+					<p>AJAX - <strong>A</strong>synchronous <strong>Ja</strong>vaScript <strong>X</strong>ML.</p>
+					<p>Ajax is a set of web development techniques that uses various web technologies on the client-side to create asynchronous web applications. With Ajax, web applications can send and retrieve data from a server asynchronously (in the background) without interfering with the display and behaviour of the existing page. By decoupling the data interchange layer from the presentation layer, Ajax allows web pages and, by extension, web applications, to change content dynamically without the need to reload the entire page.</p>
+					<p><strong>Note:</strong> In practice, modern implementations commonly utilize JSON instead of XML.</p>
+					<p>The term Ajax has come to represent a broad group of Web technologies that can be used to implement a Web application that communicates with a server in the background, without interfering with the current state of the page.</p>
+					<h3>Shortest description:</h3>
+					<p>AJAX is a technique for accessing web servers from a web page - a frontend tool used to communicate with the backend.</p>
+					<img src="./Images/api.png" alt="How an API works: diagram">
+					<br>
+					<h2>Fetch API</h2>
+					<p>Fetch is an interface for making an AJAX request in JavaScript. It is implemented widely by modern browsers and is used to call an API.</p>
+					<p>As a newer native JavaScript API, Fetch allows you to make network requests similar to the older XMLHttpRequest API. According to Google Developers Documentation, Fetch makes it easier to make asynchronous requests and handles responses better than XMLHttpRequest.</p>
+					<p>The main difference between Fetch and XMLHttpRequest is that the Fetch API uses Promises, and so avoids <a href="https://medium.com/@wendell_adriel/from-highway-to-callback-hell-to-stairway-to-async-await-heaven-e90f73309ed4" target="_blank" rel="noopener">callback hell</a>.</p>
+					<p>The fetch() method takes one mandatory argument: the path to the resource you want to fetch. It returns a <strong>Promise</strong> that resolves to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response" target="_blank" rel="noopener">Response</a> to that request — as soon as the server responds with headers — even if the server response is an HTTP error status. You can also optionally pass in an <strong>init</strong> options object as the second argument (see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request" target="_blank" rel="noopener">Request</a>).</p>
+					<h3>An example fetch request:</h3>
+<pre>
+fetch(url)
+  .then(response => response.json())
+  .catch(err => console.log(err))
+</pre>
+					<h3>Promises</h3>
+					<p>A Promise is a special JavaScript object. It produces a value after an asynchronous (aka, async) operation completes successfully, or an error if it does not complete successfully due to time out, network error, and so on.</p>
+					<p>A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.</p>
+					<p>A Promise is always in one of these states:
+						<ul>
+							<li><strong>pending:</strong> initial state, neither fulfilled nor rejected</li>
+							<li><strong>fulfilled:</strong> meaning that the operation was completed successfully</li>
+							<li><strong>rejected:</strong> meaning that the operation failed</li>
+						</ul>
+					<p>Successful call completions are indicated by the resolve function call, and errors are indicated by the reject function call.</p>
+					<p>You can create a promise using the promise constructor like this:</p>
+<pre>
+const promise = new Promise((resolve, reject) => {    
+    // Make an asynchronous call and either resolve or reject
+});
+</pre>
+					</p>
+					<h3>Resources for Fetch() method and Promises:</h3>
+					<ul>
+						<li><a href="https://www.freecodecamp.org/news/how-to-use-fetch-api/" target="_blank" rel="noopener">How to Use Fetch to Make AJAX Calls in JavaScript</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank" rel="noopener">MDN Docs: Fetch API</a></li>
+						<li><a href="https://www.freecodecamp.org/news/javascript-promise-tutorial-how-to-resolve-or-reject-promises-in-js/" target="_blank" rel="noopener">How to Resolve or Reject Promises in JS</a></li>
+					</ul>
+					<br>
+
+					<h2 class="pink-heading" id="apis">APIs</h2>
+					<p><em>In progress!</em></p>
+					<h3>Resources for APIs:</h3>
+					<ul>
+						<li><a href="https://wesbos.com/javascript/13-ajax-and-fetching-data/74-ajax-and-apis" target="_blank" rel="noopener">Wes Bos: AJAX and APIs</a></li>
+					</ul>
+
+					<br><hr><br>
+				</div>
+			</div>
+			<footer>Website made with love by Cate, &copy;2022</footer>
+		</main>
+		<script type="text/javascript" src="topnav.js"></script>
+	</body>
+</html>

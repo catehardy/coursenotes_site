@@ -64,17 +64,39 @@
 					<header><h1 class="header">AJAX and APIs</h1></header>
 					<h2 class="pink-heading">Table of Contents</h2>
 					<ol>
+						<li><a href="#apis">APIs</a></li>	
 						<li><a href="#http-https">HTTP / HTTPS</a></li>
 						<li><a href="#json">JSON</a></li>
 						<li><a href="#ajax">AJAX</a></li>
-						<li><a href="#apis">APIs</a></li>	
+						<li><a href="#fetch">Fetch API</li>
+						<li><a href="#promises">Promises</a></li>
 					</ol>
+					<br>
+
+					<h2 class="pink-heading" id="apis">APIs</h2>
+					<p><strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface</p>
+					<p>APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols. For example, the weather bureau’s software system contains daily weather data. The weather app on your phone “talks” to this system via APIs and shows you daily weather updates on your phone.</p>
+					<p>API architecture is usually explained in terms of client and server. The application sending the request is called the client, and the application sending the response is called the server. So in the weather example, the bureau’s weather database is the server, and the mobile app is the client.</p>
+					<img src="./Images/api.png" alt="How an API works: diagram">
+					<h3>REST APIs (aka RESTful APIs)</h3>
+					<p>There are several different ways that APIs can work, depending on when and why they were created. The most popular way nowadays is <strong>REST</strong>.</p>
+					<p>REST stands for <strong>R</strong>epresentational <strong>S</strong>tate <strong>T</strong>ransfer. REST defines a set of functions like GET, PUT, DELETE, etc., that clients can use to access server data using HTTP.</p>
+					<p>The main feature of a REST API is statelessness. Statelessness means that servers do not save client data between requests. When systems follow the REST paradigm, the server does not need to know anything about what state the client is in and vice versa. In this way, both the server and the client can understand any message received, even without seeing previous messages.</p>
+					<p>This constraint of statelessness is enforced through the use of resources, rather than commands. Resources are the nouns of the Web - they describe any object, document, or thing that you may need to store or send to other services</p>
+					<h3>Resources for APIs:</h3>
+					<ul>
+						<li><a href="https://aws.amazon.com/what-is/api/" target="_blank" rel="noopener">What is an API?</a></li>
+						<li><a href="https://www.youtube.com/watch?v=-MTSQjw5DrM" target="_blank" rel="noopener">RESTful APIs in 100 Seconds (YouTube)</a></li>
+						<li><a href="https://www.baeldung.com/rest-vs-websockets" target="_blank" rel="noopener">REST vs WebSockets</a></li>
+						<li><a href="https://wesbos.com/javascript/13-ajax-and-fetching-data/74-ajax-and-apis" target="_blank" rel="noopener">Wes Bos: AJAX and APIs</a></li>
+					</ul>
 					<br>
 
 					<h2 class="pink-heading" id="http-https">HTTP / HTTPS</h2>
 					<p>HTTPS - <strong>H</strong>yper <strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol <strong>S</strong>ecure.</p>
-					<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview" target="_blank" rel="noopener">HTTP is a protocol (system of rules) for fetching resources such as HTML documents</a>. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched - for instance, text, layout description, images, videos, scripts, and more.</p>
-					<p>HTTPS is a secure version of the HTTP protocol that uses the SSL/TLS protocol for encryption and authentication.</p>
+					<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview" target="_blank" rel="noopener">HTTP is a protocol (system of rules) for fetching resources such as HTML documents</a>.</p>
+					<p>It's the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched - for instance, text, layout description, images, videos, scripts, and more.</p>
+					<p>HTTPS is a secure version of the HTTP protocol, using the SSL/TLS protocol for encryption and authentication.</p>
 					<p><strong>HTTP methods:</strong> GET, POST PUT, DELETE</p>
 					<p>In general, GET requests are for getting data, POST requests are for sending data, PUT requests are for updating data and DELETE requests are for deleting data.</p>
 					<br>
@@ -87,7 +109,7 @@
 						<li>JSON.parse(string) — turns a JSON string into a JavaScript object</li>
 					</ul>
 					<p>Most of the time, when your frontend sends some data to the backend it will be formatted into JSON, and when your backend receives that data it will be parsed from JSON back into a JavaScript object. It's the same in the other direction: when your backend sends some data to the frontend it will be formatted into JSON, and when your frontend receives that data it will be parsed from JSON back into a JavaScript object.</p>
-					<p>Summary: JSON is neither frontend nor backend. It is a data format or structure used to pass data between the frontend and backend. It can also be used to transfer data between multiple backends or frontends. It is a collection of string-based key-value pairs.</p>
+					<p><strong>Note:</strong> JSON is neither frontend nor backend. It is a data format or structure used to pass data between the frontend and backend. It can also be used to transfer data between multiple backends or frontends.</p>
 					<br>
 					<p>An alternative to JSON is XML (e<strong>x</strong>tensible <strong>m</strong>arkup <strong>l</strong>anguage). However, JSON is now more popular.</p>
 					<img src="./Images/json-xml.png" alt="JSON vs XML data">
@@ -95,14 +117,14 @@
 
 					<h2 class="pink-heading" id="ajax">AJAX</h2>
 					<p>AJAX - <strong>A</strong>synchronous <strong>Ja</strong>vaScript <strong>X</strong>ML.</p>
-					<p>Ajax is a set of web development techniques that uses various web technologies on the client-side to create asynchronous web applications. With Ajax, web applications can send and retrieve data from a server asynchronously (in the background) without interfering with the display and behaviour of the existing page. By decoupling the data interchange layer from the presentation layer, Ajax allows web pages and, by extension, web applications, to change content dynamically without the need to reload the entire page.</p>
+					<p>Ajax is a set of web development techniques that uses various web technologies on the client-side to create asynchronous web applications.</p>
+					<p>With Ajax, web applications can send and retrieve data from a server asynchronously (in the background) without interfering with the display and behaviour of the existing page. By decoupling the data interchange layer from the presentation layer, Ajax allows web pages and, by extension, web applications, to change content dynamically without the need to reload the entire page.</p>
 					<p><strong>Note:</strong> In practice, modern implementations commonly utilize JSON instead of XML.</p>
-					<p>The term Ajax has come to represent a broad group of Web technologies that can be used to implement a Web application that communicates with a server in the background, without interfering with the current state of the page.</p>
+					<p>The term Ajax has come to represent a broad group of Web technologies that can be used to create a Web application which communicates with a server in the background, without interfering with the current state of the page.</p>
 					<h3>Shortest description:</h3>
 					<p>AJAX is a technique for accessing web servers from a web page - a frontend tool used to communicate with the backend.</p>
-					<img src="./Images/api.png" alt="How an API works: diagram">
 					<br>
-					<h2>Fetch API</h2>
+					<h2 class="pink-heading" id="fetch">Fetch API</h2>
 					<p>Fetch is an interface for making an AJAX request in JavaScript. It is implemented widely by modern browsers and is used to call an API.</p>
 					<p>As a newer native JavaScript API, Fetch allows you to make network requests similar to the older XMLHttpRequest API. According to Google Developers Documentation, Fetch makes it easier to make asynchronous requests and handles responses better than XMLHttpRequest.</p>
 					<p>The main difference between Fetch and XMLHttpRequest is that the Fetch API uses Promises, and so avoids <a href="https://medium.com/@wendell_adriel/from-highway-to-callback-hell-to-stairway-to-async-await-heaven-e90f73309ed4" target="_blank" rel="noopener">callback hell</a>.</p>
@@ -113,7 +135,14 @@ fetch(url)
   .then(response => response.json())
   .catch(err => console.log(err))
 </pre>
-					<h3>Promises</h3>
+						<h3>Resources for Fetch() method:</h3>
+					<ul>
+						<li><a href="https://www.freecodecamp.org/news/how-to-use-fetch-api/" target="_blank" rel="noopener">How to Use Fetch to Make AJAX Calls in JavaScript</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank" rel="noopener">MDN Docs: Fetch API</a></li>
+					</ul>
+					<br>
+
+					<h2 class="pink-heading" id="promises">Promises</h2>
 					<p>A Promise is a special JavaScript object. It produces a value after an asynchronous (aka, async) operation completes successfully, or an error if it does not complete successfully due to time out, network error, and so on.</p>
 					<p>A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.</p>
 					<p>A Promise is always in one of these states:
@@ -123,6 +152,14 @@ fetch(url)
 							<li><strong>rejected:</strong> meaning that the operation failed</li>
 						</ul>
 					<p>Successful call completions are indicated by the resolve function call, and errors are indicated by the reject function call.</p>
+					<br>
+					<h3>Some examples of times when promises are useful:</h3>
+					<ul>
+						<li><a href="https://blog.hubspot.com/website/api-calls" target="_blank" rel="noopener">Making API calls</a></li>
+						<li><a href="http://www.javascriptkit.com/javatutors/javascriptpromises.shtml" target="_blank" rel="noopener">Loading an image</a></li>
+					</ul>
+					<br>
+					<h3>Structure of a Promise</h3>
 					<p>You can create a promise using the promise constructor like this:</p>
 <pre>
 const promise = new Promise((resolve, reject) => {    
@@ -130,19 +167,15 @@ const promise = new Promise((resolve, reject) => {
 });
 </pre>
 					</p>
-					<h3>Resources for Fetch() method and Promises:</h3>
-					<ul>
-						<li><a href="https://www.freecodecamp.org/news/how-to-use-fetch-api/" target="_blank" rel="noopener">How to Use Fetch to Make AJAX Calls in JavaScript</a></li>
-						<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank" rel="noopener">MDN Docs: Fetch API</a></li>
-						<li><a href="https://www.freecodecamp.org/news/javascript-promise-tutorial-how-to-resolve-or-reject-promises-in-js/" target="_blank" rel="noopener">How to Resolve or Reject Promises in JS</a></li>
-					</ul>
 					<br>
-
-					<h2 class="pink-heading" id="apis">APIs</h2>
-					<p><em>In progress!</em></p>
-					<h3>Resources for APIs:</h3>
+					<h3>Using the Promise.all method</h3>
+					<p>Promise.all is actually a promise that takes an array of promises as an input (an iterable). Then it gets resolved when all the promises get resolved or any one of them gets rejected. Here's an example:</p>
+					<img src="./Images/promise-all.png" alt="Screenshot of code showing Promise.all method">
+					<h3>Resources for Promises:</h3>
 					<ul>
-						<li><a href="https://wesbos.com/javascript/13-ajax-and-fetching-data/74-ajax-and-apis" target="_blank" rel="noopener">Wes Bos: AJAX and APIs</a></li>
+						<li><a href="https://www.freecodecamp.org/news/javascript-promise-tutorial-how-to-resolve-or-reject-promises-in-js/" target="_blank" rel="noopener">How to Resolve or Reject Promises in JS</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises/" target="_blank" rel="noopener">Using Promises (MDN Web Docs)</a></li>
+						<li><a href="https://www.freecodecamp.org/news/promise-all-in-javascript-with-example-6c8c5aea3e32/" target="_blank" rel="noopener">All you need to know about Promise.all</a></li>
 					</ul>
 
 					<br><hr><br>

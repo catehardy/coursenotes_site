@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>AJAX and APIs</title>
+		<title>APIs</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 
 		<!-- stylesheet for Google Fonts -->
@@ -24,7 +24,7 @@
 				<a href="css.html">CSS</a>
 				<a href="javascript.html">JavaScript</a>
 				<a href="react.html">React</a>
-				<a href="ajax-apis.html" class="active">AJAX & APIs</a>
+				<a href="apis.html" class="active">APIs</a>
 				<a href="backend.html">Backend</a>
 				<a href="workflow.html">Workflow</a>
 				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -61,7 +61,8 @@
 			    </div>
 
 			    <div class="mainContent">
-					<header><h1 class="header">AJAX and APIs</h1></header>
+					<header><h1 class="header">APIs</h1></header>
+					<p>"As a developer, a lot of our work is just pulling data from APIs." <em>- Wes Bos</em></p>
 					<h2 class="pink-heading">Table of Contents</h2>
 					<ol>
 						<li><a href="#apis">APIs</a></li>	
@@ -70,6 +71,7 @@
 						<li><a href="#ajax">AJAX</a></li>
 						<li><a href="#fetch">Fetch API</li>
 						<li><a href="#promises">Promises</a></li>
+						<li><a href="#async-await">Async/await</a></li>
 					</ol>
 					<br>
 
@@ -119,15 +121,17 @@
 					<p>AJAX - <strong>A</strong>synchronous <strong>Ja</strong>vaScript <strong>X</strong>ML.</p>
 					<p>Ajax is a set of web development techniques that uses various web technologies on the client-side to create asynchronous web applications.</p>
 					<p>With Ajax, web applications can send and retrieve data from a server asynchronously (in the background) without interfering with the display and behaviour of the existing page. By decoupling the data interchange layer from the presentation layer, Ajax allows web pages and, by extension, web applications, to change content dynamically without the need to reload the entire page.</p>
+					<p>In simple terms, working asynchronously means that your code continues to run while the targeted part of your web page is trying to reload (compared to synchronously, which blocks your code from running until that part of your page is done reloading).</p>
 					<p><strong>Note:</strong> In practice, modern implementations commonly utilize JSON instead of XML.</p>
-					<p>The term Ajax has come to represent a broad group of Web technologies that can be used to create a Web application which communicates with a server in the background, without interfering with the current state of the page.</p>
+					<p class="pink-text-border">The term Ajax has come to represent a broad group of Web technologies that can be used to create a Web application which communicates with a server in the background, without interfering with the current state of the page.</p>
 					<h3>Shortest description:</h3>
 					<p>AJAX is a technique for accessing web servers from a web page - a frontend tool used to communicate with the backend.</p>
 					<br>
 					<h2 class="pink-heading" id="fetch">Fetch API</h2>
 					<p>Fetch is an interface for making an AJAX request in JavaScript. It is implemented widely by modern browsers and is used to call an API.</p>
+					<p><strong>Example uses:</strong> loading texts, images, or structured data asynchronously, to update an HTML page.</p>
 					<p>As a newer native JavaScript API, Fetch allows you to make network requests similar to the older XMLHttpRequest API. According to Google Developers Documentation, Fetch makes it easier to make asynchronous requests and handles responses better than XMLHttpRequest.</p>
-					<p>The main difference between Fetch and XMLHttpRequest is that the Fetch API uses Promises, and so avoids <a href="https://medium.com/@wendell_adriel/from-highway-to-callback-hell-to-stairway-to-async-await-heaven-e90f73309ed4" target="_blank" rel="noopener">callback hell</a>.</p>
+					<p>The main difference between Fetch and XMLHttpRequest is that the Fetch API uses Promises, and so avoids <a href="https://medium.com/@wendell_adriel/from-highway-to-callback-hell-to-stairway-to-async-await-heaven-e90f73309ed4" target="_blank" rel="noopener">callback hell</a>. The Promise object greatly simplifies the code, especially if used in conjunction with <a href="#async-await">async/await</a>.</p>
 					<p>The fetch() method takes one mandatory argument: the path to the resource you want to fetch. It returns a <strong>Promise</strong> that resolves to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response" target="_blank" rel="noopener">Response</a> to that request — as soon as the server responds with headers — even if the server response is an HTTP error status. You can also optionally pass in an <strong>init</strong> options object as the second argument (see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request" target="_blank" rel="noopener">Request</a>).</p>
 					<h3>An example fetch request:</h3>
 <pre>
@@ -176,6 +180,18 @@ const promise = new Promise((resolve, reject) => {
 						<li><a href="https://www.freecodecamp.org/news/javascript-promise-tutorial-how-to-resolve-or-reject-promises-in-js/" target="_blank" rel="noopener">How to Resolve or Reject Promises in JS</a></li>
 						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises/" target="_blank" rel="noopener">Using Promises (MDN Web Docs)</a></li>
 						<li><a href="https://www.freecodecamp.org/news/promise-all-in-javascript-with-example-6c8c5aea3e32/" target="_blank" rel="noopener">All you need to know about Promise.all</a></li>
+					</ul>
+					<br>
+
+					<h2 class="pink-heading" id="async-await">Async/await</h2>
+					<p>An async function is a function that returns a Promise; it's declared with the async keyword, and the await keyword is permitted within it.</p>
+					<p>The benefit of async/await is that it makes code easier to read. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains. It's syntactic sugar - Promises working under the hood, but a nicer way to code them!</p>
+					<p><strong>The same function two ways - 1st with Promises and 2nd with async/await:</strong></p>
+					<img src="./Images/async-await.png" alt="Screenshot of code showing async-await function">
+					<h3>Resources for async/await:</h3>
+					<ul>
+						<li><a href="https://javascript.info/async-await" target="_blank" rel="noopener">Async/await (JavaScript.info)</li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank" rel="noopener">Async function (MDN Web Docs)</li>
 					</ul>
 
 					<br><hr><br>

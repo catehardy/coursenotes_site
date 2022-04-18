@@ -772,11 +772,27 @@ const c = 789;</pre>
 
 						<h2 class="pink-heading" id="advanced-objects">Advanced Objects</h2>
 						<p></p>
-						<h3>Context and Instantiation Patterns</h3>
-						<p>In JavaScript, <strong>“context”</strong> refers to an object. Within an object, the keyword “this” refers to that object (i.e. “self”), and provides an interface to the properties and methods that are members of that object. When a function is executed, the keyword “this” refers to the object that the function is executed in.</p>
-						<p>Resource: <a href="https://blog.kevinchisholm.com/javascript/context-object-literals/" target="_blank" rel="noopener">Why is the word “this” so important in JavaScript?</a></p>
-						<p><strong>Instantiation</strong> refers to the creation of an object. There are multiple patterns that have evolved over time that are used to achieve this. When instantiation patterns are used correctly, they can effectively manage inheritance and provide greater code re-usability when creating multiple instances of objects.</p>
-						<p><strong>Instantiation example:</strong></p>
+						<h3>Context and "this"</h3>
+						<p>In JavaScript, <strong>“context”</strong> refers to an object. Within an object, the keyword <strong>“this”</strong> refers to that object (i.e. “self”), and provides an interface to the properties and methods that are members of that object. When a function is executed, the keyword “this” refers to the object that the function is executed in.</p>
+						<p>Resources:</p>
+						<ul>
+							<li><a href="https://blog.pragmatists.com/the-many-faces-of-this-in-javascript-5f8be40df52e" target="_blank" rel="noopener">The many faces of <strong>this</strong> in JavaScript</a></li>
+							
+							<li><a href="https://blog.kevinchisholm.com/javascript/context-object-literals/" target="_blank" rel="noopener">Why is the word “this” so important in JavaScript?</a></li>
+						</ul>
+						<br>
+						<h3>Instantiation Patterns and Classes</h3>
+						<p><strong>Instantiation</strong> refers to the creation of an object. <strong>Classes</strong> are a template for creating objects.</p>
+						<p>In Object Oriented Programming (OOP), there are different patterns to instantiate (which means to ‘create a new instance of’) objects. These instantiation patterns have evolved over time. There isn’t a correct instantiation pattern to implement for all scenarios. Each pattern has its own benefits and disadvantages which will allow you to determine which pattern would result in a better solution.</p>
+						<p>The JS instantiation patterns are:</p>
+						<ul>
+							<li>Functional</li>
+							<li>Functional Shared</li>
+							<li>Prototypal</li>
+							<li>Pseudoclassical</li>
+							<li>ES6 Class</li>
+						</ul>
+						<p><strong>Instantiation example - ES6 Class pattern:</strong></p>
 <pre>class Animal {
 	constructor(name, type, colour) {
 		this.name = name;
@@ -800,8 +816,10 @@ const cat1 = new Mammal("Myst", "Persian cat", "grey");</pre>
 						<p>Resources:</p>
 						<ul>
 							<li><a href="https://dev.to/gavmac/javascript-instantiation-in-5-mins-kij" target="_blank" rel="noopener">JavaScript Instantiation in 5 Minutes</a></p></li>
+							<li><a href="https://blog.devgenius.io/javascript-a-quick-reference-to-object-instantiation-patterns-for-new-developers-304f806a9b82" target="_blank" rel="noopener">A Quick Reference to Object Instantiation Patterns For New Developers</a></p></li>
 							<li><a href="https://dev.to/mconner89/a-quick-guide-to-instantiation-in-javascript-6n" target="_blank" rel="noopener">Quick Guide to Instantiation Patterns in JS</a> - explains the <strong>constructor()</strong> function and the <strong>new</strong> and <strong>class</strong> keywords</li>
 							<li><a href="https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript" target="_blank" rel="noopener">Understanding Classes in JavaScript</a></li>
+							<li><a href="https://medium.com/@nathaliarus_47370/javascript-classes-and-instantiation-patterns-cheat-sheet-5-patterns-functional-943f6f1a5530" target="_blank" rel="noopener">JavaScript Classes and Instantiation Patterns: Cheat Sheet (5 patterns)</a></li>
 						</ul>
 						<br>
 						<h3>Pass by Value and Pass by Reference</h3>

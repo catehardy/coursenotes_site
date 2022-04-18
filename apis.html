@@ -178,6 +178,14 @@ const promise = new Promise((resolve, reject) => {
 					<h3>Using the Promise.all method</h3>
 					<p>Promise.all is actually a promise that takes an array of promises as an input (an iterable). Then it gets resolved when all the promises get resolved or any one of them gets rejected. Here's an example:</p>
 					<img src="./Images/promise-all.png" alt="Screenshot of code showing Promise.all method">
+					<p><strong>Note:</strong> We can now use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled">Promise.allSettled</a> instead, if we want to return any Promises which resolved, even if some were rejected.</p>
+					<br>
+					<h3>Using the Promise .finally() method</h3>
+					<p>The .finally() method is always executed whether the promise is fulfilled or rejected. In other words, the .finally() method is executed when the promise is settled.</p>
+					<p>The .finally() method was introduced in ES2018. In the .finally() method, you can place the code that cleans up the resource when the promise is settled, regardless of its outcome. By using the .finally() method, you can avoid duplicate code in the .then() and .catch() methods.</p>
+					<p>Resource: <a href="https://www.javascripttutorial.net/es-next/javascript-promise-finally/" target="_blank" rel="noopener">JavaScript Promise .finally() tutorial</a></p>
+					<img src="./Images/promise-finally.png" alt="Screenshot of code showing Promise .finally() method">
+					<br>
 					<h3>Resources for Promises:</h3>
 					<ul>
 						<li><a href="https://www.freecodecamp.org/news/javascript-promise-tutorial-how-to-resolve-or-reject-promises-in-js/" target="_blank" rel="noopener">How to Resolve or Reject Promises in JS</a></li>
@@ -189,12 +197,23 @@ const promise = new Promise((resolve, reject) => {
 					<h2 class="pink-heading" id="async-await">Async/await</h2>
 					<p>An async function is a function that returns a Promise; it's declared with the async keyword, and the await keyword is permitted within it.</p>
 					<p>The benefit of async/await is that it makes code easier to read. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains. It's syntactic sugar - Promises working under the hood, but a nicer way to code them!</p>
-					<p><strong>The same function two ways - 1st with Promises and 2nd with async/await:</strong></p>
+					<p><strong>The same function two ways - 1st with standard Promises and 2nd with async/await Promises:</strong></p>
 					<img src="./Images/async-await.png" alt="Screenshot of code showing async-await function">
+					<br>
+					<h3>Using the 'for await...of' statement</h3>
+					<p>This lets you loop through multiple async/await calls.</p>
+					<p>Resources:</p>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of" target="_blank" rel="noopener">MDN Web Docs: for await...of</a></li>
+						<li><a href="https://stackoverflow.com/questions/59694309/for-await-of-vs-promise-all" target="_blank" rel="noopener">When to use 'for await...of' instead of 'Promises.all'</a></li>
+					</ul>
+					<p><strong>Example of Promises using 'for await...of':</strong></p>
+					<img src="./Images/for-await-of.png" alt="Screenshot of code showing 'for await...of' statement">
+					<br>
 					<h3>Resources for async/await:</h3>
 					<ul>
-						<li><a href="https://javascript.info/async-await" target="_blank" rel="noopener">Async/await (JavaScript.info)</li>
-						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank" rel="noopener">Async function (MDN Web Docs)</li>
+						<li><a href="https://javascript.info/async-await" target="_blank" rel="noopener">Async/await (JavaScript.info)</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank" rel="noopener">Async function (MDN Web Docs)</a></li>
 					</ul>
 
 					<br><hr><br>

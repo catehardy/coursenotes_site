@@ -37,6 +37,14 @@ body {
    box-shadow: 10px 10px 8px #888888;
 }
 
+.container-2 {
+    /* display: grid;
+    gap: 30px;
+    grid-template-columns: 270px 3fr; */
+    padding: 60px 6% 0%;
+	margin: 80px;
+}
+
 .mainContent {
     background-color: #FFF;
     margin-top: 20px;
